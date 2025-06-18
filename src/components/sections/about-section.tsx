@@ -1,0 +1,62 @@
+
+import { SectionWrapper } from '@/components/layout/section-wrapper';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { User, Brain, Code, Database, Cloud } from 'lucide-react';
+import Image from 'next/image';
+
+const skills = [
+  { name: 'React', icon: Code },
+  { name: 'Next.js', icon: Code },
+  { name: 'TypeScript', icon: Code },
+  { name: 'Node.js', icon: Code },
+  { name: 'Python', icon: Code },
+  { name: 'UI/UX Design', icon: Brain },
+  { name: 'SQL & NoSQL', icon: Database },
+  { name: 'Cloud Platforms', icon: Cloud },
+];
+
+export function AboutSection() {
+  return (
+    <SectionWrapper id="about" title="About Me" icon={User}>
+      <div className="grid md:grid-cols-3 gap-12 items-center">
+        <div className="md:col-span-1 flex justify-center md:justify-start">
+          <div className="relative group">
+            <Avatar className="w-48 h-48 md:w-64 md:h-64 shadow-lg border-4 border-secondary group-hover:scale-105 transition-transform duration-300">
+              <Image 
+                src="https://placehold.co/300x300.png" 
+                alt="Profile Picture" 
+                width={300} 
+                height={300} 
+                data-ai-hint="professional portrait"
+                className="object-cover"
+              />
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <div className="absolute -bottom-2 -right-2 bg-accent text-accent-foreground p-2 rounded-full shadow-md group-hover:rotate-12 transition-transform duration-300">
+              <User size={24} />
+            </div>
+          </div>
+        </div>
+        <div className="md:col-span-2">
+          <p className="text-lg md:text-xl mb-6 leading-relaxed text-foreground">
+            Hello! I&apos;m a passionate and creative Full Stack Developer with a keen eye for design and user experience. 
+            I thrive on transforming complex problems into elegant, intuitive solutions. My journey in tech has been driven by a constant curiosity and a desire to build meaningful applications that make a difference.
+          </p>
+          <p className="text-lg md:text-xl mb-8 leading-relaxed text-foreground">
+            When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
+          </p>
+          <h3 className="text-2xl font-semibold text-accent mb-4">My Skills</h3>
+          <div className="flex flex-wrap gap-3">
+            {skills.map((skill) => (
+              <Badge key={skill.name} variant="secondary" className="text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors duration-300 cursor-default">
+                <skill.icon size={16} className="mr-2" />
+                {skill.name}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  );
+}
