@@ -84,11 +84,11 @@ export function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3 text-foreground hover:text-accent transition-colors">
               <Mail size={20} />
-              <a href="mailto:johndoe@example.com">johndoe@example.com</a>
+              <a href="mailto:ghatcherengineering@gmail.com">ghatcherengineering@gmail.com</a>
             </div>
             <div className="flex items-center space-x-3 text-foreground hover:text-accent transition-colors">
               <Phone size={20} />
-              <a href="tel:+1234567890">+1 (234) 567-890</a>
+              <a href="tel:+19788466751">+1 (978) 846-6751</a>
             </div>
             <div className="flex items-center space-x-3 text-foreground hover:text-accent transition-colors">
               <Linkedin size={20} />
@@ -166,4 +166,3 @@ export function ContactSection() {
     </SectionWrapper>
   );
 }
-
