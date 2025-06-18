@@ -1,6 +1,5 @@
 
 import { SectionWrapper } from '@/components/layout/section-wrapper';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { User, Brain, Code, Database, Cloud } from 'lucide-react';
 import Image from 'next/image';
@@ -22,17 +21,16 @@ export function AboutSection() {
       <div className="grid md:grid-cols-3 gap-12 items-center">
         <div className="md:col-span-1 flex justify-center md:justify-start">
           <div className="relative group">
-            <Avatar className="w-48 h-48 md:w-64 md:h-64 shadow-lg border-4 border-secondary group-hover:scale-105 transition-transform duration-300">
-              <Image 
-                src="https://placehold.co/300x300.png" 
-                alt="Profile Picture" 
-                width={300} 
-                height={300} 
+            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-lg shadow-lg border-4 border-secondary group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <Image
+                src="https://placehold.co/300x300.png"
+                alt="Profile Picture"
+                width={300}
+                height={300}
                 data-ai-hint="professional portrait"
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
-              <AvatarFallback>JD</AvatarFallback>
-            </Avatar>
+            </div>
             <div className="absolute -bottom-2 -right-2 bg-accent text-accent-foreground p-2 rounded-full shadow-md group-hover:rotate-12 transition-transform duration-300">
               <User size={24} />
             </div>
@@ -40,7 +38,7 @@ export function AboutSection() {
         </div>
         <div className="md:col-span-2">
           <p className="text-lg md:text-xl mb-6 leading-relaxed text-foreground">
-            Hello! I&apos;m a passionate and creative Full Stack Developer with a keen eye for design and user experience. 
+            Hello! I&apos;m a passionate and creative Full Stack Developer with a keen eye for design and user experience.
             I thrive on transforming complex problems into elegant, intuitive solutions. My journey in tech has been driven by a constant curiosity and a desire to build meaningful applications that make a difference.
           </p>
           <p className="text-lg md:text-xl mb-8 leading-relaxed text-foreground">
