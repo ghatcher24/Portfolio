@@ -136,6 +136,33 @@ export const projectsData = [
     outcomeAndImpact: 'Successfully developed a functional prototype of the pneumatic soft gripper that demonstrated effective and gentle grasping. The design has potential applications in automated assembly lines for fragile components and in human-robot interaction.'
   },
   {
+    id: generateSlug('Nonlinear Cancer Treatment Model'),
+    title: 'Nonlinear Cancer Treatment Model',
+    description: 'Development and analysis of a mathematical model for optimizing cancer treatment strategies using nonlinear dynamics and control theory.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'mathematical model graph',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Mathematical Modeling', 'Nonlinear Dynamics', 'Control Theory', 'Biomedical Engineering', 'MATLAB'],
+    objective: 'To develop a robust mathematical model that predicts tumor growth and response to various treatment protocols, aiming to personalize and optimize cancer therapy.',
+    requirements: [
+      'Accurately model tumor growth dynamics.',
+      'Incorporate effects of different treatment modalities (e.g., chemotherapy, immunotherapy).',
+      'Develop control strategies to minimize tumor size while managing toxicity.',
+      'Validate the model using existing clinical or experimental data.',
+      'Implement the model using computational software (e.g., MATLAB, Python).'
+    ],
+    technicalProcess: [
+      'Literature review of existing cancer models and treatment strategies.',
+      'Formulation of nonlinear differential equations representing tumor-immune interactions and drug effects.',
+      'Parameter estimation and sensitivity analysis.',
+      'Design of optimal control algorithms for treatment scheduling.',
+      'Numerical simulations to evaluate model predictions and control strategies.',
+      'Analysis of model stability and long-term behavior.'
+    ],
+    outcomeAndImpact: 'The model provided insights into synergistic effects of combined therapies and suggested optimized treatment schedules. This research contributes to the field of personalized medicine by offering a framework for tailoring cancer treatments based on individual patient characteristics and tumor dynamics.'
+  },
+  {
     id: generateSlug('Weather Dashboard'),
     title: 'Weather Dashboard',
     description: 'A sleek weather dashboard displaying real-time weather information from a third-party API. Features include city search and 5-day forecast.',
@@ -328,5 +355,4 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
-
     
