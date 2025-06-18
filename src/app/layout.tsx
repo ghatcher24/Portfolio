@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'GreyScale Portfolio',
+  title: 'Gordon Hatcher Engineering Portfolio',
   description: 'A personal portfolio by John Doe.', // Generic description, can be updated
 };
 

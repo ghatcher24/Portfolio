@@ -32,8 +32,8 @@ export function Navbar() {
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-3xl font-bold text-accent hover:opacity-80 transition-opacity">
-            GreyScale
+          <Link href="/" className="text-xl sm:text-2xl md:text-3xl font-bold text-accent hover:opacity-80 transition-opacity whitespace-nowrap">
+            Gordon Hatcher Engineering Portfolio
           </Link>
 
           <nav className="hidden md:flex space-x-6">
