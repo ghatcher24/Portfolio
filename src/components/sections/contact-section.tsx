@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SectionWrapper } from '@/components/layout/section-wrapper';
 import { useToast } from "@/hooks/use-toast";
-import { Send, Mail, Phone, Linkedin, GithubIcon } from 'lucide-react';
+import { Send, Mail, Phone, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 const formSchema = z.object({
@@ -92,11 +92,7 @@ export function ContactSection() {
             </div>
             <div className="flex items-center space-x-3 text-foreground hover:text-accent transition-colors">
               <Linkedin size={20} />
-              <Link href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/johndoe</Link>
-            </div>
-             <div className="flex items-center space-x-3 text-foreground hover:text-accent transition-colors">
-              <GithubIcon size={20} />
-              <Link href="#" target="_blank" rel="noopener noreferrer">github.com/johndoe</Link>
+              <Link href="https://linkedin.com/in/gordonhatcher" target="_blank" rel="noopener noreferrer">linkedin.com/in/gordonhatcher</Link>
             </div>
           </div>
         </div>
