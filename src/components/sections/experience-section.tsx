@@ -51,7 +51,7 @@ const experienceData = [
         ],
       },
       {
-        title: 'Junior Intern Developer',
+        title: 'MATLAB Tutor',
         dates: 'May 2016 - Jun 2016',
         description: [
           'Assisted senior developers in building and testing new features for a web platform.',
