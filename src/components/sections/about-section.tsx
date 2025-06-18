@@ -27,7 +27,7 @@ export function AboutSection() {
       <div className="grid md:grid-cols-3 gap-4 items-start mb-8 md:mb-10">
         <div className="md:col-span-1 flex justify-center md:justify-start">
           <div className="relative">
-            <div className="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-lg shadow-lg border-4 border-secondary overflow-hidden">
+            <div className="relative w-[189px] h-[189px] md:w-[252px] md:h-[252px] rounded-lg shadow-lg border-4 border-secondary overflow-hidden">
               <Image
                 src="/images/profile.jpg"
                 alt="Profile Picture"
