@@ -64,8 +64,8 @@ export const projectsData = [
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
   {
-    id: generateSlug('Portfolio Website V1'),
-    title: 'Portfolio Website V1',
+    id: generateSlug('Angiographic Catheter'),
+    title: 'Angiographic Catheter',
     description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'personal website',
@@ -86,8 +86,8 @@ export const projectsData = [
     outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
   },
   {
-    id: generateSlug('Blog Platform'),
-    title: 'Blog Platform',
+    id: generateSlug('Prototype Slitting Machine'),
+    title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'writing platform',
