@@ -6,9 +6,9 @@ import { Award, Building2 } from 'lucide-react';
 
 const experienceData = [
   {
-    company: 'Tech Solutions Inc.',
-    position: 'Senior Software Engineer',
-    dates: 'Jan 2020 - Present',
+    company: 'Thermofab',
+    position: 'Process Engineering Intern',
+    dates: 'June 2024 - August 2024',
     description: [
       'Led the development of key features for a flagship SaaS product, improving performance by 20%.',
       'Mentored junior engineers and conducted code reviews to maintain high-quality standards.',
