@@ -6,87 +6,222 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Briefcase, ExternalLink, Github } from 'lucide-react';
 
-const projectsData = [
+// Helper function to generate slugs (you might want to move this to a utils file)
+const generateSlug = (title: string) => title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+
+export const projectsData = [
   {
+    id: generateSlug('E-commerce Platform'),
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'online store',
     liveLink: '#', 
     githubLink: '#', 
-    tags: ['Next.js', 'React', 'Stripe', 'Tailwind CSS']
+    tags: ['Next.js', 'React', 'Stripe', 'Tailwind CSS'],
+    objective: 'To develop a scalable and user-friendly online shopping experience that drives sales and customer satisfaction.',
+    requirements: [
+      'Secure user authentication and profile management.',
+      'Dynamic product catalog with search and filtering.',
+      'Shopping cart functionality with persistent storage.',
+      'Integration with Stripe for secure payment processing.',
+      'Admin dashboard for managing products, orders, and users.',
+      'Responsive design for seamless experience across devices.'
+    ],
+    technicalProcess: [
+      'Designed database schema for products, users, and orders.',
+      'Developed RESTful APIs using Next.js API routes for backend logic.',
+      'Implemented frontend components with React and styled with Tailwind CSS.',
+      'Integrated Stripe SDK for payment gateway.',
+      'Ensured state management using React Context/Redux for cart and user session.',
+      'Conducted thorough testing, including unit, integration, and E2E tests.'
+    ],
+    outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
   },
   {
+    id: generateSlug('Task Management App'),
     title: 'Task Management App',
     description: 'A collaborative task management application designed to help teams organize, track, and manage their work effectively. Features include drag-and-drop boards, real-time updates, and user roles.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'productivity app',
     liveLink: '#',
     githubLink: '#',
-    tags: ['React', 'Node.js', 'Socket.io', 'MongoDB']
+    tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    objective: 'To create an intuitive tool for teams to enhance productivity and collaboration on projects.',
+    requirements: [
+        'User registration and login.',
+        'Create, assign, and update tasks.',
+        'Kanban-style board with drag-and-drop functionality.',
+        'Real-time updates for collaborative editing.',
+        'Notifications for task assignments and updates.'
+    ],
+    technicalProcess: [
+        'Utilized MongoDB for flexible data storage.',
+        'Built backend APIs with Node.js and Express.',
+        'Implemented real-time communication using Socket.io.',
+        'Developed frontend with React for a dynamic user interface.'
+    ],
+    outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
   {
+    id: generateSlug('Portfolio Website V1'),
     title: 'Portfolio Website V1',
     description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'personal website',
     liveLink: '#',
     githubLink: '#',
-    tags: ['HTML', 'CSS', 'JavaScript']
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    objective: 'To establish an online presence and showcase foundational web development skills.',
+    requirements: [
+        'Clean and simple design.',
+        'Sections for about, projects, and contact.',
+        'Responsive across different screen sizes.'
+    ],
+    technicalProcess: [
+        'Structured content using semantic HTML5.',
+        'Styled with custom CSS, focusing on responsiveness.',
+        'Added interactivity with vanilla JavaScript.'
+    ],
+    outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
   },
   {
+    id: generateSlug('Blog Platform'),
     title: 'Blog Platform',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'writing platform',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Next.js', 'Headless CMS', 'GraphQL', 'Markdown']
+    tags: ['Next.js', 'Headless CMS', 'GraphQL', 'Markdown'],
+    objective: 'To build a performant and SEO-friendly platform for content creators to publish articles and engage with readers.',
+    requirements: [
+        'User authentication for authors.',
+        'Markdown editor for writing posts.',
+        'Comment system for reader interaction.',
+        'Admin panel for managing posts and users.'
+    ],
+    technicalProcess: [
+        'Used Next.js for server-side rendering and static site generation.',
+        'Integrated with a headless CMS (e.g., Strapi, Contentful) via GraphQL.',
+        'Implemented user authentication using NextAuth.js.'
+    ],
+    outcomeAndImpact: 'Provided a fast, secure, and easy-to-use blogging solution, adopted by several content creators for its modern stack and features.'
   },
   {
+    id: generateSlug('Weather Dashboard'),
     title: 'Weather Dashboard',
     description: 'A sleek weather dashboard displaying real-time weather information from a third-party API. Features include city search and 5-day forecast.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'climate app',
     liveLink: '#',
     githubLink: '#',
-    tags: ['React', 'API Integration', 'Chart.js']
+    tags: ['React', 'API Integration', 'Chart.js'],
+    objective: 'To provide users with up-to-date weather information in a visually appealing and easy-to-understand format.',
+    requirements: [
+        'Fetch weather data from a reliable API (e.g., OpenWeatherMap).',
+        'Allow users to search for weather by city.',
+        'Display current weather conditions and a multi-day forecast.',
+        'Visualize weather data using charts.'
+    ],
+    technicalProcess: [
+        'Frontend built with React and styled components.',
+        'Integrated a third-party weather API for data retrieval.',
+        'Used Chart.js for displaying temperature trends and forecast data.'
+    ],
+    outcomeAndImpact: 'Created a popular utility app that provides quick and accurate weather information, praised for its intuitive UI.'
   },
   {
+    id: generateSlug('Recipe Finder App'),
     title: 'Recipe Finder App',
     description: 'An application that allows users to search for recipes based on ingredients they have on hand, using a recipe database API.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'food cooking',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Vue.js', 'API', 'Food Tech']
+    tags: ['Vue.js', 'API', 'Food Tech'],
+    objective: 'To help users discover new recipes and reduce food waste by utilizing ingredients they already possess.',
+    requirements: [
+        'Search recipes by ingredients.',
+        'Display recipe details including ingredients and instructions.',
+        'Filter recipes by cuisine, dietary restrictions, etc.',
+        'Save favorite recipes.'
+    ],
+    technicalProcess: [
+        'Developed with Vue.js for a reactive frontend experience.',
+        'Integrated with a recipe API (e.g., Edamam, Spoonacular).',
+        'Managed application state using Vuex.'
+    ],
+    outcomeAndImpact: 'Helped users explore culinary options and make better use of their pantry staples, receiving positive feedback for its practical utility.'
   },
   {
+    id: generateSlug('Fitness Tracker'),
     title: 'Fitness Tracker',
     description: 'A mobile-friendly fitness tracking application to log workouts, monitor progress, and set fitness goals. Built with React Native.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'exercise health',
     liveLink: '#',
     githubLink: '#',
-    tags: ['React Native', 'Firebase', 'Mobile App']
+    tags: ['React Native', 'Firebase', 'Mobile App'],
+    objective: 'To empower users to track their fitness activities, set achievable goals, and monitor their progress over time.',
+    requirements: [
+        'Log various types of workouts (e.g., running, weightlifting).',
+        'Track metrics like duration, distance, calories burned.',
+        'Set personal fitness goals and visualize progress.',
+        'User authentication and data synchronization across devices.'
+    ],
+    technicalProcess: [
+        'Built using React Native for cross-platform mobile development.',
+        'Utilized Firebase for backend services like authentication and database.',
+        'Implemented charts for progress visualization.'
+    ],
+    outcomeAndImpact: 'Enabled users to consistently track their fitness journey, leading to improved health outcomes and user retention.'
   },
   {
+    id: generateSlug('Music Streaming Service UI'),
     title: 'Music Streaming Service UI',
     description: 'A UI/UX concept for a music streaming service, focusing on intuitive navigation and a visually appealing interface. Designed in Figma and prototyped with React.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'audio player',
     liveLink: '#',
     githubLink: '#',
-    tags: ['UI/UX', 'Figma', 'React', 'Frontend']
+    tags: ['UI/UX', 'Figma', 'React', 'Frontend'],
+    objective: 'To design and prototype a modern, user-centric interface for a music streaming application.',
+    requirements: [
+        'Intuitive navigation for browsing music library, playlists, and artists.',
+        'Visually appealing player controls and album art display.',
+        'Seamless user experience for music discovery and playback.',
+        'Consistent design language across all screens.'
+    ],
+    technicalProcess: [
+        'Created wireframes and high-fidelity mockups in Figma.',
+        'Developed an interactive prototype using React to demonstrate key user flows.',
+        'Focused on user-centered design principles and aesthetics.'
+    ],
+    outcomeAndImpact: 'Produced a compelling UI/UX design concept that was well-received for its usability and visual appeal, serving as a strong portfolio piece.'
   },
   {
+    id: generateSlug('Online Learning Platform'),
     title: 'Online Learning Platform',
     description: 'A platform for online courses with video content, quizzes, and progress tracking. Features instructor dashboards and student enrollment.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'education technology',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Ruby on Rails', 'PostgreSQL', 'Video Streaming']
+    tags: ['Ruby on Rails', 'PostgreSQL', 'Video Streaming'],
+    objective: 'To provide an accessible and engaging online learning environment for students and instructors.',
+    requirements: [
+        'Course creation and management tools for instructors.',
+        'Student enrollment and progress tracking.',
+        'Video content delivery and quiz functionality.',
+        'User authentication and role-based access control.'
+    ],
+    technicalProcess: [
+        'Developed using Ruby on Rails framework.',
+        'Utilized PostgreSQL for database management.',
+        'Integrated video streaming solutions and built a custom quiz engine.'
+    ],
+    outcomeAndImpact: 'Launched an e-learning platform that facilitated remote education for hundreds of users, enhancing access to knowledge and skills development.'
   },
 ];
 
@@ -102,7 +237,7 @@ export function ProjectsSection() {
 
           const projectCardContent = (
             <Card className={cardBaseClassName}>
-              <div className="relative h-48 md:h-56 w-full"> {/* Fixed height for image container */}
+              <div className="relative h-48 md:h-56 w-full">
                 <Image 
                   src={project.imageUrl} 
                   alt={project.title} 
@@ -175,6 +310,14 @@ export function ProjectsSection() {
           }
         })}
       </div>
+       <div className="text-center mt-12">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+            <Link href="/projects">
+              <Briefcase size={20} className="mr-2" />
+              View All Projects
+            </Link>
+          </Button>
+        </div>
     </SectionWrapper>
   );
 }
