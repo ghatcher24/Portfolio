@@ -26,8 +26,8 @@ export function AboutSection() {
     <SectionWrapper id="about" title="About Me" icon={User} className="pt-12 md:pt-20">
       <div className="grid md:grid-cols-3 gap-12 items-center">
         <div className="md:col-span-1 flex justify-center md:justify-start">
-          <div className="relative group">
-            <div className="relative w-[225px] h-[300px] md:w-[300px] md:h-[400px] rounded-lg shadow-lg border-4 border-secondary group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+          <div className="relative">
+            <div className="relative w-[225px] h-[300px] md:w-[300px] md:h-[400px] rounded-lg shadow-lg border-4 border-secondary transition-transform duration-300 overflow-hidden">
               <Image
                 src="https://placehold.co/300x400.png"
                 alt="Profile Picture"
@@ -37,7 +37,7 @@ export function AboutSection() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute -bottom-2 -right-2 bg-accent text-accent-foreground p-2 rounded-full shadow-md group-hover:rotate-12 transition-transform duration-300">
+            <div className="absolute -bottom-2 -right-2 bg-accent text-accent-foreground p-2 rounded-full shadow-md transition-transform duration-300">
               <User size={24} />
             </div>
           </div>
