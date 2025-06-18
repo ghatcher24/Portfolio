@@ -17,6 +17,8 @@ const skills = [
   { name: 'Google Suite', icon: FileText },
   { name: 'Shop Machinery and Hand Tools', icon: Wrench },
   { name: 'Basic Soldering and Welding', icon: Flame },
+  { name: 'Creo', icon: Cuboid },
+  { name: 'Mathcad', icon: Sigma },
 ];
 
 export function AboutSection() {
