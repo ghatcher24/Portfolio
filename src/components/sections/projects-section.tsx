@@ -39,8 +39,8 @@ export const projectsData = [
     outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
   },
   {
-    id: generateSlug('Task Management App'),
-    title: 'Task Management App',
+    id: generateSlug('12:1 Gearbox'),
+    title: '12:1 Gearbox',
     description: 'A collaborative task management application designed to help teams organize, track, and manage their work effectively. Features include drag-and-drop boards, real-time updates, and user roles.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'productivity app',
