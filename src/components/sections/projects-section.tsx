@@ -136,31 +136,30 @@ export const projectsData = [
     outcomeAndImpact: 'Successfully developed a functional prototype of the pneumatic soft gripper that demonstrated effective and gentle grasping. The design has potential applications in automated assembly lines for fragile components and in human-robot interaction.'
   },
   {
-    id: generateSlug('Nonlinear Cancer Treatment Model'),
-    title: 'Nonlinear Cancer Treatment Model',
-    description: 'Development and analysis of a mathematical model for optimizing cancer treatment strategies using nonlinear dynamics and control theory.',
+    id: generateSlug('Project Management Simulation'),
+    title: 'Project Management Simulation',
+    description: 'An interactive simulation tool designed to teach project management principles through hands-on scenarios and decision-making exercises.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'mathematical model graph',
+    imageHint: 'simulation interface',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Mathematical Modeling', 'Nonlinear Dynamics', 'Control Theory', 'Biomedical Engineering', 'MATLAB'],
-    objective: 'To develop a robust mathematical model that predicts tumor growth and response to various treatment protocols, aiming to personalize and optimize cancer therapy.',
+    tags: ['Simulation', 'Project Management', 'Gamification', 'Educational Tool', 'React'],
+    objective: 'To provide an engaging and effective way for users to learn and practice project management skills in a risk-free environment.',
     requirements: [
-      'Accurately model tumor growth dynamics.',
-      'Incorporate effects of different treatment modalities (e.g., chemotherapy, immunotherapy).',
-      'Develop control strategies to minimize tumor size while managing toxicity.',
-      'Validate the model using existing clinical or experimental data.',
-      'Implement the model using computational software (e.g., MATLAB, Python).'
+      'Realistic project scenarios with varying complexities.',
+      'Decision points affecting project outcomes (time, budget, scope, quality).',
+      'Feedback mechanisms to explain consequences of decisions.',
+      'Scoring or performance metrics to track user progress.',
+      'User-friendly interface for intuitive interaction.'
     ],
     technicalProcess: [
-      'Literature review of existing cancer models and treatment strategies.',
-      'Formulation of nonlinear differential equations representing tumor-immune interactions and drug effects.',
-      'Parameter estimation and sensitivity analysis.',
-      'Design of optimal control algorithms for treatment scheduling.',
-      'Numerical simulations to evaluate model predictions and control strategies.',
-      'Analysis of model stability and long-term behavior.'
+      'Defined core project management concepts to be simulated.',
+      'Designed simulation logic and scenario branching.',
+      'Developed interactive UI components using React.',
+      'Implemented state management for tracking simulation progress and user choices.',
+      'Created a library of project events and challenges.'
     ],
-    outcomeAndImpact: 'The model provided insights into synergistic effects of combined therapies and suggested optimized treatment schedules. This research contributes to the field of personalized medicine by offering a framework for tailoring cancer treatments based on individual patient characteristics and tumor dynamics.'
+    outcomeAndImpact: 'The simulation tool has been adopted in workshops and training programs, significantly improving participants\' understanding of project trade-offs and decision-making. It offers a dynamic alternative to traditional learning methods.'
   },
   {
     id: generateSlug('Weather Dashboard'),
