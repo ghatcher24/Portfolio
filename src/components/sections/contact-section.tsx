@@ -133,7 +133,7 @@ export function ContactSection() {
                   <FormLabel className="text-card-foreground">Message</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Tell me about your project or inquiry..."
+                      placeholder="Type your message here..."
                       rows={5}
                       {...field}
                       className="bg-background focus:ring-primary"
