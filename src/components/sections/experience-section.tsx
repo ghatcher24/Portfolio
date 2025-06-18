@@ -29,6 +29,18 @@ const experienceData = [
     imageUrl: 'https://placehold.co/100x100.png',
     imageHint: 'tech company'
   },
+  {
+    company: 'Startup Hub Co.',
+    position: 'Full Stack Intern',
+    dates: 'May 2016 - Aug 2016',
+    description: [
+      'Assisted senior developers in building and testing new features for a web platform.',
+      'Gained experience with full-stack development practices and agile methodologies.',
+      'Contributed to front-end and back-end tasks, including UI development and API integration.',
+    ],
+    imageUrl: 'https://placehold.co/100x100.png',
+    imageHint: 'startup office'
+  }
 ];
 
 export function ExperienceSection() {

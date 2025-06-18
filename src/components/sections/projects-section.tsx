@@ -12,8 +12,8 @@ const projectsData = [
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'online store',
-    liveLink: '#', // Example: 'https://example.com/ecommerce'
-    githubLink: '#', // Example: 'https://github.com/user/ecommerce'
+    liveLink: '#', 
+    githubLink: '#', 
     tags: ['Next.js', 'React', 'Stripe', 'Tailwind CSS']
   },
   {
@@ -34,74 +34,128 @@ const projectsData = [
     githubLink: '#',
     tags: ['HTML', 'CSS', 'JavaScript']
   },
+  {
+    title: 'Blog Platform',
+    description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'writing platform',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Next.js', 'Headless CMS', 'GraphQL', 'Markdown']
+  },
+  {
+    title: 'Weather Dashboard',
+    description: 'A sleek weather dashboard displaying real-time weather information from a third-party API. Features include city search and 5-day forecast.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'climate app',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['React', 'API Integration', 'Chart.js']
+  },
+  {
+    title: 'Recipe Finder App',
+    description: 'An application that allows users to search for recipes based on ingredients they have on hand, using a recipe database API.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'food cooking',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Vue.js', 'API', 'Food Tech']
+  },
+  {
+    title: 'Fitness Tracker',
+    description: 'A mobile-friendly fitness tracking application to log workouts, monitor progress, and set fitness goals. Built with React Native.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'exercise health',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['React Native', 'Firebase', 'Mobile App']
+  },
+  {
+    title: 'Music Streaming Service UI',
+    description: 'A UI/UX concept for a music streaming service, focusing on intuitive navigation and a visually appealing interface. Designed in Figma and prototyped with React.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'audio player',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['UI/UX', 'Figma', 'React', 'Frontend']
+  },
+  {
+    title: 'Online Learning Platform',
+    description: 'A platform for online courses with video content, quizzes, and progress tracking. Features instructor dashboards and student enrollment.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'education technology',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Ruby on Rails', 'PostgreSQL', 'Video Streaming']
+  },
 ];
 
 export function ProjectsSection() {
   return (
     <SectionWrapper id="projects" title="My Projects" icon={Briefcase} className="bg-secondary">
-      <div className="space-y-12 md:space-y-16">
-        {projectsData.map((project, index) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projectsData.map((project) => {
           const cardIsALink = project.liveLink && project.liveLink !== '#';
           
-          const cardBaseClassName = `overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-[1.01] transition-all duration-300 h-full flex flex-col`;
+          const cardBaseClassName = `overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-[1.01] transition-all duration-300 h-full flex flex-col rounded-lg`;
           const imageClassName = `transform group-hover:brightness-105 transition-all duration-300`;
 
           const projectCardContent = (
             <Card className={cardBaseClassName}>
-              <div className="grid md:grid-cols-2 gap-0 items-stretch flex-grow"> {/* items-stretch ensures columns take full height */}
-                <div className={`relative h-64 md:h-auto ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}> {/* md:h-auto to allow image to define height within grid cell */}
-                  <Image 
-                    src={project.imageUrl} 
-                    alt={project.title} 
-                    layout="fill" 
-                    objectFit="cover" 
-                    data-ai-hint={project.imageHint}
-                    className={imageClassName}
-                  />
-                </div>
-                <div className={`${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} flex flex-col`}>
-                  <CardHeader>
-                    <CardTitle className="text-2xl md:text-3xl text-accent">{project.title}</CardTitle>
-                    <CardDescription className="text-md text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-foreground leading-relaxed mb-6">{project.description}</p>
-                  </CardContent>
-                  <CardFooter className="flex space-x-4 mt-auto"> {/* mt-auto to push footer down */}
-                    {project.liveLink && project.liveLink !== '#' && (
-                      <Button 
-                        variant="outline" 
-                        className="hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
-                        onClick={(e) => {
-                          if (cardIsALink) { 
-                            e.preventDefault(); 
-                            e.stopPropagation(); 
-                          }
-                          window.open(project.liveLink!, '_blank', 'noopener,noreferrer');
-                        }}
-                      >
-                        <ExternalLink size={18} className="mr-2" />
-                        Live Demo
-                      </Button>
-                    )}
-                    {project.githubLink && project.githubLink !== '#' && (
-                       <Button 
-                        variant="ghost" 
-                        className="text-primary hover:text-accent transition-colors duration-300"
-                        onClick={(e) => {
-                          if (cardIsALink) { 
-                            e.preventDefault(); 
-                            e.stopPropagation(); 
-                          }
-                          window.open(project.githubLink!, '_blank', 'noopener,noreferrer');
-                        }}
-                       >
-                        <Github size={18} className="mr-2" />
-                        View Code
-                      </Button>
-                    )}
-                  </CardFooter>
-                </div>
+              <div className="relative h-48 md:h-56 w-full"> {/* Fixed height for image container */}
+                <Image 
+                  src={project.imageUrl} 
+                  alt={project.title} 
+                  layout="fill" 
+                  objectFit="cover" 
+                  data-ai-hint={project.imageHint}
+                  className={imageClassName}
+                />
+              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <CardHeader className="p-0 pb-4">
+                  <CardTitle className="text-xl md:text-2xl text-accent">{project.title}</CardTitle>
+                  <CardDescription className="text-sm text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
+                </CardHeader>
+                <CardContent className="p-0 flex-grow">
+                  <p className="text-foreground leading-relaxed text-sm mb-4">{project.description}</p>
+                </CardContent>
+                <CardFooter className="p-0 pt-4 flex space-x-3 mt-auto">
+                  {project.liveLink && project.liveLink !== '#' && (
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="hover:bg-accent hover:text-accent-foreground transition-colors duration-300 text-xs"
+                      onClick={(e) => {
+                        if (cardIsALink) { 
+                          e.preventDefault(); 
+                          e.stopPropagation(); 
+                        }
+                        window.open(project.liveLink!, '_blank', 'noopener,noreferrer');
+                      }}
+                    >
+                      <ExternalLink size={16} className="mr-1.5" />
+                      Live Demo
+                    </Button>
+                  )}
+                  {project.githubLink && project.githubLink !== '#' && (
+                     <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="text-primary hover:text-accent transition-colors duration-300 text-xs"
+                      onClick={(e) => {
+                        if (cardIsALink) { 
+                          e.preventDefault(); 
+                          e.stopPropagation(); 
+                        }
+                        window.open(project.githubLink!, '_blank', 'noopener,noreferrer');
+                      }}
+                     >
+                      <Github size={16} className="mr-1.5" />
+                      View Code
+                    </Button>
+                  )}
+                </CardFooter>
               </div>
             </Card>
           );
