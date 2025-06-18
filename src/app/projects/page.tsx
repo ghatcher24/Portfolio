@@ -1,7 +1,7 @@
 
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
-import { projectsData } from '@/components/sections/projects-section'; // Reusing the augmented data
+import { projectsData } from '@/components/sections/projects-section'; 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -19,10 +19,10 @@ export default function ProjectsPage() {
             Explore a collection of projects showcasing a range of skills and technologies. Each project reflects a commitment to quality and innovation.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8"> {/* Updated grid layout */}
           {projectsData.map((project) => (
-            <div key={project.id} className="group block h-full">
-               <Card className="overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-[1.01] transition-all duration-300 h-full flex flex-col rounded-lg">
+            <div key={project.id} className="block h-full"> {/* Removed 'group' class */}
+               <Card className="overflow-hidden shadow-lg h-full flex flex-col rounded-lg"> {/* Removed hover classes */}
                 <div className="relative h-48 md:h-56 w-full">
                   <Image 
                     src={project.imageUrl} 
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
                     layout="fill" 
                     objectFit="cover" 
                     data-ai-hint={project.imageHint}
-                    className="transform group-hover:brightness-105 transition-all duration-300"
+                    className="transition-all duration-300" // Removed brightness hover class
                   />
                 </div>
                 <div className="flex flex-col flex-grow p-6">
