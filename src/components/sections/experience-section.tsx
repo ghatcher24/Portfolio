@@ -18,9 +18,9 @@ const experienceData = [
     imageHint: 'company logo'
   },
   {
-    company: 'Innovatech Ltd.',
-    position: 'Software Developer',
-    dates: 'Jun 2017 - Dec 2019',
+    company: 'Cofab Design',
+    position: 'Engineering Intern',
+    dates: 'June 2023 - August 2023',
     description: [
       'Developed and maintained web applications using React, Node.js, and PostgreSQL.',
       'Participated in agile development cycles, including sprint planning and daily stand-ups.',
