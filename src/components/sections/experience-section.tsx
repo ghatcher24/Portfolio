@@ -42,8 +42,8 @@ const experienceData = [
         ],
       },
       {
-        title: 'Full Stack Intern - Advanced Tasks',
-        dates: 'Jun 2016 - Jul 2016',
+        title: 'Graduate Student Advisor',
+        dates: 'August 2024 - May 2025',
         description: [
           'Assigned to more complex tasks involving API development and UI enhancements.',
           'Assisted in database schema modifications for new product modules.',
