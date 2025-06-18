@@ -78,7 +78,7 @@ export function ContactSection() {
       <div className="grid md:grid-cols-2 gap-12">
         <div>
           <p className="text-lg text-foreground mb-6 leading-relaxed">
-            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of something amazing. 
+            I&apos;m always happy to connect and am open to discussing new opportunities, positions, or answering any questions you may have. 
             Feel free to reach out to me using the form or through my other contact channels.
           </p>
           <div className="space-y-4">
