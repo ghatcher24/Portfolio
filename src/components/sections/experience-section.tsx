@@ -31,12 +31,35 @@ const experienceData = [
   },
   {
     company: 'Startup Hub Co.',
-    position: 'Full Stack Intern',
-    dates: 'May 2016 - Aug 2016',
-    description: [
-      'Assisted senior developers in building and testing new features for a web platform.',
-      'Gained experience with full-stack development practices and agile methodologies.',
-      'Contributed to front-end and back-end tasks, including UI development and API integration.',
+    // This entry now has multiple positions
+    positions: [
+      {
+        title: 'Lead Intern Developer',
+        dates: 'Jul 2016 - Aug 2016',
+        description: [
+          'Led a small team of interns on a feature sub-project for the main web platform.',
+          'Presented project demo to senior management and received positive feedback.',
+          'Took initiative in problem-solving and unblocking team members.',
+        ],
+      },
+      {
+        title: 'Full Stack Intern - Advanced Tasks',
+        dates: 'Jun 2016 - Jul 2016',
+        description: [
+          'Assigned to more complex tasks involving API development and UI enhancements.',
+          'Assisted in database schema modifications for new product modules.',
+          'Participated in debugging sessions for critical platform issues.',
+        ],
+      },
+      {
+        title: 'Junior Intern Developer',
+        dates: 'May 2016 - Jun 2016',
+        description: [
+          'Assisted senior developers in building and testing new features for a web platform.',
+          'Gained foundational experience with full-stack development practices (React, Node.js).',
+          'Learned about agile methodologies and version control (Git).',
+        ],
+      }
     ],
     imageUrl: 'https://placehold.co/100x100.png',
     imageHint: 'startup office'
@@ -55,8 +78,13 @@ export function ExperienceSection() {
                   <Building2 size={24} className="mr-3 text-primary" />
                   {exp.company}
                 </CardTitle>
-                <CardDescription className="text-md text-primary font-semibold mt-1">{exp.position}</CardDescription>
-                <CardDescription className="text-sm text-muted-foreground mt-1">{exp.dates}</CardDescription>
+                {/* Render position and dates only if they exist (for single-position entries) */}
+                {exp.position && exp.dates && (
+                  <>
+                    <CardDescription className="text-md text-primary font-semibold mt-1">{exp.position}</CardDescription>
+                    <CardDescription className="text-sm text-muted-foreground mt-1">{exp.dates}</CardDescription>
+                  </>
+                )}
               </div>
               <div className="flex-shrink-0 self-center sm:self-start">
                 <Image 
@@ -70,11 +98,29 @@ export function ExperienceSection() {
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
-                {exp.description.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+              {exp.positions ? ( // If entry has multiple positions
+                <div className="space-y-6">
+                  {exp.positions.map((pos, posIndex) => (
+                    <div key={posIndex} className={posIndex > 0 ? "pt-4 border-t border-border/50" : ""}>
+                      <h4 className="text-lg font-semibold text-accent">{pos.title}</h4>
+                      <p className="text-sm text-muted-foreground mb-2">{pos.dates}</p>
+                      <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm">
+                        {pos.description.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : ( // Else, render single position's description
+                exp.description && (
+                  <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
+                    {exp.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )
+              )}
             </CardContent>
           </Card>
         ))}
