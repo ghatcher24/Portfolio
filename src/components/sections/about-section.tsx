@@ -24,7 +24,7 @@ const skills = [
 export function AboutSection() {
   return (
     <SectionWrapper id="about" title="About Me" icon={User} className="pt-12 md:pt-20">
-      <div className="grid md:grid-cols-3 gap-8 items-start mb-8 md:mb-10">
+      <div className="grid md:grid-cols-3 gap-6 items-start mb-8 md:mb-10">
         <div className="md:col-span-1 flex justify-center md:justify-start">
           <div className="relative">
             <div className="relative w-[150px] h-[200px] md:w-[200px] md:h-[267px] rounded-lg shadow-lg border-4 border-secondary overflow-hidden">
@@ -67,3 +67,4 @@ export function AboutSection() {
     </SectionWrapper>
   );
 }
+
