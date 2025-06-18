@@ -21,12 +21,12 @@ export function AboutSection() {
       <div className="grid md:grid-cols-3 gap-12 items-center">
         <div className="md:col-span-1 flex justify-center md:justify-start">
           <div className="relative group">
-            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-lg shadow-lg border-4 border-secondary group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+            <div className="relative w-[225px] h-[300px] md:w-[300px] md:h-[400px] rounded-lg shadow-lg border-4 border-secondary group-hover:scale-105 transition-transform duration-300 overflow-hidden">
               <Image
-                src="https://placehold.co/300x300.png"
+                src="https://placehold.co/300x400.png"
                 alt="Profile Picture"
                 width={300}
-                height={300}
+                height={400}
                 data-ai-hint="professional portrait"
                 className="object-cover w-full h-full"
               />
