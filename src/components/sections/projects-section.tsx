@@ -16,8 +16,8 @@ export const projectsData = [
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'online store',
-    liveLink: '#', 
-    githubLink: '#', 
+    liveLink: '#',
+    githubLink: '#',
     tags: ['Next.js', 'React', 'Stripe', 'Tailwind CSS'],
     objective: 'To develop a scalable and user-friendly online shopping experience that drives sales and customer satisfaction.',
     requirements: [
@@ -230,84 +230,64 @@ export function ProjectsSection() {
     <SectionWrapper id="projects" title="My Projects" icon={Briefcase} className="bg-secondary">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project) => {
-          const cardIsALink = project.liveLink && project.liveLink !== '#';
-          
           const cardBaseClassName = `overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-[1.01] transition-all duration-300 h-full flex flex-col rounded-lg`;
           const imageClassName = `transform group-hover:brightness-105 transition-all duration-300`;
 
-          const projectCardContent = (
-            <Card className={cardBaseClassName}>
-              <div className="relative h-48 md:h-56 w-full">
-                <Image 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                  layout="fill" 
-                  objectFit="cover" 
-                  data-ai-hint={project.imageHint}
-                  className={imageClassName}
-                />
-              </div>
-              <div className="flex flex-col flex-grow p-6">
-                <CardHeader className="p-0 pb-4">
-                  <CardTitle className="text-xl md:text-2xl text-accent">{project.title}</CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
-                </CardHeader>
-                <CardContent className="p-0 flex-grow">
-                  <p className="text-foreground leading-relaxed text-sm mb-4">{project.description}</p>
-                </CardContent>
-                <CardFooter className="p-0 pt-4 flex space-x-3 mt-auto">
-                  {project.liveLink && project.liveLink !== '#' && (
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="hover:bg-accent hover:text-accent-foreground transition-colors duration-300 text-xs"
-                      onClick={(e) => {
-                        if (cardIsALink) { 
-                          e.preventDefault(); 
-                          e.stopPropagation(); 
-                        }
-                        window.open(project.liveLink!, '_blank', 'noopener,noreferrer');
-                      }}
-                    >
-                      <ExternalLink size={16} className="mr-1.5" />
-                      Live Demo
-                    </Button>
-                  )}
-                  {project.githubLink && project.githubLink !== '#' && (
-                     <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-primary hover:text-accent transition-colors duration-300 text-xs"
-                      onClick={(e) => {
-                        if (cardIsALink) { 
-                          e.preventDefault(); 
-                          e.stopPropagation(); 
-                        }
-                        window.open(project.githubLink!, '_blank', 'noopener,noreferrer');
-                      }}
-                     >
-                      <Github size={16} className="mr-1.5" />
-                      View Code
-                    </Button>
-                  )}
-                </CardFooter>
-              </div>
-            </Card>
+          return (
+            <Link key={project.id} href={`/projects/${project.id}`} className="group block h-full">
+              <Card className={cardBaseClassName}>
+                <div className="relative h-48 md:h-56 w-full">
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    data-ai-hint={project.imageHint}
+                    className={imageClassName}
+                  />
+                </div>
+                <div className="flex flex-col flex-grow p-6">
+                  <CardHeader className="p-0 pb-4">
+                    <CardTitle className="text-xl md:text-2xl text-accent">{project.title}</CardTitle>
+                    <CardDescription className="text-sm text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0 flex-grow">
+                    <p className="text-foreground leading-relaxed text-sm mb-4 line-clamp-4">{project.description}</p>
+                  </CardContent>
+                  <CardFooter className="p-0 pt-4 flex space-x-3 mt-auto">
+                    {project.liveLink && project.liveLink !== '#' && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="hover:bg-accent hover:text-accent-foreground transition-colors duration-300 text-xs"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent Link navigation
+                          window.open(project.liveLink!, '_blank', 'noopener,noreferrer');
+                        }}
+                      >
+                        <ExternalLink size={16} className="mr-1.5" />
+                        Live Demo
+                      </Button>
+                    )}
+                    {project.githubLink && project.githubLink !== '#' && (
+                       <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-primary hover:text-accent transition-colors duration-300 text-xs"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent Link navigation
+                          window.open(project.githubLink!, '_blank', 'noopener,noreferrer');
+                        }}
+                       >
+                        <Github size={16} className="mr-1.5" />
+                        View Code
+                      </Button>
+                    )}
+                  </CardFooter>
+                </div>
+              </Card>
+            </Link>
           );
-
-          if (cardIsALink) {
-            return (
-              <Link key={project.title} href={project.liveLink!} target="_blank" rel="noopener noreferrer" className="group block h-full">
-                {projectCardContent}
-              </Link>
-            );
-          } else {
-            return (
-              <div key={project.title} className="group block h-full">
-                {projectCardContent}
-              </div>
-            );
-          }
         })}
       </div>
        <div className="text-center mt-12">
@@ -321,3 +301,5 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
+
+    
