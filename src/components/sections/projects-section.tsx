@@ -162,27 +162,31 @@ export const projectsData = [
     outcomeAndImpact: 'The simulation tool has been adopted in workshops and training programs, significantly improving participants\' understanding of project trade-offs and decision-making. It offers a dynamic alternative to traditional learning methods.'
   },
   {
-    id: generateSlug('Weather Dashboard'),
-    title: 'Weather Dashboard',
-    description: 'A sleek weather dashboard displaying real-time weather information from a third-party API. Features include city search and 5-day forecast.',
+    id: generateSlug('Nonlinear Cancer Treatment Model'),
+    title: 'Nonlinear Cancer Treatment Model',
+    description: 'Development of a mathematical model to simulate nonlinear dynamics of cancer growth and optimize treatment strategies. This project involved differential equations, parameter estimation, and sensitivity analysis.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'climate app',
+    imageHint: 'mathematical model graph',
     liveLink: '#',
     githubLink: '#',
-    tags: ['React', 'API Integration', 'Chart.js'],
-    objective: 'To provide users with up-to-date weather information in a visually appealing and easy-to-understand format.',
+    tags: ['Mathematical Modeling', 'Bioengineering', 'Cancer Research', 'Differential Equations', 'Simulation'],
+    objective: 'To create a predictive model for cancer progression under various treatment regimens, aiding in the personalization of therapy.',
     requirements: [
-        'Fetch weather data from a reliable API (e.g., OpenWeatherMap).',
-        'Allow users to search for weather by city.',
-        'Display current weather conditions and a multi-day forecast.',
-        'Visualize weather data using charts.'
+      'Model nonlinear tumor growth dynamics.',
+      'Incorporate effects of chemotherapy and immunotherapy.',
+      'Parameterize the model using clinical or experimental data.',
+      'Perform sensitivity analysis to identify key parameters.',
+      'Simulate and compare different treatment protocols.'
     ],
     technicalProcess: [
-        'Frontend built with React and styled components.',
-        'Integrated a third-party weather API for data retrieval.',
-        'Used Chart.js for displaying temperature trends and forecast data.'
+      'Literature review of existing cancer models and treatment mechanisms.',
+      'Formulation of a system of nonlinear ordinary differential equations.',
+      'Implementation of the model in a computational environment (e.g., MATLAB, Python).',
+      'Parameter estimation using optimization techniques.',
+      'Validation of the model against known biological behaviors.',
+      'Simulation of treatment scenarios and analysis of outcomes.'
     ],
-    outcomeAndImpact: 'Created a popular utility app that provides quick and accurate weather information, praised for its intuitive UI.'
+    outcomeAndImpact: 'Developed a robust nonlinear model capable of simulating complex cancer dynamics and treatment responses. The model provides a framework for exploring novel therapeutic strategies and has potential to contribute to personalized medicine approaches in oncology.'
   },
   {
     id: generateSlug('Recipe Finder App'),
