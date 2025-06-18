@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Github, Target, ListChecks, Cpu, TrendingUp, FileText } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Target, ListChecks, Cpu, TrendingUp, FileText, Images } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 interface ProjectDetailPageProps {
@@ -64,8 +64,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <Image 
                 src={project.imageUrl} 
                 alt={project.title} 
-                layout="fill" 
-                objectFit="cover"
+                fill={true}
+                style={{ objectFit: 'cover' }}
                 data-ai-hint={project.imageHint}
               />
             </div>
@@ -97,32 +97,73 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           </section>
           
           <Separator className="my-8" />
+          
+          <section className="mb-8 prose prose-lg max-w-none text-foreground">
+            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Target size={24} className="mr-3 text-primary" />Project Objective</h2>
+            <p className="leading-relaxed">{project.objective}</p>
+          </section>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-            <section className="prose max-w-none text-foreground">
-              <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Target size={24} className="mr-3 text-primary" />Objective</h2>
-              <p className="leading-relaxed">{project.objective}</p>
-            </section>
+          <Separator className="my-8" />
 
-            <section className="prose max-w-none text-foreground">
-              <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><ListChecks size={24} className="mr-3 text-primary" />Key Requirements</h2>
-              <ul className="list-disc pl-5 space-y-1 leading-relaxed">
-                {project.requirements.map((req, index) => <li key={index}>{req}</li>)}
-              </ul>
-            </section>
+          <section className="mb-8 prose prose-lg max-w-none text-foreground">
+            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><ListChecks size={24} className="mr-3 text-primary" />Specifications</h2>
+            <ul className="list-disc pl-5 space-y-1 leading-relaxed">
+              {project.requirements.map((req, index) => <li key={index}>{req}</li>)}
+            </ul>
+          </section>
 
-            <section className="prose max-w-none text-foreground md:col-span-2">
-              <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
-              <ul className="list-disc pl-5 space-y-1 leading-relaxed">
-                {project.technicalProcess.map((step, index) => <li key={index}>{step}</li>)}
-              </ul>
-            </section>
+          <Separator className="my-8" />
 
-            <section className="prose max-w-none text-foreground md:col-span-2">
-              <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-              <p className="leading-relaxed">{project.outcomeAndImpact}</p>
-            </section>
-          </div>
+          <section className="mb-8 prose prose-lg max-w-none text-foreground">
+            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+            <ul className="list-disc pl-5 space-y-1 leading-relaxed">
+              {project.technicalProcess.map((step, index) => <li key={index}>{step}</li>)}
+            </ul>
+          </section>
+
+          <Separator className="my-8" />
+
+          <section className="mb-8 prose prose-lg max-w-none text-foreground">
+            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+            <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+          </section>
+
+          <Separator className="my-8" />
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {/* Placeholder for additional images. Add more Image components here as needed. */}
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Additional project image 1" 
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
+                  data-ai-hint="project details"
+                />
+              </div>
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Additional project image 2" 
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
+                  data-ai-hint="interface screenshot"
+                />
+              </div>
+               <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <Image 
+                  src="https://placehold.co/600x400.png" 
+                  alt="Additional project image 3" 
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
+                  data-ai-hint="feature showcase"
+                />
+              </div>
+            </div>
+          </section>
+
         </article>
       </main>
       <Footer />
@@ -130,10 +171,4 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   );
 }
 
-// This function can be used if you plan to pre-render these pages with Next.js SSG.
-// For dynamic server-side rendering as implemented above, it's not strictly necessary for this setup.
-// export async function generateStaticParams() {
-//   return projectsData.map(project => ({
-//     id: project.id,
-//   }));
-// }
+    
