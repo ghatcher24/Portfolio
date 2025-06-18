@@ -30,12 +30,11 @@ const experienceData = [
     imageHint: 'tech company'
   },
   {
-    company: 'Startup Hub Co.',
-    // This entry now has multiple positions
+    company: 'University of Massachusetts Amherst',
     positions: [
       {
-        title: 'Lead Intern Developer',
-        dates: 'Jul 2016 - Aug 2016',
+        title: 'Graduate Teachers Assistant - Senior Design - Industrial Automation',
+        dates: 'August 2024 - May 2025',
         description: [
           'Led a small team of interns on a feature sub-project for the main web platform.',
           'Presented project demo to senior management and received positive feedback.',
@@ -62,7 +61,7 @@ const experienceData = [
       }
     ],
     imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'startup office'
+    imageHint: 'university campus'
   }
 ];
 
