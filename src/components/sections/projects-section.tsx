@@ -39,6 +39,33 @@ export const projectsData = [
     outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
   },
   {
+    id: generateSlug('Pneumatic Soft Gripper'),
+    title: 'Pneumatic Soft Gripper',
+    description: 'Design and development of a novel pneumatic soft gripper for delicate object manipulation. This project involved material selection, FEA analysis, and prototype testing.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'robotic gripper',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Robotics', 'Pneumatics', 'Soft Robotics', 'Mechanical Design', 'Prototyping'],
+    objective: 'To create a versatile and gentle soft robotic gripper capable of handling a variety of fragile objects without causing damage.',
+    requirements: [
+      'Ability to grasp objects of varying shapes and sizes.',
+      'Gentle handling to prevent damage to delicate items.',
+      'Actuation using standard pneumatic pressure.',
+      'Durable material selection for repeated use.',
+      'Cost-effective design for potential manufacturing.'
+    ],
+    technicalProcess: [
+      'Conceptual design and sketching of gripper fingers and palm.',
+      'Material research and selection for flexibility and durability (e.g., silicone).',
+      'CAD modeling of the gripper components and mold.',
+      'Finite Element Analysis (FEA) to simulate deformation and stress under pressure.',
+      'Fabrication of a prototype using 3D printed molds and casting.',
+      'Experimental testing with various objects to evaluate performance.'
+    ],
+    outcomeAndImpact: 'Successfully developed a functional prototype of the pneumatic soft gripper that demonstrated effective and gentle grasping. The design has potential applications in automated assembly lines for fragile components and in human-robot interaction.'
+  },
+  {
     id: generateSlug('12:1 Gearbox'),
     title: '12:1 Gearbox',
     description: 'A collaborative task management application designed to help teams organize, track, and manage their work effectively. Features include drag-and-drop boards, real-time updates, and user roles.',
@@ -107,33 +134,6 @@ export const projectsData = [
         'Implemented user authentication using NextAuth.js.'
     ],
     outcomeAndImpact: 'Provided a fast, secure, and easy-to-use blogging solution, adopted by several content creators for its modern stack and features.'
-  },
-  {
-    id: generateSlug('Pneumatic Soft Gripper'),
-    title: 'Pneumatic Soft Gripper',
-    description: 'Design and development of a novel pneumatic soft gripper for delicate object manipulation. This project involved material selection, FEA analysis, and prototype testing.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'robotic gripper',
-    liveLink: '#',
-    githubLink: '#',
-    tags: ['Robotics', 'Pneumatics', 'Soft Robotics', 'Mechanical Design', 'Prototyping'],
-    objective: 'To create a versatile and gentle soft robotic gripper capable of handling a variety of fragile objects without causing damage.',
-    requirements: [
-      'Ability to grasp objects of varying shapes and sizes.',
-      'Gentle handling to prevent damage to delicate items.',
-      'Actuation using standard pneumatic pressure.',
-      'Durable material selection for repeated use.',
-      'Cost-effective design for potential manufacturing.'
-    ],
-    technicalProcess: [
-      'Conceptual design and sketching of gripper fingers and palm.',
-      'Material research and selection for flexibility and durability (e.g., silicone).',
-      'CAD modeling of the gripper components and mold.',
-      'Finite Element Analysis (FEA) to simulate deformation and stress under pressure.',
-      'Fabrication of a prototype using 3D printed molds and casting.',
-      'Experimental testing with various objects to evaluate performance.'
-    ],
-    outcomeAndImpact: 'Successfully developed a functional prototype of the pneumatic soft gripper that demonstrated effective and gentle grasping. The design has potential applications in automated assembly lines for fragile components and in human-robot interaction.'
   },
   {
     id: generateSlug('Project Management Simulation'),
@@ -354,4 +354,6 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
+    
+
     
