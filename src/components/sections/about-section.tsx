@@ -42,7 +42,7 @@ export function AboutSection() {
             </div>
           </div>
         </div>
-        <div className="md:col-span-2 md:pl-6">
+        <div className="md:col-span-2">
           <p className="text-lg md:text-xl mb-6 leading-relaxed text-foreground">
             Hello! I&apos;m a passionate and creative Full Stack Developer with a keen eye for design and user experience.
             I thrive on transforming complex problems into elegant, intuitive solutions. My journey in tech has been driven by a constant curiosity and a desire to build meaningful applications that make a difference.
