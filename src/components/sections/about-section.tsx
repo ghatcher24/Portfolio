@@ -1,18 +1,22 @@
 
 import { SectionWrapper } from '@/components/layout/section-wrapper';
 import { Badge } from '@/components/ui/badge';
-import { User, Brain, Code, Database, Cloud } from 'lucide-react';
+import { User, Code, Sigma, Cuboid, DraftingCompass, Calculator, FunctionSquare, Clipboard, FileText, Wrench, Flame } from 'lucide-react';
 import Image from 'next/image';
 
 const skills = [
-  { name: 'React', icon: Code },
-  { name: 'Next.js', icon: Code },
-  { name: 'TypeScript', icon: Code },
-  { name: 'Node.js', icon: Code },
+  { name: 'MATLAB', icon: Sigma },
+  { name: 'SOLIDWORKS', icon: Cuboid },
+  { name: 'OnShape', icon: DraftingCompass },
+  { name: 'Inventor', icon: Cuboid },
+  { name: 'ANSYS', icon: Calculator },
+  { name: 'COMSOL', icon: FunctionSquare },
   { name: 'Python', icon: Code },
-  { name: 'UI/UX Design', icon: Brain },
-  { name: 'SQL & NoSQL', icon: Database },
-  { name: 'Cloud Platforms', icon: Cloud },
+  { name: 'Visual BASIC', icon: Code },
+  { name: 'Microsoft Office Suite', icon: Clipboard },
+  { name: 'Google Suite', icon: FileText },
+  { name: 'Shop Machinery and Hand Tools', icon: Wrench },
+  { name: 'Basic Soldering and Welding', icon: Flame },
 ];
 
 export function AboutSection() {
