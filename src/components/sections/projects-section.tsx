@@ -142,7 +142,7 @@ export const projectsData = [
     imageHint: 'management simulation',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Work Breakdown Structure', 'Project Scheduling', 'GANNT Chart', 'Recovery', 'Cost Management', 'Risk'],
+    tags: ['Work Breakdown Structure', 'Project Scheduling', 'GANNT Chart', 'Recovery', 'Cost Management', 'Risk Management'],
     objective: 'To provide an engaging and effective way for users to learn and practice project management skills in a risk-free environment.',
     requirements: [
       'Realistic project scenarios with varying complexities.',
@@ -187,7 +187,7 @@ export const projectsData = [
     ],
     outcomeAndImpact: 'Developed a robust nonlinear model capable of simulating complex cancer dynamics and treatment responses. The model provides a framework for exploring novel therapeutic strategies and has potential to contribute to personalized medicine approaches in oncology.'
   },
-  {
+   {
     id: generateSlug('HA 6.5 Bone Screw'),
     title: 'HA 6.5 Bone Screw',
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
@@ -216,7 +216,7 @@ export const projectsData = [
     outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
   },
   {
-    id: generateSlug('Catheter Hub w Hemostatic Lock'),
+    id: generateSlug('Catheter Hub w/ Hemostatic Lock'),
     title: 'Catheter Hub w/ Hemostatic Lock',
     description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
     imageUrl: '/images/CatheterHubCover.JPG',
