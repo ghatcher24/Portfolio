@@ -102,13 +102,13 @@ export function ExperienceSection() {
                 <div className="space-y-6">
                   {exp.positions.map((pos, posIndex) => (
                     <div key={posIndex} className={posIndex > 0 ? "pt-4 border-t border-border/50" : ""}>
-                      <p className="text-sm text-muted-foreground mb-1">{pos.dates}</p> {/* Dates first */}
                       <div className="mb-2"> {/* Title and Subtitle container */}
                         <h4 className="text-lg font-semibold text-accent">{pos.title}</h4>
                         {pos.subtitle && (
                           <p className="text-sm text-muted-foreground">{pos.subtitle}</p>
                         )}
                       </div>
+                      <p className="text-sm text-muted-foreground mb-1">{pos.dates}</p> {/* Dates after title/subtitle */}
                       <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm">
                         {pos.description.map((item, i) => (
                           <li key={i}>{item}</li>
