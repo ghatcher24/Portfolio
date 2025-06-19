@@ -26,8 +26,8 @@ const experienceData = [
       'Participated in agile development cycles, including sprint planning and daily stand-ups.',
       'Contributed to the successful launch of three major product updates.',
     ],
-    imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'tech company'
+    imageUrl: '/images/CofabLogo.jpg',
+    imageHint: 'Cofab Design logo'
   },
   {
     company: 'University of Massachusetts Amherst',
