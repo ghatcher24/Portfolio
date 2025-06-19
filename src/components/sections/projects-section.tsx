@@ -214,6 +214,33 @@ export const projectsData = [
       'Iterated on design based on experimental results and usability feedback.'
     ],
     outcomeAndImpact: 'Successfully developed a prototype IRE ablation system demonstrating precise and controllable tissue ablation. The device shows promise for applications in treating tumors and other pathological tissues with improved selectivity and reduced side effects compared to traditional methods.'
+  },
+  {
+    id: generateSlug('6 DOF Adaptive Control'),
+    title: '6 DOF Adaptive Control',
+    description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'robotic arm control',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Robotics', 'Control Systems', 'Adaptive Control', '6 DOF', 'MATLAB', 'Simulink'],
+    objective: 'To design a robust adaptive controller that allows a 6 DOF robotic arm to maintain trajectory tracking accuracy despite unknown or changing dynamic parameters.',
+    requirements: [
+      'Controller must adapt to at least a 50% variation in payload mass.',
+      'Real-time implementation with acceptable computational load.',
+      'Stability guarantees for the adaptive control law.',
+      'Performance comparison with conventional PID controllers.',
+      'Simulation validation in MATLAB/Simulink environment.'
+    ],
+    technicalProcess: [
+      'Derived the dynamic model of the 6 DOF robotic arm.',
+      'Designed a model reference adaptive control (MRAC) scheme.',
+      'Developed Lyapunov-based adaptation laws for parameter estimation.',
+      'Implemented the controller and robot dynamics in Simulink.',
+      'Conducted extensive simulations with varying payloads and disturbances.',
+      'Analyzed controller performance in terms of tracking error and adaptation speed.'
+    ],
+    outcomeAndImpact: 'The adaptive controller significantly outperformed traditional PID controllers in handling payload variations, maintaining precise trajectory tracking. This work demonstrates the potential of adaptive control for enhancing robustness and versatility in industrial robotic applications.'
   }
 ];
 
@@ -296,3 +323,4 @@ export function ProjectsSection() {
     
 
     
+
