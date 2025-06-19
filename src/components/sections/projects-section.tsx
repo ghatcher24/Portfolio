@@ -13,7 +13,7 @@ export const projectsData = [
   {
     id: generateSlug('Pneumatic Soft Gripper'),
     title: 'Pneumatic Soft Gripper',
-    description: 'Design and development of a novel pneumatic soft gripper for delicate object manipulation. This project involved material selection, FEA analysis, and prototype testing.',
+    description: 'A Soft robotic gripper designed and developed for the purpose of manipulating plastic straws. The design of the actuator involved parameter optimization and selection through parameter sweeping. Following design, resin molds were fabricated and the gripper was prototyped and its performance was evaluated.',
     imageUrl: '/images/GripperCover.jpg',
     imageHint: 'robotic gripper',
     liveLink: '#',
@@ -89,7 +89,7 @@ export const projectsData = [
     ],
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
-  {
+    {
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
