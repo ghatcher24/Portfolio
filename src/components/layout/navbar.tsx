@@ -3,12 +3,12 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, User, Briefcase, Award, FileText, Send } from 'lucide-react';
+import { Menu, X, User, Briefcase, Award, FileText, Send, CalendarDays } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
   { href: '/#about', label: 'About', icon: User },
-  { href: '/projects', label: 'Projects', icon: Briefcase },
+  { href: '/projects', label: 'Projects', icon: CalendarDays },
   { href: '/#experience', label: 'Experience', icon: Award },
   { href: '/#resume', label: 'Resume', icon: FileText },
   { href: '/#contact', label: 'Contact', icon: Send },
