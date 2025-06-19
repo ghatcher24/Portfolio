@@ -142,7 +142,7 @@ export const projectsData = [
     imageHint: 'management simulation',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Simulation', 'Project Management', 'Gamification', 'Educational Tool', 'React'],
+    tags: ['Work Breakdown Structure', 'Project Scheduling', 'GANNT Chart', 'Recovery', 'Cost Management', 'Risk'],
     objective: 'To provide an engaging and effective way for users to learn and practice project management skills in a risk-free environment.',
     requirements: [
       'Realistic project scenarios with varying complexities.',
@@ -346,6 +346,3 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
-
-    
-    
