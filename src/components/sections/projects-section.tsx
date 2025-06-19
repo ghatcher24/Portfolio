@@ -190,7 +190,7 @@ export const projectsData = [
    {
     id: generateSlug('HA 6.5 Bone Screw'),
     title: 'HA 6.5 Bone Screw',
-    description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
+    description: 'Feasibility of using polymer screw evaluated for pediatric fracture fixation. Bone screw designed and analyzed using computation and finite element analysis. Uniaxial tensile testing performed on prototype.',
     imageUrl: '/images/HA65Screw.jpg',
     imageHint: 'bone screw',
     liveLink: '#',
