@@ -119,8 +119,8 @@ export function ExperienceSection() {
                       {pos.focusAreas ? (
                         <div className="space-y-4">
                           {pos.focusAreas.map((area, areaIndex) => (
-                            <div key={areaIndex} className="ml-0"> {/* No extra indent for area container, h5 will be styled */}
-                              <h5 className="text-lg font-medium text-accent/90 mb-1">{area.areaTitle}</h5>
+                            <div key={areaIndex} className="ml-0">
+                              <h5 className="text-md text-primary font-semibold mb-1">{area.areaTitle}</h5>
                               <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm ml-5">
                                 {area.description.map((item, i) => (
                                   <li key={i}>{item}</li>
