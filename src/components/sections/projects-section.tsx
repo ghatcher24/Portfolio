@@ -168,7 +168,7 @@ export const projectsData = [
     imageHint: 'mathematical model graph',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Mathematical Modeling', 'Bioengineering', 'Cancer Research', 'Differential Equations', 'Simulation'],
+    tags: ['Nonlinear Modeling', '3 Degrees of Freedom', 'Chemotherapy', 'Stability Analysis', 'Matlab', 'Bifurcation Study'],
     objective: 'To create a predictive model for cancer progression under various treatment regimens, aiding in the personalization of therapy.',
     requirements: [
       'Model nonlinear tumor growth dynamics.',
