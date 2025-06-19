@@ -89,7 +89,7 @@ export const projectsData = [
     ],
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
-   {
+  {
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
@@ -97,7 +97,7 @@ export const projectsData = [
     imageHint: 'machine prototype',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Customer Communication', 'Scope Management', 'Process Design', 'Pneumatic Control', 'CNC Machining', 'FDM 3D Printing'],
+    tags: ['Customer Communication', 'Scope Management', 'Process Design', 'Pneumatic Control', 'CNC Machining', '3D Printing'],
     objective: 'To build a performant and SEO-friendly platform for content creators to publish articles and engage with readers.',
     requirements: [
         'User authentication for authors.',
@@ -289,7 +289,7 @@ export function ProjectsSection() {
                       <div className="flex flex-col flex-grow p-6">
                         <CardHeader className="p-0 pb-4">
                           <CardTitle className="text-xl md:text-2xl text-accent">{project.title}</CardTitle>
-                          <CardDescription className="text-sm text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
+                          <CardDescription className="text-sm text-muted-foreground pt-1 line-clamp-2">{project.tags.join(' • ')}</CardDescription>
                         </CardHeader>
                         <CardContent className="p-0 flex-grow">
                           <p className="text-foreground leading-relaxed text-sm mb-4 line-clamp-4">{project.description}</p>
@@ -346,3 +346,6 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
+
+    
+    
