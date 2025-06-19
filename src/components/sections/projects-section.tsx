@@ -13,7 +13,7 @@ export const projectsData = [
   {
     id: generateSlug('Pneumatic Soft Gripper'),
     title: 'Pneumatic Soft Gripper',
-    description: 'Design and development of soft robotic gripper for the purpose of manipulating plastic straws. The design of the actuator involved parameter optimization and selection through parameter sweeping. Following design, resin molds were fabricated and the gripper was prototyped and its performance was evaluated.',
+    description: 'Design and development of soft robotic gripper for the purpose of manipulating plastic straws. Actuator parameters optimized and selected through parameter sweeping. Resin molds were fabricated and gripper was prototyped and it’s performance evaluated.',
     imageUrl: '/images/GripperCover.jpg',
     imageHint: 'robotic gripper',
     liveLink: '#',
