@@ -67,7 +67,7 @@ export const projectsData = [
   {
     id: generateSlug('Inline 12:1 Gearbox'),
     title: 'Inline 12:1 Gearbox',
-    description: 'A collaborative task management application designed to help teams organize, track, and manage their work effectively. Features include drag-and-drop boards, real-time updates, and user roles.',
+    description: 'Design of compound gear train to achieve 12:1 reduction ratio within 22 millimeter casing. Gear combinations computationally established and then validated and selected using gear stress analysis. Casing modeled for selected configuration.',
     imageUrl: '/images/GearTrainCover.JPG',
     imageHint: 'gearbox assembly',
     liveLink: '#',
