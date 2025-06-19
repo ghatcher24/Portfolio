@@ -45,7 +45,7 @@ export const projectsData = [
     imageHint: 'medical ablation device',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Medical Device', 'IRE', 'Bioengineering', 'Electrode Design', 'High Voltage Pulsing'],
+    tags: ['Medical Device', 'Ablation Analysis', 'Comsol', 'SolidWorks Design', 'Market Research'],
     objective: 'To develop a safe and effective IRE ablation device for targeted tissue destruction with minimal collateral damage to surrounding healthy tissue.',
     requirements: [
       'Precise delivery of high-voltage, short-duration electrical pulses.',
@@ -90,28 +90,6 @@ export const projectsData = [
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
   {
-    id: generateSlug('Angiographic Catheter'),
-    title: 'Angiographic Catheter',
-    description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
-    imageUrl: '/images/CatheterCover.jpg',
-    imageHint: 'medical catheter',
-    liveLink: '#',
-    githubLink: '#',
-    tags: ['Catheter Design', 'Material Sourcing', 'Resilient Modeling', 'Solidworks', 'Medical Compliance', 'ISO 594'],
-    objective: 'To establish an online presence and showcase foundational web development skills.',
-    requirements: [
-        'Clean and simple design.',
-        'Sections for about, projects, and contact.',
-        'Responsive across different screen sizes.'
-    ],
-    technicalProcess: [
-        'Structured content using semantic HTML5.',
-        'Styled with custom CSS, focusing on responsiveness.',
-        'Added interactivity with vanilla JavaScript.'
-    ],
-    outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
-  },
-  {
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
@@ -133,6 +111,28 @@ export const projectsData = [
         'Implemented user authentication using NextAuth.js.'
     ],
     outcomeAndImpact: 'Provided a fast, secure, and easy-to-use blogging solution, adopted by several content creators for its modern stack and features.'
+  },
+  {
+    id: generateSlug('Angiographic Catheter'),
+    title: 'Angiographic Catheter',
+    description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
+    imageUrl: '/images/CatheterCover.jpg',
+    imageHint: 'medical catheter',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Catheter Design', 'Material Sourcing', 'Resilient Modeling', 'Solidworks', 'Medical Compliance', 'ISO 594'],
+    objective: 'To establish an online presence and showcase foundational web development skills.',
+    requirements: [
+        'Clean and simple design.',
+        'Sections for about, projects, and contact.',
+        'Responsive across different screen sizes.'
+    ],
+    technicalProcess: [
+        'Structured content using semantic HTML5.',
+        'Styled with custom CSS, focusing on responsiveness.',
+        'Added interactivity with vanilla JavaScript.'
+    ],
+    outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
   },
   {
     id: generateSlug('Project Management Simulation'),
