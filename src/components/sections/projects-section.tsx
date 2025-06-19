@@ -46,7 +46,7 @@ export const projectsData = [
     imageHint: 'robotic gripper',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Robotics', 'Pneumatics', 'Soft Robotics', 'Mechanical Design', 'Prototyping'],
+    tags: ['Soft Robotics', 'Parameter Optimization', 'FDM 3D Printing', 'Resin Molding'],
     objective: 'To create a versatile and gentle soft robotic gripper capable of handling a variety of fragile objects without causing damage.',
     requirements: [
       'Ability to grasp objects of varying shapes and sizes.',
@@ -349,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
