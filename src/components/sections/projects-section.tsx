@@ -139,8 +139,8 @@ export const projectsData = [
     id: generateSlug('Project Management Simulation'),
     title: 'Project Management Simulation',
     description: 'An interactive simulation tool designed to teach project management principles through hands-on scenarios and decision-making exercises.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'simulation interface',
+    imageUrl: '/images/ManageCover.JPG',
+    imageHint: 'management simulation',
     liveLink: '#',
     githubLink: '#',
     tags: ['Simulation', 'Project Management', 'Gamification', 'Educational Tool', 'React'],
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
