@@ -14,8 +14,8 @@ const experienceData = [
       'Mentored junior engineers and conducted code reviews to maintain high-quality standards.',
       'Collaborated with product managers and designers to translate requirements into technical specifications.',
     ],
-    imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'company logo'
+    imageUrl: '/images/ThermofabLogo.jpg',
+    imageHint: 'Thermofab logo'
   },
   {
     company: 'Cofab Design',
@@ -92,7 +92,7 @@ export function ExperienceSection() {
                   width={80} 
                   height={80} 
                   data-ai-hint={exp.imageHint}
-                  className="rounded-lg border border-border shadow-sm"
+                  className="rounded-lg border border-border shadow-sm object-contain" // Added object-contain
                 />
               </div>
             </CardHeader>
