@@ -89,7 +89,7 @@ export const projectsData = [
     ],
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
-  {
+   {
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
@@ -97,7 +97,7 @@ export const projectsData = [
     imageHint: 'machine prototype',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Customer Communication', 'Scope Management', 'Manufacturing Process Design', 'Pneumatic Control', 'CNC Machining', 'FDM 3D Printing'],
+    tags: ['Customer Communication', 'Scope Management', 'Process Design', 'Pneumatic Control', 'CNC Machining', 'FDM 3D Printing'],
     objective: 'To build a performant and SEO-friendly platform for content creators to publish articles and engage with readers.',
     requirements: [
         'User authentication for authors.',
@@ -216,7 +216,7 @@ export const projectsData = [
     outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
   },
   {
-    id: generateSlug('Catheter Hub w/ Hemostatic Lock'),
+    id: generateSlug('Catheter Hub w Hemostatic Lock'),
     title: 'Catheter Hub w/ Hemostatic Lock',
     description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
     imageUrl: '/images/CatheterHubCover.JPG',
