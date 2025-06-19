@@ -44,11 +44,10 @@ export function AboutSection() {
         </div>
         <div className="md:col-span-2">
           <p className="text-lg md:text-xl mb-6 leading-relaxed text-foreground">
-            Hello! I&apos;m a passionate and creative Full Stack Developer with a keen eye for design and user experience.
-            I thrive on transforming complex problems into elegant, intuitive solutions. My journey in tech has been driven by a constant curiosity and a desire to build meaningful applications that make a difference.
+            Hi, I&apos;m Gordon Hatcher! Recently I graduated from the University of Massachusetts Amherst with a Masters in Mechanical Engineering and am now looking for an opportunity to take the next big step in my professional career. I thrive on decomposing complex engineering challenges and creating intuitive solutions to tackle them. My academic journey has been driven by an intense curiosity and a desire to better the world around me.
           </p>
           <p className="text-lg md:text-xl leading-relaxed text-foreground">
-            When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
+            In my free time I enjoy skiing, rock climbing and modifying my 1992 Mazda Miata.
           </p>
         </div>
       </div>
