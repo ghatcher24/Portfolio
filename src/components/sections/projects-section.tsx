@@ -40,7 +40,7 @@ export const projectsData = [
   {
     id: generateSlug('IRE Ablation Device'),
     title: 'IRE Ablation Device',
-    description: 'Design and development of a medical device utilizing Irreversible Electroporation (IRE) for precise tissue ablation. This project focused on electrode design, pulse generation, and treatment planning.',
+    description: 'Evaluation of numerous electrode configurations for performing IRE Ablation Procedure. Electrode spacing and sizing was tested using Comsol cell death modeling to optimize design. Preliminary modeling of catheter based design was performed within SolidWorks.',
     imageUrl: '/images/AblationCover.JPG',
     imageHint: 'medical ablation device',
     liveLink: '#',
