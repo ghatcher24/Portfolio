@@ -10,9 +10,8 @@ const experienceData = [
     position: 'Process Engineering Intern',
     dates: 'June 2024 - August 2024',
     description: [
-      'Led the development of key features for a flagship SaaS product, improving performance by 20%.',
-      'Mentored junior engineers and conducted code reviews to maintain high-quality standards.',
-      'Collaborated with product managers and designers to translate requirements into technical specifications.',
+      'Developed QMS procedures relevant for transition to ISO 13485 compliance and performed installation qualification on existing machinery.',
+      'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure. Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
     imageUrl: '/images/ThermofabLogo.jpg',
     imageHint: 'Thermofab logo'
@@ -88,7 +87,6 @@ export function ExperienceSection() {
                   <Building2 size={24} className="mr-3 text-primary" />
                   {exp.company}
                 </CardTitle>
-                {/* Render position and dates only if they exist (for single-position entries) */}
                 {exp.position && exp.dates && !exp.positions && (
                   <>
                     <CardDescription className="text-md text-primary font-semibold mt-1">{exp.position}</CardDescription>
@@ -108,7 +106,7 @@ export function ExperienceSection() {
               </div>
             </CardHeader>
             <CardContent>
-              {exp.positions ? ( // If entry has multiple positions
+              {exp.positions ? ( 
                 <div className="space-y-6">
                   {exp.positions.map((pos, posIndex) => (
                     <div key={posIndex} className={posIndex > 0 ? "pt-6 border-t border-border/50" : ""}>
@@ -139,7 +137,7 @@ export function ExperienceSection() {
                     </div>
                   ))}
                 </div>
-              ) : ( // Else, render single position's description
+              ) : ( 
                 exp.description && (
                   <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
                     {exp.description.map((item, i) => (
