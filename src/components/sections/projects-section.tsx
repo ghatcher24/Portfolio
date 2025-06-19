@@ -115,7 +115,7 @@ export const projectsData = [
   {
     id: generateSlug('Angiographic Catheter'),
     title: 'Angiographic Catheter',
-    description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
+    description: 'Design of angiographic balloon catheter intended for drug delivery to pulmonary arteries. Developed to functional requirements with materials sourced from commercially available suppliers.',
     imageUrl: '/images/CatheterCover.jpg',
     imageHint: 'medical catheter',
     liveLink: '#',
