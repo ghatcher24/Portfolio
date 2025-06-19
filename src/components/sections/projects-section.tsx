@@ -38,32 +38,31 @@ export const projectsData = [
     outcomeAndImpact: 'Successfully developed a functional prototype of the pneumatic soft gripper that demonstrated effective and gentle grasping. The design has potential applications in automated assembly lines for fragile components and in human-robot interaction.'
   },
   {
-    id: generateSlug('HA 6.5 Bone Screw'),
-    title: 'HA 6.5 Bone Screw',
-    description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
-    imageUrl: '/images/HA65Screw.jpg',
-    imageHint: 'bone screw',
+    id: generateSlug('IRE Ablation Device'),
+    title: 'IRE Ablation Device',
+    description: 'Design and development of a medical device utilizing Irreversible Electroporation (IRE) for precise tissue ablation. This project focused on electrode design, pulse generation, and treatment planning.',
+    imageUrl: '/images/AblationCover.JPG',
+    imageHint: 'medical ablation device',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Orthopedic Design', 'SolidWorks', 'ANSYS', 'SLA 3D Printing', 'Instron Testing'],
-    objective: 'To develop a scalable and user-friendly online shopping experience that drives sales and customer satisfaction.',
+    tags: ['Medical Device', 'IRE', 'Bioengineering', 'Electrode Design', 'High Voltage Pulsing'],
+    objective: 'To develop a safe and effective IRE ablation device for targeted tissue destruction with minimal collateral damage to surrounding healthy tissue.',
     requirements: [
-      'Secure user authentication and profile management.',
-      'Dynamic product catalog with search and filtering.',
-      'Shopping cart functionality with persistent storage.',
-      'Integration with Stripe for secure payment processing.',
-      'Admin dashboard for managing products, orders, and users.',
-      'Responsive design for seamless experience across devices.'
+      'Precise delivery of high-voltage, short-duration electrical pulses.',
+      'Accurate electrode placement and configuration.',
+      'Real-time monitoring and feedback of treatment parameters.',
+      'Compliance with medical device safety standards.',
+      'User-friendly interface for clinicians.'
     ],
     technicalProcess: [
-      'Designed database schema for products, users, and orders.',
-      'Developed RESTful APIs using Next.js API routes for backend logic.',
-      'Implemented frontend components with React and styled with Tailwind CSS.',
-      'Integrated Stripe SDK for payment gateway.',
-      'Ensured state management using React Context/Redux for cart and user session.',
-      'Conducted thorough testing, including unit, integration, and E2E tests.'
+      'Researched principles of irreversible electroporation and existing devices.',
+      'Designed and simulated various electrode configurations using COMSOL.',
+      'Developed a high-voltage pulse generator with precise control.',
+      'Integrated safety mechanisms and monitoring systems.',
+      'Conducted ex-vivo and in-vitro testing to validate ablation zones.',
+      'Iterated on design based on experimental results and usability feedback.'
     ],
-    outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
+    outcomeAndImpact: 'Successfully developed a prototype IRE ablation system demonstrating precise and controllable tissue ablation. The device shows promise for applications in treating tumors and other pathological tissues with improved selectivity and reduced side effects compared to traditional methods.'
   },
   {
     id: generateSlug('Inline 12:1 Gearbox'),
@@ -189,34 +188,35 @@ export const projectsData = [
     outcomeAndImpact: 'Developed a robust nonlinear model capable of simulating complex cancer dynamics and treatment responses. The model provides a framework for exploring novel therapeutic strategies and has potential to contribute to personalized medicine approaches in oncology.'
   },
   {
-    id: generateSlug('IRE Ablation Device'),
-    title: 'IRE Ablation Device',
-    description: 'Design and development of a medical device utilizing Irreversible Electroporation (IRE) for precise tissue ablation. This project focused on electrode design, pulse generation, and treatment planning.',
-    imageUrl: '/images/AblationCover.JPG',
-    imageHint: 'medical ablation device',
+    id: generateSlug('HA 6.5 Bone Screw'),
+    title: 'HA 6.5 Bone Screw',
+    description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
+    imageUrl: '/images/HA65Screw.jpg',
+    imageHint: 'bone screw',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Medical Device', 'IRE', 'Bioengineering', 'Electrode Design', 'High Voltage Pulsing'],
-    objective: 'To develop a safe and effective IRE ablation device for targeted tissue destruction with minimal collateral damage to surrounding healthy tissue.',
+    tags: ['Orthopedic Design', 'SolidWorks', 'ANSYS', 'SLA 3D Printing', 'Instron Testing'],
+    objective: 'To develop a scalable and user-friendly online shopping experience that drives sales and customer satisfaction.',
     requirements: [
-      'Precise delivery of high-voltage, short-duration electrical pulses.',
-      'Accurate electrode placement and configuration.',
-      'Real-time monitoring and feedback of treatment parameters.',
-      'Compliance with medical device safety standards.',
-      'User-friendly interface for clinicians.'
+      'Secure user authentication and profile management.',
+      'Dynamic product catalog with search and filtering.',
+      'Shopping cart functionality with persistent storage.',
+      'Integration with Stripe for secure payment processing.',
+      'Admin dashboard for managing products, orders, and users.',
+      'Responsive design for seamless experience across devices.'
     ],
     technicalProcess: [
-      'Researched principles of irreversible electroporation and existing devices.',
-      'Designed and simulated various electrode configurations using COMSOL.',
-      'Developed a high-voltage pulse generator with precise control.',
-      'Integrated safety mechanisms and monitoring systems.',
-      'Conducted ex-vivo and in-vitro testing to validate ablation zones.',
-      'Iterated on design based on experimental results and usability feedback.'
+      'Designed database schema for products, users, and orders.',
+      'Developed RESTful APIs using Next.js API routes for backend logic.',
+      'Implemented frontend components with React and styled with Tailwind CSS.',
+      'Integrated Stripe SDK for payment gateway.',
+      'Ensured state management using React Context/Redux for cart and user session.',
+      'Conducted thorough testing, including unit, integration, and E2E tests.'
     ],
-    outcomeAndImpact: 'Successfully developed a prototype IRE ablation system demonstrating precise and controllable tissue ablation. The device shows promise for applications in treating tumors and other pathological tissues with improved selectivity and reduced side effects compared to traditional methods.'
+    outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
   },
   {
-    id: generateSlug('Catheter Hub w Hemostatic Lock'),
+    id: generateSlug('Catheter Hub w/ Hemostatic Lock'),
     title: 'Catheter Hub w/ Hemostatic Lock',
     description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
     imageUrl: '/images/CatheterHubCover.JPG',
@@ -349,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
