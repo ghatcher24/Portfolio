@@ -7,11 +7,11 @@ import { Menu, X, User, Briefcase, Award, FileText, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { href: '/#about', label: 'About', icon: User }, // Changed href
+  { href: '/#about', label: 'About', icon: User },
   { href: '/projects', label: 'Projects', icon: Briefcase },
-  { href: '#experience', label: 'Experience', icon: Award },
-  { href: '#resume', label: 'Resume', icon: FileText },
-  { href: '#contact', label: 'Contact', icon: Send },
+  { href: '/#experience', label: 'Experience', icon: Award },
+  { href: '/#resume', label: 'Resume', icon: FileText },
+  { href: '/#contact', label: 'Contact', icon: Send },
 ];
 
 export function Navbar() {
