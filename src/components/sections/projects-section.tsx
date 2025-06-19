@@ -137,12 +137,12 @@ export const projectsData = [
   {
     id: generateSlug('Project Management Simulation'),
     title: 'Project Management Simulation',
-    description: 'Creation of project plan and kick off presentation including: scope, work breakdown structure, schedule, recovery, risk management and cost management for the entirety of manufacturing line deployment.',
+    description: 'Creation of project plan and kick off presentation covering scope, work breakdown structure, schedule, recovery, risk management and cost management for deployment of a manufacturing product line.',
     imageUrl: '/images/ManageCover.JPG',
     imageHint: 'management simulation',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Work Breakdown Structure', 'Project Scheduling', 'GANNT Chart', 'Recovery', 'Cost Management', 'Risk Management'],
+    tags: ['Work Breakdown Structure', 'Project Scheduling', 'GANNT Chart', 'Recovery', 'Risk Management', 'Cost Management'],
     objective: 'To provide an engaging and effective way for users to learn and practice project management skills in a risk-free environment.',
     requirements: [
       'Realistic project scenarios with varying complexities.',
