@@ -90,6 +90,28 @@ export const projectsData = [
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
   {
+    id: generateSlug('Angiographic Catheter'),
+    title: 'Angiographic Catheter',
+    description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
+    imageUrl: '/images/CatheterCover.jpg',
+    imageHint: 'medical catheter',
+    liveLink: '#',
+    githubLink: '#',
+    tags: ['Catheter Design', 'Material Sourcing', 'Resilient Modeling', 'Solidworks', 'Medical Compliance', 'ISO 594'],
+    objective: 'To establish an online presence and showcase foundational web development skills.',
+    requirements: [
+        'Clean and simple design.',
+        'Sections for about, projects, and contact.',
+        'Responsive across different screen sizes.'
+    ],
+    technicalProcess: [
+        'Structured content using semantic HTML5.',
+        'Styled with custom CSS, focusing on responsiveness.',
+        'Added interactivity with vanilla JavaScript.'
+    ],
+    outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
+  },
+  {
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
@@ -111,28 +133,6 @@ export const projectsData = [
         'Implemented user authentication using NextAuth.js.'
     ],
     outcomeAndImpact: 'Provided a fast, secure, and easy-to-use blogging solution, adopted by several content creators for its modern stack and features.'
-  },
-  {
-    id: generateSlug('Angiographic Catheter'),
-    title: 'Angiographic Catheter',
-    description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
-    imageUrl: '/images/CatheterCover.jpg',
-    imageHint: 'medical catheter',
-    liveLink: '#',
-    githubLink: '#',
-    tags: ['Catheter Design', 'Material Sourcing', 'Resilient Modeling', 'Solidworks', 'Medical Compliance', 'ISO 594'],
-    objective: 'To establish an online presence and showcase foundational web development skills.',
-    requirements: [
-        'Clean and simple design.',
-        'Sections for about, projects, and contact.',
-        'Responsive across different screen sizes.'
-    ],
-    technicalProcess: [
-        'Structured content using semantic HTML5.',
-        'Styled with custom CSS, focusing on responsiveness.',
-        'Added interactivity with vanilla JavaScript.'
-    ],
-    outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
   },
   {
     id: generateSlug('Project Management Simulation'),
@@ -223,7 +223,7 @@ export const projectsData = [
     imageHint: 'catheter hub',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Robotics', 'Control Systems', 'Adaptive Control', '6 DOF', 'MATLAB', 'Simulink'],
+    tags: ['Design Requirement Matrix', 'Hemostatic Design', 'DFMEA', 'DHF Management', 'ISO 594', 'FDA 21.CFR 820.30', 'SLA 3D Printing'],
     objective: 'To design a robust adaptive controller that allows a 6 DOF robotic arm to maintain trajectory tracking accuracy despite unknown or changing dynamic parameters.',
     requirements: [
       'Controller must adapt to at least a 50% variation in payload mass.',
