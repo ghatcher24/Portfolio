@@ -163,7 +163,7 @@ export const projectsData = [
   {
     id: generateSlug('Nonlinear Cancer Treatment Model'),
     title: 'Nonlinear Cancer Treatment Model',
-    description: 'Development of a mathematical model to simulate nonlinear dynamics of cancer growth and optimize treatment strategies. This project involved differential equations, parameter estimation, and sensitivity analysis.',
+    description: 'Evaluation of existing nonlinear models that simulated dynamics of cancer growth and treatment. Fixed point and bifurcation analysis conducted for untreated and chemotheraputrically treated tumors',
     imageUrl: '/images/CancerCover.JPG',
     imageHint: 'mathematical model graph',
     liveLink: '#',
