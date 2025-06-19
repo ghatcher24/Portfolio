@@ -14,7 +14,7 @@ export const projectsData = [
     id: generateSlug('HA 6.5 Bone Screw'),
     title: 'HA 6.5 Bone Screw',
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
-    imageUrl: '/images/HA65Screw.jpg',
+    imageUrl: '/images/HA65Screw.jpg', // Corrected to .jpg
     imageHint: 'bone screw',
     liveLink: '#',
     githubLink: '#',
@@ -42,7 +42,7 @@ export const projectsData = [
     id: generateSlug('Pneumatic Soft Gripper'),
     title: 'Pneumatic Soft Gripper',
     description: 'Design and development of a novel pneumatic soft gripper for delicate object manipulation. This project involved material selection, FEA analysis, and prototype testing.',
-    imageUrl: '/images/GripperCover.jpg',
+    imageUrl: '/images/GripperCover.jpg', // Corrected to .jpg
     imageHint: 'robotic gripper',
     liveLink: '#',
     githubLink: '#',
@@ -69,7 +69,7 @@ export const projectsData = [
     id: generateSlug('12:1 Gearbox'),
     title: '12:1 Gearbox',
     description: 'A collaborative task management application designed to help teams organize, track, and manage their work effectively. Features include drag-and-drop boards, real-time updates, and user roles.',
-    imageUrl: '/images/GearTrainCover.JPG',
+    imageUrl: '/images/GearTrainCover.jpg', // Corrected to .jpg
     imageHint: 'gearbox assembly',
     liveLink: '#',
     githubLink: '#',
@@ -94,7 +94,7 @@ export const projectsData = [
     id: generateSlug('Angiographic Catheter'),
     title: 'Angiographic Catheter',
     description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
-    imageUrl: '/images/CatheterCover.JPG',
+    imageUrl: '/images/CatheterCover.jpg', // Corrected to .jpg
     imageHint: 'medical catheter',
     liveLink: '#',
     githubLink: '#',
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
