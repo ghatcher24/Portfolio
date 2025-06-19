@@ -219,7 +219,7 @@ export const projectsData = [
     id: generateSlug('6 DOF Adaptive Control'),
     title: '6 DOF Adaptive Control',
     description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/RobotCover.png',
     imageHint: 'robotic arm control',
     liveLink: '#',
     githubLink: '#',
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
