@@ -192,8 +192,8 @@ export const projectsData = [
     id: generateSlug('IRE Ablation Device'),
     title: 'IRE Ablation Device',
     description: 'Design and development of a medical device utilizing Irreversible Electroporation (IRE) for precise tissue ablation. This project focused on electrode design, pulse generation, and treatment planning.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'medical device electroporation',
+    imageUrl: '/images/AblationCover.JPG',
+    imageHint: 'medical ablation device',
     liveLink: '#',
     githubLink: '#',
     tags: ['Medical Device', 'IRE', 'Bioengineering', 'Electrode Design', 'High Voltage Pulsing'],
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
