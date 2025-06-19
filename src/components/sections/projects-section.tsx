@@ -244,70 +244,96 @@ export const projectsData = [
   }
 ];
 
+// Helper function to chunk an array into smaller arrays of a specific size
+function chunkArray<T>(array: T[], size: number): T[][] {
+  const chunkedArr: T[][] = [];
+  for (let i = 0; i < array.length; i += size) {
+    chunkedArr.push(array.slice(i, i + size));
+  }
+  return chunkedArr;
+}
+
 export function ProjectsSection() {
+  const projectChunks = chunkArray(projectsData, 3);
+
   return (
     <SectionWrapper id="projects" title="My Projects" icon={Briefcase} className="bg-secondary">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projectsData.map((project) => {
-          const cardBaseClassName = `overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-[1.01] transition-all duration-300 h-full flex flex-col rounded-lg`;
-          const imageClassName = `transform group-hover:brightness-105 transition-all duration-300`;
+      <div className="space-y-12"> {/* Container for all chunks, adds space between them */}
+        {projectChunks.map((chunk, chunkIndex) => (
+          <div key={chunkIndex}>
+            {/* 
+              If you want a visible header for each group, you can add it here.
+              For example: 
+              <h3 className="text-2xl font-semibold mb-6 text-accent">
+                Project Group {chunkIndex + 1}
+              </h3>
+            */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {chunk.map((project) => {
+                const cardBaseClassName = `overflow-hidden shadow-lg group-hover:shadow-xl group-hover:scale-[1.01] transition-all duration-300 h-full flex flex-col rounded-lg`;
+                const imageClassName = `transform group-hover:brightness-105 transition-all duration-300`;
 
-          return (
-            <Link key={project.id} href={`/projects/${project.id}`} className="group block h-full">
-              <Card className={cardBaseClassName}>
-                <div className="relative h-48 md:h-56 w-full">
-                  <Image
-                    src={project.imageUrl}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    data-ai-hint={project.imageHint}
-                    className={imageClassName}
-                  />
-                </div>
-                <div className="flex flex-col flex-grow p-6">
-                  <CardHeader className="p-0 pb-4">
-                    <CardTitle className="text-xl md:text-2xl text-accent">{project.title}</CardTitle>
-                    <CardDescription className="text-sm text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="p-0 flex-grow">
-                    <p className="text-foreground leading-relaxed text-sm mb-4 line-clamp-4">{project.description}</p>
-                  </CardContent>
-                  <CardFooter className="p-0 pt-4 flex space-x-3 mt-auto">
-                    {project.liveLink && project.liveLink !== '#' && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="hover:bg-accent hover:text-accent-foreground transition-colors duration-300 text-xs"
-                        onClick={(e) => {
-                          e.stopPropagation(); // Prevent Link navigation
-                          window.open(project.liveLink!, '_blank', 'noopener,noreferrer');
-                        }}
-                      >
-                        <ExternalLink size={16} className="mr-1.5" />
-                        Live Demo
-                      </Button>
-                    )}
-                    {project.githubLink && project.githubLink !== '#' && (
-                       <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-primary hover:text-accent transition-colors duration-300 text-xs"
-                        onClick={(e) => {
-                          e.stopPropagation(); // Prevent Link navigation
-                          window.open(project.githubLink!, '_blank', 'noopener,noreferrer');
-                        }}
-                       >
-                        <Github size={16} className="mr-1.5" />
-                        View Code
-                      </Button>
-                    )}
-                  </CardFooter>
-                </div>
-              </Card>
-            </Link>
-          );
-        })}
+                return (
+                  <Link key={project.id} href={`/projects/${project.id}`} className="group block h-full">
+                    <Card className={cardBaseClassName}>
+                      <div className="relative h-48 md:h-56 w-full">
+                        <Image
+                          src={project.imageUrl}
+                          alt={project.title}
+                          layout="fill"
+                          objectFit="cover"
+                          data-ai-hint={project.imageHint}
+                          className={imageClassName}
+                        />
+                      </div>
+                      <div className="flex flex-col flex-grow p-6">
+                        <CardHeader className="p-0 pb-4">
+                          <CardTitle className="text-xl md:text-2xl text-accent">{project.title}</CardTitle>
+                          <CardDescription className="text-sm text-muted-foreground pt-1">{project.tags.join(' • ')}</CardDescription>
+                        </CardHeader>
+                        <CardContent className="p-0 flex-grow">
+                          <p className="text-foreground leading-relaxed text-sm mb-4 line-clamp-4">{project.description}</p>
+                        </CardContent>
+                        <CardFooter className="p-0 pt-4 flex space-x-3 mt-auto">
+                          {project.liveLink && project.liveLink !== '#' && (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="hover:bg-accent hover:text-accent-foreground transition-colors duration-300 text-xs"
+                              onClick={(e) => {
+                                e.stopPropagation(); // Prevent Link navigation
+                                e.preventDefault(); // Also prevent default link behavior
+                                window.open(project.liveLink!, '_blank', 'noopener,noreferrer');
+                              }}
+                            >
+                              <ExternalLink size={16} className="mr-1.5" />
+                              Live Demo
+                            </Button>
+                          )}
+                          {project.githubLink && project.githubLink !== '#' && (
+                             <Button
+                              variant="ghost"
+                              size="sm"
+                              className="text-primary hover:text-accent transition-colors duration-300 text-xs"
+                              onClick={(e) => {
+                                e.stopPropagation(); // Prevent Link navigation
+                                e.preventDefault(); // Also prevent default link behavior
+                                window.open(project.githubLink!, '_blank', 'noopener,noreferrer');
+                              }}
+                             >
+                              <Github size={16} className="mr-1.5" />
+                              View Code
+                            </Button>
+                          )}
+                        </CardFooter>
+                      </div>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
        <div className="text-center mt-12">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
@@ -323,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
