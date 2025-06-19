@@ -14,8 +14,8 @@ export const projectsData = [
     id: generateSlug('HA 6.5 Bone Screw'),
     title: 'HA 6.5 Bone Screw',
     description: 'A full-featured e-commerce platform with user authentication, product listings, cart functionality, and payment integration. Built with Next.js, Tailwind CSS, and Stripe.',
-    imageUrl: '/images/HA65Screw.JPG', // Updated image URL
-    imageHint: 'bone screw', // Updated image hint
+    imageUrl: '/images/HA65Screw.jpg', // Corrected image URL case
+    imageHint: 'bone screw',
     liveLink: '#',
     githubLink: '#',
     tags: ['Next.js', 'React', 'Stripe', 'Tailwind CSS'],
@@ -323,5 +323,6 @@ export function ProjectsSection() {
     
 
     
+
 
 
