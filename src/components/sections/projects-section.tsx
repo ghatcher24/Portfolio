@@ -66,14 +66,14 @@ export const projectsData = [
     outcomeAndImpact: 'Successfully developed a functional prototype of the pneumatic soft gripper that demonstrated effective and gentle grasping. The design has potential applications in automated assembly lines for fragile components and in human-robot interaction.'
   },
   {
-    id: generateSlug('12:1 Gearbox'),
-    title: '12:1 Gearbox',
+    id: generateSlug('Inline 12:1 Gearbox'),
+    title: 'Inline 12:1 Gearbox',
     description: 'A collaborative task management application designed to help teams organize, track, and manage their work effectively. Features include drag-and-drop boards, real-time updates, and user roles.',
     imageUrl: '/images/GearTrainCover.JPG',
     imageHint: 'gearbox assembly',
     liveLink: '#',
     githubLink: '#',
-    tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    tags: ['Parameter Selection', 'Matlab', 'Gear Stress Calculations', 'PTC Mathcad', 'Gear Train Design', 'SolidWorks', 'Design Packaging'],
     objective: 'To create an intuitive tool for teams to enhance productivity and collaboration on projects.',
     requirements: [
         'User registration and login.',
@@ -349,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
