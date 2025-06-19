@@ -216,11 +216,11 @@ export const projectsData = [
     outcomeAndImpact: 'Successfully developed a prototype IRE ablation system demonstrating precise and controllable tissue ablation. The device shows promise for applications in treating tumors and other pathological tissues with improved selectivity and reduced side effects compared to traditional methods.'
   },
   {
-    id: generateSlug('6 DOF Adaptive Control'),
-    title: '6 DOF Adaptive Control',
+    id: generateSlug('Catheter Hub w Hemostatic Lock'),
+    title: 'Catheter Hub w/ Hemostatic Lock',
     description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
     imageUrl: '/images/RobotCover.png',
-    imageHint: 'robotic arm control',
+    imageHint: 'catheter hub',
     liveLink: '#',
     githubLink: '#',
     tags: ['Robotics', 'Control Systems', 'Adaptive Control', '6 DOF', 'MATLAB', 'Simulink'],
@@ -349,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
