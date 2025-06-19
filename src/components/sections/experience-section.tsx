@@ -33,7 +33,8 @@ const experienceData = [
     company: 'University of Massachusetts Amherst',
     positions: [
       {
-        title: 'Graduate Teachers Assistant - Senior Design - Industrial Automation',
+        title: 'Graduate Teachers Assistant',
+        subtitle: 'Senior Design - Industrial Automation',
         dates: 'August 2024 - May 2025',
         description: [
           'Led a small team of interns on a feature sub-project for the main web platform.',
@@ -101,7 +102,12 @@ export function ExperienceSection() {
                 <div className="space-y-6">
                   {exp.positions.map((pos, posIndex) => (
                     <div key={posIndex} className={posIndex > 0 ? "pt-4 border-t border-border/50" : ""}>
-                      <h4 className="text-lg font-semibold text-accent">{pos.title}</h4>
+                      <div className="mb-1">
+                        <h4 className="text-lg font-semibold text-accent">{pos.title}</h4>
+                        {pos.subtitle && (
+                          <p className="text-sm text-muted-foreground">{pos.subtitle}</p>
+                        )}
+                      </div>
                       <p className="text-sm text-muted-foreground mb-2">{pos.dates}</p>
                       <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm">
                         {pos.description.map((item, i) => (
