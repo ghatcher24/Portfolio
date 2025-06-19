@@ -94,8 +94,8 @@ export const projectsData = [
     id: generateSlug('Angiographic Catheter'),
     title: 'Angiographic Catheter',
     description: 'My previous personal portfolio website, showcasing earlier projects and skills. Developed with vanilla JavaScript and custom CSS.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'personal website',
+    imageUrl: '/images/CatheterCover.JPG',
+    imageHint: 'medical catheter',
     liveLink: '#',
     githubLink: '#',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
