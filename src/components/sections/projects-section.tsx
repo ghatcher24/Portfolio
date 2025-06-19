@@ -165,7 +165,7 @@ export const projectsData = [
     id: generateSlug('Nonlinear Cancer Treatment Model'),
     title: 'Nonlinear Cancer Treatment Model',
     description: 'Development of a mathematical model to simulate nonlinear dynamics of cancer growth and optimize treatment strategies. This project involved differential equations, parameter estimation, and sensitivity analysis.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/CancerCover.JPG',
     imageHint: 'mathematical model graph',
     liveLink: '#',
     githubLink: '#',
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
