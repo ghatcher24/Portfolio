@@ -92,7 +92,7 @@ export const projectsData = [
     {
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
-    description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
+    description: 'Proof of concept manufacturing process capable of creating slits in plastic straw developed, designed, and prototyped for external customer. Project carried from concept generation to preliminary testing. Achieved 1st Place in Senior Design.',
     imageUrl: '/images/BlendyCover.JPG',
     imageHint: 'machine prototype',
     liveLink: '#',
