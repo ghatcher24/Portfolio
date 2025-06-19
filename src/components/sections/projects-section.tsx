@@ -97,7 +97,7 @@ export const projectsData = [
     imageHint: 'machine prototype',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Next.js', 'Headless CMS', 'GraphQL', 'Markdown'],
+    tags: ['Customer Communication', 'Scope Management', 'Manufacturing Process Design', 'Pneumatic Control', 'CNC Machining', 'FDM 3D Printing'],
     objective: 'To build a performant and SEO-friendly platform for content creators to publish articles and engage with readers.',
     requirements: [
         'User authentication for authors.',
