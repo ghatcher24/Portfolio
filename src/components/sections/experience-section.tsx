@@ -34,12 +34,22 @@ const experienceData = [
     positions: [
       {
         title: 'Graduate Teachers Assistant',
-        subtitle: 'Senior Design - Industrial Automation',
         dates: 'August 2024 - May 2025',
-        description: [
-          'Led a small team of interns on a feature sub-project for the main web platform.',
-          'Presented project demo to senior management and received positive feedback.',
-          'Took initiative in problem-solving and unblocking team members.',
+        focusAreas: [
+          {
+            areaTitle: 'Industrial Automation',
+            description: [
+              'Text',
+              'Text',
+            ],
+          },
+          {
+            areaTitle: 'Senior Design Capstone',
+            description: [
+              'Text',
+              'Text',
+            ],
+          },
         ],
       },
       {
@@ -79,7 +89,7 @@ export function ExperienceSection() {
                   {exp.company}
                 </CardTitle>
                 {/* Render position and dates only if they exist (for single-position entries) */}
-                {exp.position && exp.dates && (
+                {exp.position && exp.dates && !exp.positions && (
                   <>
                     <CardDescription className="text-md text-primary font-semibold mt-1">{exp.position}</CardDescription>
                     <CardDescription className="text-sm text-muted-foreground mt-1">{exp.dates}</CardDescription>
@@ -101,19 +111,31 @@ export function ExperienceSection() {
               {exp.positions ? ( // If entry has multiple positions
                 <div className="space-y-6">
                   {exp.positions.map((pos, posIndex) => (
-                    <div key={posIndex} className={posIndex > 0 ? "pt-4 border-t border-border/50" : ""}>
-                      <div className="mb-2"> {/* Title and Subtitle container */}
-                        <h4 className="text-lg font-semibold text-accent">{pos.title}</h4>
-                        {pos.subtitle && (
-                          <p className="text-sm text-muted-foreground">{pos.subtitle}</p>
-                        )}
-                      </div>
-                      <p className="text-sm text-muted-foreground mb-1">{pos.dates}</p> {/* Dates after title/subtitle */}
-                      <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm">
-                        {pos.description.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
+                    <div key={posIndex} className={posIndex > 0 ? "pt-6 border-t border-border/50" : ""}>
+                      
+                      <h4 className="text-xl font-semibold text-accent mb-1">{pos.title}</h4>
+                      <p className="text-md text-muted-foreground mb-3">{pos.dates}</p>
+
+                      {pos.focusAreas ? (
+                        <div className="space-y-4">
+                          {pos.focusAreas.map((area, areaIndex) => (
+                            <div key={areaIndex} className="ml-0"> {/* No extra indent for area container, h5 will be styled */}
+                              <h5 className="text-lg font-medium text-accent/90 mb-1">{area.areaTitle}</h5>
+                              <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm ml-5">
+                                {area.description.map((item, i) => (
+                                  <li key={i}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ) : pos.description ? (
+                        <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm ml-5">
+                          {pos.description.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
                     </div>
                   ))}
                 </div>
