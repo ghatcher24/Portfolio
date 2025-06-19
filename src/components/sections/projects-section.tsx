@@ -219,7 +219,7 @@ export const projectsData = [
     id: generateSlug('Catheter Hub w Hemostatic Lock'),
     title: 'Catheter Hub w/ Hemostatic Lock',
     description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
-    imageUrl: '/images/RobotCover.png',
+    imageUrl: '/images/CatheterHubCover.JPG',
     imageHint: 'catheter hub',
     liveLink: '#',
     githubLink: '#',
@@ -349,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
