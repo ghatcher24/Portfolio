@@ -218,7 +218,7 @@ export const projectsData = [
   {
     id: generateSlug('Catheter Hub w/ Hemostatic Lock'),
     title: 'Catheter Hub w/ Hemostatic Lock',
-    description: 'Development and implementation of an adaptive control system for a 6 Degrees of Freedom (DOF) robotic manipulator to handle varying payloads and dynamic uncertainties.',
+    description: 'Design and prototyping of catheter hub that enabled the injection of contrast while immobilizing guidewire with hemostatic lock with adherence to FDA guidelines. Physical prototype manufactured and tested.',
     imageUrl: '/images/CatheterHubCover.JPG',
     imageHint: 'catheter hub',
     liveLink: '#',
