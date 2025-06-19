@@ -15,6 +15,7 @@ const skills = [
   { name: 'Visual BASIC', icon: Code },
   { name: 'Microsoft Office Suite', icon: Clipboard },
   { name: 'Google Suite', icon: FileText },
+  { name: 'Microsoft Projects', icon: FileText },
   { name: 'Shop Machinery and Hand Tools', icon: Wrench },
   { name: 'Basic Soldering and Welding', icon: Flame },
   { name: 'Creo', icon: Cuboid },
