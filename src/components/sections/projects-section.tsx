@@ -137,7 +137,7 @@ export const projectsData = [
   {
     id: generateSlug('Project Management Simulation'),
     title: 'Project Management Simulation',
-    description: 'An interactive simulation tool designed to teach project management principles through hands-on scenarios and decision-making exercises.',
+    description: 'Creation of project plan and kick off presentation including: scope, work breakdown structure, schedule, recovery, risk management and cost management for the entirety of manufacturing line deployment.',
     imageUrl: '/images/ManageCover.JPG',
     imageHint: 'management simulation',
     liveLink: '#',
