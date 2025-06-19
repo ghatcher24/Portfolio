@@ -92,7 +92,7 @@ export function ExperienceSection() {
                   width={80} 
                   height={80} 
                   data-ai-hint={exp.imageHint}
-                  className="rounded-lg border border-border shadow-sm object-contain" // Added object-contain
+                  className="rounded-lg shadow-sm object-contain"
                 />
               </div>
             </CardHeader>
