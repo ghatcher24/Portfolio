@@ -120,7 +120,7 @@ export const projectsData = [
     imageHint: 'medical catheter',
     liveLink: '#',
     githubLink: '#',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['Catheter Design', 'Material Sourcing', 'Resilient Modeling', 'Solidworks', 'Medical Compliance', 'ISO 594'],
     objective: 'To establish an online presence and showcase foundational web development skills.',
     requirements: [
         'Clean and simple design.',
@@ -346,33 +346,3 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
