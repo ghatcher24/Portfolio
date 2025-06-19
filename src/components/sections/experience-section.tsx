@@ -60,8 +60,8 @@ const experienceData = [
         ],
       }
     ],
-    imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'university campus'
+    imageUrl: '/images/UmassLogo.png',
+    imageHint: 'UMass Amherst logo'
   }
 ];
 
