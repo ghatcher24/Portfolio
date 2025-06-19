@@ -18,7 +18,7 @@ export const projectsData = [
     imageHint: 'bone screw',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Orthopedics', 'ANSYS', 'SolidWorks', 'Instron Testing', 'SLA 3D Printing'],
+    tags: ['Orthopedic Design', 'SolidWorks', 'ANSYS', 'SLA 3D Printing', 'Instron Testing'],
     objective: 'To develop a scalable and user-friendly online shopping experience that drives sales and customer satisfaction.',
     requirements: [
       'Secure user authentication and profile management.',
@@ -349,6 +349,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
