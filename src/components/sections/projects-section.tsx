@@ -116,7 +116,7 @@ export const projectsData = [
     id: generateSlug('Prototype Slitting Machine'),
     title: 'Prototype Slitting Machine',
     description: 'A dynamic blogging platform with markdown support, user comments, and an admin dashboard for content management. Powered by Next.js and a headless CMS.',
-    imageUrl: '/images/BendyCover.JPG',
+    imageUrl: '/images/BlendyCover.JPG',
     imageHint: 'machine prototype',
     liveLink: '#',
     githubLink: '#',
@@ -323,6 +323,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
