@@ -189,97 +189,32 @@ export const projectsData = [
     outcomeAndImpact: 'Developed a robust nonlinear model capable of simulating complex cancer dynamics and treatment responses. The model provides a framework for exploring novel therapeutic strategies and has potential to contribute to personalized medicine approaches in oncology.'
   },
   {
-    id: generateSlug('Recipe Finder App'),
-    title: 'Recipe Finder App',
-    description: 'An application that allows users to search for recipes based on ingredients they have on hand, using a recipe database API.',
+    id: generateSlug('IRE Ablation Device'),
+    title: 'IRE Ablation Device',
+    description: 'Design and development of a medical device utilizing Irreversible Electroporation (IRE) for precise tissue ablation. This project focused on electrode design, pulse generation, and treatment planning.',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'food cooking',
+    imageHint: 'medical device electroporation',
     liveLink: '#',
     githubLink: '#',
-    tags: ['Vue.js', 'API', 'Food Tech'],
-    objective: 'To help users discover new recipes and reduce food waste by utilizing ingredients they already possess.',
+    tags: ['Medical Device', 'IRE', 'Bioengineering', 'Electrode Design', 'High Voltage Pulsing'],
+    objective: 'To develop a safe and effective IRE ablation device for targeted tissue destruction with minimal collateral damage to surrounding healthy tissue.',
     requirements: [
-        'Search recipes by ingredients.',
-        'Display recipe details including ingredients and instructions.',
-        'Filter recipes by cuisine, dietary restrictions, etc.',
-        'Save favorite recipes.'
+      'Precise delivery of high-voltage, short-duration electrical pulses.',
+      'Accurate electrode placement and configuration.',
+      'Real-time monitoring and feedback of treatment parameters.',
+      'Compliance with medical device safety standards.',
+      'User-friendly interface for clinicians.'
     ],
     technicalProcess: [
-        'Developed with Vue.js for a reactive frontend experience.',
-        'Integrated with a recipe API (e.g., Edamam, Spoonacular).',
-        'Managed application state using Vuex.'
+      'Researched principles of irreversible electroporation and existing devices.',
+      'Designed and simulated various electrode configurations using COMSOL.',
+      'Developed a high-voltage pulse generator with precise control.',
+      'Integrated safety mechanisms and monitoring systems.',
+      'Conducted ex-vivo and in-vitro testing to validate ablation zones.',
+      'Iterated on design based on experimental results and usability feedback.'
     ],
-    outcomeAndImpact: 'Helped users explore culinary options and make better use of their pantry staples, receiving positive feedback for its practical utility.'
-  },
-  {
-    id: generateSlug('Fitness Tracker'),
-    title: 'Fitness Tracker',
-    description: 'A mobile-friendly fitness tracking application to log workouts, monitor progress, and set fitness goals. Built with React Native.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'exercise health',
-    liveLink: '#',
-    githubLink: '#',
-    tags: ['React Native', 'Firebase', 'Mobile App'],
-    objective: 'To empower users to track their fitness activities, set achievable goals, and monitor their progress over time.',
-    requirements: [
-        'Log various types of workouts (e.g., running, weightlifting).',
-        'Track metrics like duration, distance, calories burned.',
-        'Set personal fitness goals and visualize progress.',
-        'User authentication and data synchronization across devices.'
-    ],
-    technicalProcess: [
-        'Built using React Native for cross-platform mobile development.',
-        'Utilized Firebase for backend services like authentication and database.',
-        'Implemented charts for progress visualization.'
-    ],
-    outcomeAndImpact: 'Enabled users to consistently track their fitness journey, leading to improved health outcomes and user retention.'
-  },
-  {
-    id: generateSlug('Music Streaming Service UI'),
-    title: 'Music Streaming Service UI',
-    description: 'A UI/UX concept for a music streaming service, focusing on intuitive navigation and a visually appealing interface. Designed in Figma and prototyped with React.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'audio player',
-    liveLink: '#',
-    githubLink: '#',
-    tags: ['UI/UX', 'Figma', 'React', 'Frontend'],
-    objective: 'To design and prototype a modern, user-centric interface for a music streaming application.',
-    requirements: [
-        'Intuitive navigation for browsing music library, playlists, and artists.',
-        'Visually appealing player controls and album art display.',
-        'Seamless user experience for music discovery and playback.',
-        'Consistent design language across all screens.'
-    ],
-    technicalProcess: [
-        'Created wireframes and high-fidelity mockups in Figma.',
-        'Developed an interactive prototype using React to demonstrate key user flows.',
-        'Focused on user-centered design principles and aesthetics.'
-    ],
-    outcomeAndImpact: 'Produced a compelling UI/UX design concept that was well-received for its usability and visual appeal, serving as a strong portfolio piece.'
-  },
-  {
-    id: generateSlug('Online Learning Platform'),
-    title: 'Online Learning Platform',
-    description: 'A platform for online courses with video content, quizzes, and progress tracking. Features instructor dashboards and student enrollment.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'education technology',
-    liveLink: '#',
-    githubLink: '#',
-    tags: ['Ruby on Rails', 'PostgreSQL', 'Video Streaming'],
-    objective: 'To provide an accessible and engaging online learning environment for students and instructors.',
-    requirements: [
-        'Course creation and management tools for instructors.',
-        'Student enrollment and progress tracking.',
-        'Video content delivery and quiz functionality.',
-        'User authentication and role-based access control.'
-    ],
-    technicalProcess: [
-        'Developed using Ruby on Rails framework.',
-        'Utilized PostgreSQL for database management.',
-        'Integrated video streaming solutions and built a custom quiz engine.'
-    ],
-    outcomeAndImpact: 'Launched an e-learning platform that facilitated remote education for hundreds of users, enhancing access to knowledge and skills development.'
-  },
+    outcomeAndImpact: 'Successfully developed a prototype IRE ablation system demonstrating precise and controllable tissue ablation. The device shows promise for applications in treating tumors and other pathological tissues with improved selectivity and reduced side effects compared to traditional methods.'
+  }
 ];
 
 export function ProjectsSection() {
