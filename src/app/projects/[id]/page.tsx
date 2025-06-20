@@ -219,41 +219,42 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             </>
           )}
           
-          <Separator className="my-8" />
-
           {project.id !== 'inline-121-gearbox' && (
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="https://placehold.co/600x400.png" 
-                    alt="Additional project image 1" 
-                    fill={true}
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint="project details"
-                  />
+            <>
+              <Separator className="my-8" />
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                    <Image 
+                      src="https://placehold.co/600x400.png" 
+                      alt="Additional project image 1" 
+                      fill={true}
+                      style={{ objectFit: 'cover' }}
+                      data-ai-hint="project details"
+                    />
+                  </div>
+                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                    <Image 
+                      src="https://placehold.co/600x400.png" 
+                      alt="Additional project image 2" 
+                      fill={true}
+                      style={{ objectFit: 'cover' }}
+                      data-ai-hint="interface screenshot"
+                    />
+                  </div>
+                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                    <Image 
+                      src="https://placehold.co/600x400.png" 
+                      alt="Additional project image 3" 
+                      fill={true}
+                      style={{ objectFit: 'cover' }}
+                      data-ai-hint="feature showcase"
+                    />
+                  </div>
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="https://placehold.co/600x400.png" 
-                    alt="Additional project image 2" 
-                    fill={true}
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint="interface screenshot"
-                  />
-                </div>
-                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="https://placehold.co/600x400.png" 
-                    alt="Additional project image 3" 
-                    fill={true}
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint="feature showcase"
-                  />
-                </div>
-              </div>
-            </section>
+              </section>
+            </>
           )}
 
         </article>
@@ -262,3 +263,5 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
+
+    
