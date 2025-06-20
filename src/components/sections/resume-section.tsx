@@ -22,7 +22,7 @@ export function ResumeSection() {
             <p className="text-muted-foreground mb-2">This area could feature a simplified version or key highlights from the resume.</p>
             <div className="space-y-3 text-left text-sm text-foreground">
                 <p><strong>Summary:</strong> Motivated graduate with a Masters in Mechanical Engineering searching for next step...</p>
-                <p><strong>Key Skills:</strong> React, Next.js, TypeScript, Node.js, Python...</p>
+                <p><strong>Key Skills:</strong> Product Design, CSWA SolidWorks, Process Improvement, MATLAB, FEA</p>
                 <p><strong>Recent Experience:</strong> Senior Software Engineer at Tech Solutions Inc. ...</p>
                 <p className="italic text-muted-foreground mt-4">For a complete overview, please download the full PDF version.</p>
             </div>
