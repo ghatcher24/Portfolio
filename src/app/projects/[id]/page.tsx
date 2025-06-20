@@ -241,28 +241,28 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                   <Image
                     src="/images/CatheterGallery1.jpg"
-                    alt="Angiographic Catheter Gallery Image 1"
+                    alt="Angiographic Catheter Gallery Image 1 (2:1)"
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                   <Image
                     src="/images/CatheterGallery2.jpg"
-                    alt="Angiographic Catheter Gallery Image 2"
+                    alt="Angiographic Catheter Gallery Image 2 (5:4)"
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                   <Image
                     src="/images/CatheterGallery3.jpg"
-                    alt="Angiographic Catheter Gallery Image 3"
+                    alt="Angiographic Catheter Gallery Image 3 (2:1)"
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
