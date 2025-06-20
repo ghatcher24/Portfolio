@@ -245,13 +245,13 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </aside>
               </div>
               <Separator className="my-8" />
-              <div className="grid md:grid-cols-7 gap-8 mb-8">
+              <div className="grid md:grid-cols-4 gap-8 mb-8">
                 <section className="md:col-span-3 flex flex-col justify-center prose prose-lg max-w-none text-foreground">
                   <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
                   {renderOutcomeAndImpact()}
                 </section>
-                <aside className="md:col-span-4 flex items-center justify-center">
-                  <div className="relative w-1/4 aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                <aside className="md:col-span-1 flex items-center justify-center">
+                  <div className="relative w-3/4 aspect-square rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/BoneScrewAnsys.png"
                       alt="Bone Screw ANSYS FEA"
@@ -283,7 +283,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
+                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                      <Image
                         src="/images/CatheterGallery1.jpg"
                         alt="Angiographic Catheter Gallery Image 1 (Native 2:1)"
@@ -292,7 +292,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         data-ai-hint="catheter detail"
                       />
                   </div>
-                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
+                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                     <Image
                         src="/images/CatheterGallery2.jpg"
                         alt="Angiographic Catheter Gallery Image 2 (Native 5:4)"
@@ -301,7 +301,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         data-ai-hint="medical device"
                       />
                   </div>
-                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
+                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                      <Image
                         src="/images/CatheterGallery3.jpg"
                         alt="Angiographic Catheter Gallery Image 3 (Native 2:1)"
@@ -353,3 +353,4 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
+
