@@ -195,7 +195,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           ) : project.id === 'angiographic-catheter' ? (
             <>
               <div className="grid md:grid-cols-7 gap-8 mb-8">
-                 <section className="md:col-span-3 flex flex-col">
+                 <section className="md:col-span-3 flex flex-col h-full">
                   <div>
                     <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   </div>
@@ -241,30 +241,30 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative rounded-lg overflow-hidden shadow-md" style={{ paddingTop: '200%' }}>
                   <Image
                     src="/images/CatheterGallery1.jpg"
-                    alt="Angiographic Catheter Gallery Image 1"
+                    alt="Angiographic Catheter Gallery Image 1 (2:1 native aspect)"
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative rounded-lg overflow-hidden shadow-md" style={{ paddingTop: '125%' }}>
                   <Image
                     src="/images/CatheterGallery2.jpg"
-                    alt="Angiographic Catheter Gallery Image 2"
+                    alt="Angiographic Catheter Gallery Image 2 (5:4 native aspect)"
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative rounded-lg overflow-hidden shadow-md" style={{ paddingTop: '200%' }}>
                   <Image
                     src="/images/CatheterGallery3.jpg"
-                    alt="Angiographic Catheter Gallery Image 3"
+                    alt="Angiographic Catheter Gallery Image 3 (2:1 native aspect)"
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
                   />
                 </div>
