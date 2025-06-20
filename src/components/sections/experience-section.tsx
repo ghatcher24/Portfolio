@@ -79,7 +79,13 @@ export function ExperienceSection() {
       <div className="space-y-8">
         {experienceData.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className={`flex flex-col sm:flex-row justify-between items-start sm:items-center ${exp.company === 'University of Massachusetts Amherst' ? 'pb-0' : 'pb-4'}`}>
+            <CardHeader className={`
+              flex flex-col sm:flex-row justify-between items-start sm:items-center 
+              ${exp.company === 'University of Massachusetts Amherst' 
+                ? 'space-y-0 pb-0'  // For UMass: remove vertical spacing between header items when flex-col, remove bottom padding
+                : 'pb-4'             // For others: default space-y-1.5 from CardHeader base will apply, adjust bottom padding
+              }
+            `}>
               <div className={exp.company === 'University of Massachusetts Amherst' && exp.positions ? "sm:mb-0" : "mb-4 sm:mb-0"}>
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
