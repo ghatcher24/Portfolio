@@ -164,7 +164,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </section>
                 <aside className="md:col-span-4 flex items-center justify-center">
-                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-full aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/GearDrawing.jpg"
                       alt="Gear Drawing"
@@ -204,7 +204,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </section>
                 <aside className="md:col-span-4 flex items-center justify-center">
-                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-muted/10">
+                  <div className="relative w-full aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-muted/10">
                     <Image
                       src="/images/CatheterDrawing.png"
                       alt="Catheter Drawing"
@@ -233,7 +233,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </section>
                 <aside className="md:col-span-4 flex items-center justify-center">
-                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-full aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/BoneScrewDrawing.png"
                       alt="Bone Screw Drawing"
@@ -269,7 +269,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           {project.id === 'angiographic-catheter' ? (
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
-                <div className="text-center space-y-4 md:space-y-0">
+                <div className="text-center space-y-4 md:space-y-0 mt-8">
                   <div className="inline-block relative h-64 w-auto mx-2 align-top rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card border-0">
                     <Image
                       src="/images/CatheterGallery1.jpg"
@@ -308,7 +308,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 1"
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="app showcase"
                   />
                 </div>
@@ -317,7 +317,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 2"
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="interface screenshot"
                   />
                 </div>
@@ -326,7 +326,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 3"
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="feature showcase"
                   />
                 </div>
