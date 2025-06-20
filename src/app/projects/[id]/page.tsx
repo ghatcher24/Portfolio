@@ -117,89 +117,42 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             </ul>
           </section>
 
-          {project.id === 'inline-12-1-gearbox' ? (
-            <div className="md:grid md:grid-cols-2 md:gap-8 my-8">
-              <div className="md:col-span-1"> {/* Left column for text content */}
-                <section className="mb-8 prose prose-lg max-w-none text-foreground">
-                  <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
-                  {project.technicalProcess && project.technicalProcess.length > 0 ? (
-                    <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
-                      {project.technicalProcess.map((step, index) => (
-                        <li key={index}>
-                          {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
-                            <>
-                              <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
-                              <div>{(step as TechnicalProcessStepObject).description}</div>
-                            </>
-                          ) : (
-                            String(step) 
-                          )}
-                        </li>
-                      ))}
-                    </ol>
-                  ) : (
-                    <p>No technical process details available.</p>
-                  )}
-                </section>
-                <Separator className="my-8" />
-                <section className="mb-8 prose prose-lg max-w-none text-foreground">
-                  <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-                  {typeof project.outcomeAndImpact === 'string' && project.outcomeAndImpact.includes('\n') ? (
-                    <ul className="list-disc pl-5 space-y-1 leading-relaxed">
-                      {project.outcomeAndImpact.split('\n').map((item, index) => (
-                        item.trim() ? <li key={index}>{item.trim()}</li> : null
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="leading-relaxed">{project.outcomeAndImpact}</p>
-                  )}
-                </section>
-              </div>
-              {/* Right column is intentionally left empty for now */}
-              <div className="md:col-span-1">
-                 {/* Placeholder for image if needed later */}
-              </div>
-            </div>
-          ) : (
-            <>
-              <Separator className="my-8" />
-              <section className="mb-8 prose prose-lg max-w-none text-foreground">
-                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
-                {project.technicalProcess && project.technicalProcess.length > 0 ? (
-                  <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
-                    {project.technicalProcess.map((step, index) => (
-                      <li key={index}>
-                        {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
-                          <>
-                            <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
-                            <div>{(step as TechnicalProcessStepObject).description}</div>
-                          </>
-                        ) : (
-                          String(step) 
-                        )}
-                      </li>
-                    ))}
-                  </ol>
-                ) : (
-                  <p>No technical process details available.</p>
-                )}
-              </section>
-              <Separator className="my-8" />
-              <section className="mb-8 prose prose-lg max-w-none text-foreground">
-                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-                 {typeof project.outcomeAndImpact === 'string' && project.outcomeAndImpact.includes('\n') ? (
-                    <ul className="list-disc pl-5 space-y-1 leading-relaxed">
-                      {project.outcomeAndImpact.split('\n').map((item, index) => (
-                         item.trim() ? <li key={index}>{item.trim()}</li> : null
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="leading-relaxed">{project.outcomeAndImpact}</p>
-                  )}
-              </section>
-            </>
-          )}
-
+          <Separator className="my-8" />
+          <section className="mb-8 prose prose-lg max-w-none text-foreground">
+            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+            {project.technicalProcess && project.technicalProcess.length > 0 ? (
+              <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
+                {project.technicalProcess.map((step, index) => (
+                  <li key={index}>
+                    {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
+                      <>
+                        <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
+                        <div>{(step as TechnicalProcessStepObject).description}</div>
+                      </>
+                    ) : (
+                      String(step) 
+                    )}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <p>No technical process details available.</p>
+            )}
+          </section>
+          <Separator className="my-8" />
+          <section className="mb-8 prose prose-lg max-w-none text-foreground">
+            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+              {typeof project.outcomeAndImpact === 'string' && project.outcomeAndImpact.includes('\n') ? (
+                <ul className="list-disc pl-5 space-y-1 leading-relaxed">
+                  {project.outcomeAndImpact.split('\n').map((item, index) => (
+                      item.trim() ? <li key={index}>{item.trim()}</li> : null
+                  ))}
+                </ul>
+              ) : (
+                <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+              )}
+          </section>
+          
           <Separator className="my-8" />
 
           <section className="mb-8">
@@ -232,6 +185,17 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   data-ai-hint="feature showcase"
                 />
               </div>
+              {project.id === 'inline-12-1-gearbox' && (
+                <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  <Image 
+                    src="/images/GearDrawing.jpg" 
+                    alt="Gear Drawing" 
+                    fill={true}
+                    style={{ objectFit: 'contain' }}
+                    data-ai-hint="technical drawing"
+                  />
+                </div>
+              )}
             </div>
           </section>
 
