@@ -35,7 +35,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           <h1 className="text-4xl font-bold text-destructive mb-4">Project Not Found</h1>
           <p className="text-lg text-muted-foreground mb-8">The project you are looking for does not exist or has been moved.</p>
           <Button asChild>
-            <Link href="/projects">
+            <Link href="/#projects"> {/* Corrected to /#projects */}
               <ArrowLeft size={18} className="mr-2" />
               Back to Projects
             </Link>
@@ -52,7 +52,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="mb-8">
           <Button asChild variant="outline" size="sm">
-            <Link href="/projects"> {/* Changed from /projects to /#projects to go to the section on homepage */}
+            <Link href="/#projects"> {/* Changed from /projects to /#projects to go to the section on homepage */}
               <ArrowLeft size={18} className="mr-2" />
               Back to All Projects
             </Link>
@@ -121,36 +121,81 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             </ul>
           </section>
 
-          <Separator className="my-8" />
-
-          <section className="mb-8 prose prose-lg max-w-none text-foreground">
-            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
-            {project.technicalProcess && project.technicalProcess.length > 0 ? (
-              <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
-                {project.technicalProcess.map((step, index) => (
-                  <li key={index}>
-                    {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
-                      <>
-                        <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
-                        <div>{(step as TechnicalProcessStepObject).description}</div>
-                      </>
-                    ) : (
-                      String(step) 
-                    )}
-                  </li>
-                ))}
-              </ol>
-            ) : (
-              <p>No technical process details available.</p>
-            )}
-          </section>
-
-          <Separator className="my-8" />
-
-          <section className="mb-8 prose prose-lg max-w-none text-foreground">
-            <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-            <p className="leading-relaxed">{project.outcomeAndImpact}</p>
-          </section>
+          {project.id === 'inline-12:1-gearbox' ? (
+            <div className="md:grid md:grid-cols-10 md:gap-12 my-8">
+              <div className="md:col-span-6">
+                <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                  <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  {project.technicalProcess && project.technicalProcess.length > 0 ? (
+                    <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
+                      {project.technicalProcess.map((step, index) => (
+                        <li key={index}>
+                          {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
+                            <>
+                              <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
+                              <div>{(step as TechnicalProcessStepObject).description}</div>
+                            </>
+                          ) : (
+                            String(step) 
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <p>No technical process details available.</p>
+                  )}
+                </section>
+                <Separator className="my-8" />
+                <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                  <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                  <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+                </section>
+              </div>
+              <div className="md:col-span-4 flex flex-col items-center justify-start pt-8 md:pt-0">
+                <div className="w-full">
+                  <Image 
+                    src="/images/GearDrawing.jpg" 
+                    alt="Detailed drawing of the inline 12:1 gearbox"
+                    width={350}
+                    height={490}
+                    style={{ objectFit: 'contain' }}
+                    className="rounded-lg shadow-md mx-auto"
+                    data-ai-hint="gearbox drawing"
+                  />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                {project.technicalProcess && project.technicalProcess.length > 0 ? (
+                  <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
+                    {project.technicalProcess.map((step, index) => (
+                      <li key={index}>
+                        {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
+                          <>
+                            <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
+                            <div>{(step as TechnicalProcessStepObject).description}</div>
+                          </>
+                        ) : (
+                          String(step) 
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                ) : (
+                  <p>No technical process details available.</p>
+                )}
+              </section>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+              </section>
+            </>
+          )}
 
           <Separator className="my-8" />
 
