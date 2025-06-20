@@ -14,7 +14,7 @@ const experienceData = [
       'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure.',
       'Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
-    imageUrl: '/images/InnovaPlasticsLogo.jpg', 
+    imageUrl: '/images/InnovaPlasticsLogo.jpg',
     imageHint: 'Innova Plastics Engineering logo'
   },
   {
@@ -79,74 +79,107 @@ export function ExperienceSection() {
       <div className="space-y-8">
         {experienceData.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className={`
-              flex flex-col sm:flex-row justify-between items-start sm:items-center 
-              ${exp.company === 'University of Massachusetts Amherst' 
-                ? 'space-y-0 pb-0'  // For UMass: remove vertical spacing between header items when flex-col, remove bottom padding
-                : 'pb-4'             // For others: default space-y-1.5 from CardHeader base will apply, adjust bottom padding
-              }
-            `}>
-              <div className={exp.company === 'University of Massachusetts Amherst' && exp.positions ? "sm:mb-0" : "mb-4 sm:mb-0"}>
+            <CardHeader className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
+              <div className="mb-4 sm:mb-0"> {/* Container for text elements */}
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
                   {exp.company}
                 </CardTitle>
-                {exp.position && exp.dates && !exp.positions && (
+                {/* Display first UMass position's title & dates, or the single position for other companies */}
+                {exp.positions && exp.positions.length > 0 ? (
+                  <>
+                    <CardDescription className="text-xl font-semibold mt-1 text-primary">{exp.positions[0].title}</CardDescription>
+                    <CardDescription className="text-sm text-muted-foreground mt-1">{exp.positions[0].dates}</CardDescription>
+                  </>
+                ) : exp.position && exp.dates ? (
                   <>
                     <CardDescription className="text-md text-primary font-semibold mt-1">{exp.position}</CardDescription>
                     <CardDescription className="text-sm text-muted-foreground mt-1">{exp.dates}</CardDescription>
                   </>
-                )}
+                ) : null}
               </div>
-              <div className="flex-shrink-0 self-center sm:self-start">
-                <Image 
-                  src={exp.imageUrl} 
-                  alt={`${exp.company} logo`} 
-                  width={80} 
-                  height={80} 
+              <div className="flex-shrink-0 self-center sm:self-start"> {/* Container for the image */}
+                <Image
+                  src={exp.imageUrl}
+                  alt={`${exp.company} logo`}
+                  width={80}
+                  height={80}
                   data-ai-hint={exp.imageHint}
                   className="rounded-lg shadow-sm object-contain"
                 />
               </div>
             </CardHeader>
             <CardContent>
-              {exp.positions ? ( 
+              {exp.positions ? ( // UMass case: multiple positions
                 <div className="space-y-6">
-                  {exp.positions.map((pos, posIndex) => (
-                    <div key={posIndex} className={posIndex > 0 ? "pt-6 border-t border-border/50" : ""}>
-                      
-                      <h4 className={`text-xl font-semibold mt-1 mb-1 ${exp.company === 'University of Massachusetts Amherst' ? 'text-primary' : 'text-accent'}`}>{pos.title}</h4>
-                      <p className="text-sm text-muted-foreground mb-3">{pos.dates}</p>
+                  {(() => {
+                    const firstPos = exp.positions[0];
+                    // Check if the first position has details (focusAreas or description) to render in CardContent
+                    const firstPosDetailsExist = firstPos && (firstPos.focusAreas || (firstPos.description && !firstPos.focusAreas));
+                    const remainingPositions = exp.positions.slice(1);
 
-                      {pos.focusAreas ? (
-                        <div className="space-y-4">
-                          {pos.focusAreas.map((area, areaIndex) => (
-                            <div key={areaIndex}>
-                              <h5 className="text-md text-primary font-semibold mb-1">{area.areaTitle}</h5>
-                              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
-                                {area.description.map((item, i) => (
-                                  <li key={i}>{item}</li>
+                    return (
+                      <>
+                        {/* Details for the first position (title/dates are now in header) */}
+                        {firstPosDetailsExist && (
+                          <div> {/* No top border for this first block of details */}
+                            {firstPos.focusAreas ? (
+                              <div className="space-y-4">
+                                {firstPos.focusAreas.map((area, areaIndex) => (
+                                  <div key={`area-${areaIndex}`}>
+                                    <h5 className="text-md text-primary font-semibold mb-1">{area.areaTitle}</h5>
+                                    <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
+                                      {area.description.map((item, i) => <li key={`desc-${i}`}>{item}</li>)}
+                                    </ul>
+                                  </div>
                                 ))}
+                              </div>
+                            ) : firstPos.description ? (
+                              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
+                                {firstPos.description.map((item, i) => <li key={`desc-${i}`}>{item}</li>)}
                               </ul>
-                            </div>
-                          ))}
-                        </div>
-                      ) : pos.description ? (
-                        <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
-                          {pos.description.map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      ) : null}
-                    </div>
-                  ))}
+                            ) : null}
+                          </div>
+                        )}
+
+                        {/* Subsequent positions (from index 1 onwards) */}
+                        {remainingPositions.map((pos, posIdx) => (
+                          <div
+                            key={`pos-${posIdx}`}
+                            className={
+                              (firstPosDetailsExist || posIdx > 0) // Add border if first pos details existed, OR if this is not the first of remaining_positions
+                                ? "pt-6 border-t border-border/50"
+                                : ""
+                            }
+                          >
+                            <h4 className="text-xl font-semibold mt-1 mb-1 text-primary">{pos.title}</h4>
+                            <p className="text-sm text-muted-foreground mb-3">{pos.dates}</p>
+                            {pos.focusAreas ? (
+                              <div className="space-y-4">
+                                {pos.focusAreas.map((area, areaIndex) => (
+                                  <div key={`sub-area-${areaIndex}`}>
+                                    <h5 className="text-md text-primary font-semibold mb-1">{area.areaTitle}</h5>
+                                    <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
+                                      {area.description.map((item, i) => <li key={`sub-desc-${i}`}>{item}</li>)}
+                                    </ul>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : pos.description ? (
+                              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
+                                {pos.description.map((item, i) => <li key={`sub-desc-${i}`}>{item}</li>)}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </>
+                    );
+                  })()}
                 </div>
-              ) : ( 
+              ) : ( // Non-UMass case: single position, render its description
                 exp.description && (
                   <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
-                    {exp.description.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
+                    {exp.description.map((item, i) => <li key={i}>{item}</li>)}
                   </ul>
                 )
               )}
