@@ -44,7 +44,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
   const renderTechnicalProcess = () => (
     project.technicalProcess && project.technicalProcess.length > 0 ? (
-      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' ? 'space-y-4' : 'space-y-2'}`}>
+      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' ? 'space-y-4' : project.id === 'angiographic-catheter' ? 'space-y-4' :'space-y-2'}`}>
         {project.technicalProcess.map((step, index) => (
           <li key={index}>
             {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
@@ -246,7 +246,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     src="/images/CatheterGallery1.jpg" 
                     alt="Angiographic Catheter Gallery Image 1" 
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
                   />
                 </div>
@@ -255,7 +255,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     src="/images/CatheterGallery2.jpg" 
                     alt="Angiographic Catheter Gallery Image 2" 
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
                   />
                 </div>
@@ -264,13 +264,13 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     src="/images/CatheterGallery3.jpg" 
                     alt="Angiographic Catheter Gallery Image 3" 
                     fill={true}
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
                   />
                 </div>
               </div>
             </section>
-          ) : project.id !== 'inline-121-gearbox' ? (
+          ) : project.id !== 'inline-121-gearbox' ? ( // Hide gallery for inline-121-gearbox
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
