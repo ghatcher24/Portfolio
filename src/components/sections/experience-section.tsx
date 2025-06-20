@@ -14,7 +14,7 @@ const experienceData = [
       'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure.',
       'Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
-    imageUrl: '/images/ThermofabLogo.jpg',
+    imageUrl: '/images/InnovaPlasticsLogo.jpg', // Updated from ThermofabLogo.jpg
     imageHint: 'Innova Plastics Engineering logo'
   },
   {
@@ -79,7 +79,7 @@ export function ExperienceSection() {
       <div className="space-y-8">
         {experienceData.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className={`flex flex-col sm:flex-row justify-between items-start sm:items-center ${exp.company === 'University of Massachusetts Amherst' ? 'pb-2' : 'pb-4'}`}>
+            <CardHeader className={`flex flex-col sm:flex-row justify-between items-start sm:items-center ${exp.company === 'University of Massachusetts Amherst' ? 'pb-0' : 'pb-4'}`}>
               <div className="mb-4 sm:mb-0">
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
