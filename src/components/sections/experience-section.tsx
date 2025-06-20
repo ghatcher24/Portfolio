@@ -63,9 +63,8 @@ const experienceData = [
         title: 'MATLAB Tutor',
         dates: 'May 2016 - Jun 2016',
         description: [
-          'Assisted senior developers in building and testing new features for a web platform.',
-          'Gained foundational experience with full-stack development practices (React, Node.js).',
-          'Learned about agile methodologies and version control (Git).',
+          'Helped students dissect and troubleshoot complex problems within Matlab',
+          'Fostered the learning of MATLAB concepts through custom exercises and pseudocode explanations.',
         ],
       }
     ],
@@ -118,7 +117,7 @@ export function ExperienceSection() {
                           {pos.focusAreas.map((area, areaIndex) => (
                             <div key={areaIndex}>
                               <h5 className="text-md text-primary font-semibold mb-1">{area.areaTitle}</h5>
-                              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
+                              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
                                 {area.description.map((item, i) => (
                                   <li key={i}>{item}</li>
                                 ))}
@@ -127,7 +126,7 @@ export function ExperienceSection() {
                           ))}
                         </div>
                       ) : pos.description ? (
-                        <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
+                        <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
                           {pos.description.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
@@ -138,7 +137,7 @@ export function ExperienceSection() {
                 </div>
               ) : ( 
                 exp.description && (
-                  <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
+                  <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
                     {exp.description.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
