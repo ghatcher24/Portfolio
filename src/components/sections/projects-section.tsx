@@ -125,7 +125,7 @@ export const projectsData = [
     outcomeAndImpact: 'Provided a fast, secure, and easy-to-use blogging solution, adopted by several content creators for its modern stack and features.'
   },
   {
-    id: generateSlug('Angiographic Catheter'),
+    id: 'angiographic-catheter', // Using pre-generated slug
     title: 'Angiographic Catheter',
     description: 'Design of angiographic balloon catheter intended for drug delivery to pulmonary arteries. Developed to functional requirements with materials sourced from commercially available suppliers.',
     imageUrl: '/images/CatheterCover.jpg',
@@ -219,7 +219,7 @@ export const projectsData = [
     outcomeAndImpact: 'Developed a robust nonlinear model capable of simulating complex cancer dynamics and treatment responses. The model provides a framework for exploring novel therapeutic strategies and has potential to contribute to personalized medicine approaches in oncology.'
   },
    {
-    id: generateSlug('HA 6.5 Bone Screw'),
+    id: 'ha-65-bone-screw', // Using pre-generated slug
     title: 'HA 6.5 Bone Screw',
     description: 'Feasibility of using polymer screw evaluated for pediatric fracture fixation. Bone screw designed and analyzed using computation and finite element analysis. Uniaxial tensile testing performed on prototype.',
     imageUrl: '/images/HA65Screw.jpg',
@@ -227,24 +227,39 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Orthopedic Design', 'SolidWorks', 'ANSYS', 'SLA 3D Printing', 'Instron Testing'],
-    objective: 'To develop a scalable and user-friendly online shopping experience that drives sales and customer satisfaction.',
+    objective: 'Design an Orthopedic HA 6.5 cortical screw equipped with a through hole for a Kirschner wire. Prototype with SLA Resin.',
     requirements: [
-      'Secure user authentication and profile management.',
-      'Dynamic product catalog with search and filtering.',
-      'Shopping cart functionality with persistent storage.',
-      'Integration with Stripe for secure payment processing.',
-      'Admin dashboard for managing products, orders, and users.',
-      'Responsive design for seamless experience across devices.'
+      'Design to ASTM F543 - 17',
+      'Manufacturable from Standard Resin on a Formlabs Form 3 printer.',
+      'Withstand uniaxial pullout force of 100 N'
     ],
     technicalProcess: [
-      'Designed database schema for products, users, and orders.',
-      'Developed RESTful APIs using Next.js API routes for backend logic.',
-      'Implemented frontend components with React and styled with Tailwind CSS.',
-      'Integrated Stripe SDK for payment gateway.',
-      'Ensured state management using React Context/Redux for cart and user session.',
-      'Conducted thorough testing, including unit, integration, and E2E tests.'
+      {
+        title: 'Design & Modeling',
+        description: 'HA 6.5 orthopedic screw modeled in SolidWorks to ASTM F543-17 standards.'
+      },
+      {
+        title: 'Engineering Calculations',
+        description: 'Maximum k-wire hole diameter was calculated w/ a Factor of Safety of 3 using minimum tensile stress area calculations.'
+      },
+      {
+        title: 'Finite Element Analysis',
+        description: 'Explicit Dynamics FEA was performed in ANSYS to validate calculations, predict deformation and evaluate stress concentrations.'
+      },
+      {
+        title: 'Prototyping',
+        description: 'Screws SLA printed in Standard Resin on a Formlabs Form 3L. Design considerations included overhangs, engraving depth, and layer thickness.'
+      },
+      {
+        title: 'GD&T',
+        description: 'Performed visual inspection including grinding to centerline to view cross-section. Key dimensions were measured using digital calipers and tolerances recorded.'
+      },
+      {
+        title: 'Mechanical Testing',
+        description: 'Uniaxial tensile testing was conducted on Instron per ASTM Section A3. Failure modes were visually inspected, data was compared to FEA.'
+      }
     ],
-    outcomeAndImpact: 'The platform successfully launched, leading to a 30% increase in customer engagement and a streamlined checkout process. It provided a robust foundation for future feature expansions and market growth.'
+    outcomeAndImpact: 'Resin screws are not suitable for pediatric fracture fixation due to insufficient thread strength.\nFEA is a reliable predictor of physical testing outcomes when executed properly.'
   },
   {
     id: generateSlug('Catheter Hub w/ Hemostatic Lock'),
