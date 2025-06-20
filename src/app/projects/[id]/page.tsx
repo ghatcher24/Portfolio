@@ -163,7 +163,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     {renderTechnicalProcess()}
                   </div>
                 </section>
-                <aside className="md:col-span-4">
+                <aside className="md:col-span-4 flex items-center justify-center">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/GearDrawing.jpg"
@@ -203,7 +203,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     {renderTechnicalProcess()}
                   </div>
                 </section>
-                <aside className="md:col-span-4">
+                <aside className="md:col-span-4 flex items-center justify-center">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-muted/10">
                     <Image
                       src="/images/CatheterDrawing.png"
@@ -232,7 +232,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     {renderTechnicalProcess()}
                   </div>
                 </section>
-                <aside className="md:col-span-4">
+                <aside className="md:col-span-4 flex items-center justify-center">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/BoneScrewDrawing.png"
@@ -269,8 +269,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           {project.id === 'angiographic-catheter' ? (
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
+                <div className="text-center space-y-4 md:space-y-0">
+                  <div className="inline-block relative h-64 w-auto mx-2 align-top rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card border-0">
                     <Image
                       src="/images/CatheterGallery1.jpg"
                       alt="Angiographic Catheter Gallery Image 1 (2:1 native)"
@@ -279,7 +279,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       data-ai-hint="catheter detail"
                     />
                   </div>
-                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
+                  <div className="inline-block relative h-64 w-auto mx-2 align-top rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card border-0">
                     <Image
                       src="/images/CatheterGallery2.jpg"
                       alt="Angiographic Catheter Gallery Image 2 (5:4 native)"
@@ -288,7 +288,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       data-ai-hint="medical device"
                     />
                   </div>
-                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
+                  <div className="inline-block relative h-64 w-auto mx-2 align-top rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card border-0">
                     <Image
                       src="/images/CatheterGallery3.jpg"
                       alt="Angiographic Catheter Gallery Image 3 (2:1 native)"
@@ -303,7 +303,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
                   <Image
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 1"
@@ -312,7 +312,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     data-ai-hint="app showcase"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
                   <Image
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 2"
@@ -321,7 +321,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     data-ai-hint="interface screenshot"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
                   <Image
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 3"
@@ -340,4 +340,3 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
-
