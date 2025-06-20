@@ -22,9 +22,9 @@ const experienceData = [
     position: 'Engineering Intern',
     dates: 'June 2023 - August 2023',
     description: [
-      'Developed and maintained web applications using React, Node.js, and PostgreSQL.',
-      'Participated in agile development cycles, including sprint planning and daily stand-ups.',
-      'Contributed to the successful launch of three major product updates.',
+      'Aided in design, development and delivery of numerous projects to customers.',
+      'Contacted suppliers and established meetings to explore potential manufacturing options.',
+      'Designed test rigs to evaluate product capabilities. Wrote testing procedures and conducted testing in accordance with ISO.',
     ],
     imageUrl: '/images/CofabLogo.jpg',
     imageHint: 'Cofab Design logo'
@@ -154,3 +154,4 @@ export function ExperienceSection() {
     </SectionWrapper>
   );
 }
+
