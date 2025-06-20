@@ -133,18 +133,37 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Catheter Design', 'Material Sourcing', 'Resilient Modeling', 'Solidworks', 'Medical Compliance', 'ISO 594'],
-    objective: 'To establish an online presence and showcase foundational web development skills.',
+    objective: 'Design an angiographic catheter intended for drug delivery to the pulmonary artery. Include a balloon tip and a catheter hub that facilitates balloon inflation with a syringe.',
     requirements: [
-        'Clean and simple design.',
-        'Sections for about, projects, and contact.',
-        'Responsive across different screen sizes.'
+        'Deployment to Pulmonary Artery (PA)',
+        'Balloon conforms to typical diameter of PA',
+        'Dual lumen catheter (Inflation and Delivery)',
+        'Catheter hub w/ 2 Luer Lock ports.',
+        'Required materials from reputable source'
     ],
     technicalProcess: [
-        'Structured content using semantic HTML5.',
-        'Styled with custom CSS, focusing on responsiveness.',
-        'Added interactivity with vanilla JavaScript.'
+      {
+        title: 'Select Key Constraints',
+        description: 'Important values were selected for catheter length, catheter diameter, balloon diameter and balloon shape and durometer.'
+      },
+      {
+        title: 'Source Materials and Create BOM',
+        description: 'Materials were sourced from Nordson Medical and Chamfer, a quote was generated for production cost.'
+      },
+      {
+        title: 'Design Catheter Hub',
+        description: 'Catheter hub with isolated channels and luer lock connectors was designed compliant to ISO 594.'
+      },
+      {
+        title: 'Adjust Design for Prototyping',
+        description: 'Catheter hub design was simplified and modifications were made for prototyping with 3D printing.'
+      },
+      {
+        title: 'Generate Marketing Material',
+        description: 'Catheter assembly was modeled in SolidWorks and high-quality renders were generated in Visualize.'
+      }
     ],
-    outcomeAndImpact: 'Successfully launched a personal brand online, leading to freelance opportunities and demonstrating core web technologies proficiency.'
+    outcomeAndImpact: 'Researched and designed proof of concept angiographic catheter.\nPrepared design for prototyping through design changes and part sourcing.\nGained experience with designing in compliance to ISO 594'
   },
   {
     id: generateSlug('Project Management Simulation'),
