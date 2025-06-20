@@ -18,7 +18,7 @@ export function ResumeSection() {
           </Link>
         </Button>
         <div className="mt-12 p-8 border border-dashed border-border rounded-lg bg-background max-w-3xl mx-auto shadow-sm">
-            <h3 className="text-2xl font-semibold text-accent mb-4">Resume Preview (Placeholder)</h3>
+            <h3 className="text-2xl font-semibold text-accent mb-4">Resume Preview</h3>
             
             <div className="space-y-3 text-left text-sm text-foreground">
                 <p><strong>Summary:</strong> Motivated graduate with a Masters in Mechanical Engineering searching for next step...</p>
@@ -31,6 +31,7 @@ export function ResumeSection() {
     </SectionWrapper>
   );
 }
+
 
 
 
