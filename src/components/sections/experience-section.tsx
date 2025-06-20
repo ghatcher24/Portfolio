@@ -23,7 +23,7 @@ const experienceData = [
     dates: 'June 2023 - August 2023',
     description: [
       'Aided in design, development and delivery of numerous projects to customers.',
-      'Contacted suppliers and established meetings to explore potential manufacturing options. Explored tooling options and generated cost projections.',
+      'Contacted suppliers and established meetings to explore manufacturing options. Explored tooling options and generated cost projections.',
       'Designed test rigs to determine product meets customer requirements. Wrote testing procedures and conducted testing in accordance with ISO.',
     ],
     imageUrl: '/images/CofabLogo.jpg',
@@ -80,9 +80,9 @@ export function ExperienceSection() {
         {experienceData.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader 
-              className={`flex flex-col sm:flex-row justify-between items-start sm:items-center pb-0 ${exp.company === 'University of Massachusetts Amherst' ? 'sm:space-y-0' : ''}`}
+              className={`flex flex-col sm:flex-row justify-between items-start sm:items-center pb-0 ${exp.company === 'University of Massachusetts Amherst' ? 'space-y-0 sm:space-y-0' : ''}`}
             >
-              <div className="mb-4 sm:mb-0">
+              <div className={`${exp.company === 'University of Massachusetts Amherst' ? "sm:mb-0" : "mb-4 sm:mb-0"}`}>
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
                   {exp.company}
