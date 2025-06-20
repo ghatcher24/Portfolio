@@ -44,7 +44,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
   const renderTechnicalProcess = () => (
     project.technicalProcess && project.technicalProcess.length > 0 ? (
-      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' ? 'space-y-4' :'space-y-2'}`}>
+      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' || project.id === 'ha-65-bone-screw' ? 'space-y-4' :'space-y-2'}`}>
         {project.technicalProcess.map((step, index) => (
           <li key={index}>
             {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
@@ -204,13 +204,42 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </section>
                 <aside className="md:col-span-4">
-                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-muted/10">
                     <Image
                       src="/images/CatheterDrawing.png"
                       alt="Catheter Drawing"
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="catheter drawing"
+                    />
+                  </div>
+                </aside>
+              </div>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                {renderOutcomeAndImpact()}
+              </section>
+            </>
+          ) : project.id === 'ha-65-bone-screw' ? (
+            <>
+              <div className="grid md:grid-cols-7 gap-8 mb-8">
+                <section className="md:col-span-3 flex flex-col h-full">
+                  <div>
+                    <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  </div>
+                  <div className="flex-grow flex flex-col justify-center">
+                    {renderTechnicalProcess()}
+                  </div>
+                </section>
+                <aside className="md:col-span-4">
+                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/BoneScrewDrawing.png"
+                      alt="Bone Screw Drawing"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="technical drawing"
                     />
                   </div>
                 </aside>
@@ -240,37 +269,37 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           {project.id === 'angiographic-catheter' ? (
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
-                  <Image
-                    src="/images/CatheterGallery1.jpg"
-                    alt="Angiographic Catheter Gallery Image 1 (2:1)"
-                    fill={true}
-                    style={{ objectFit: 'contain' }}
-                    data-ai-hint="catheter detail"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
+                    <Image
+                      src="/images/CatheterGallery1.jpg"
+                      alt="Angiographic Catheter Gallery Image 1 (2:1 native)"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="catheter detail"
+                    />
+                  </div>
+                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
+                    <Image
+                      src="/images/CatheterGallery2.jpg"
+                      alt="Angiographic Catheter Gallery Image 2 (5:4 native)"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="medical device"
+                    />
+                  </div>
+                  <div className="relative aspect-video rounded-lg overflow-hidden border-0">
+                    <Image
+                      src="/images/CatheterGallery3.jpg"
+                      alt="Angiographic Catheter Gallery Image 3 (2:1 native)"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="catheter design"
+                    />
+                  </div>
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
-                  <Image
-                    src="/images/CatheterGallery2.jpg"
-                    alt="Angiographic Catheter Gallery Image 2 (5:4)"
-                    fill={true}
-                    style={{ objectFit: 'contain' }}
-                    data-ai-hint="medical device"
-                  />
-                </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
-                  <Image
-                    src="/images/CatheterGallery3.jpg"
-                    alt="Angiographic Catheter Gallery Image 3 (2:1)"
-                    fill={true}
-                    style={{ objectFit: 'contain' }}
-                    data-ai-hint="catheter design"
-                  />
-                </div>
-              </div>
             </section>
-          ) : project.id !== 'inline-121-gearbox' ? (
+          ) : !['inline-121-gearbox', 'ha-65-bone-screw'].includes(project.id) ? (
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -311,3 +340,4 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
+
