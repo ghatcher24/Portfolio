@@ -121,8 +121,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
           {project.id === 'inline-121-gearbox' ? (
             <>
-              <div className="grid md:grid-cols-10 gap-8 mb-8">
-                <section className="md:col-span-6 prose prose-lg max-w-none text-foreground">
+              <div className="grid md:grid-cols-5 gap-8 mb-8">
+                <section className="md:col-span-3 prose prose-lg max-w-none text-foreground">
                   <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   {project.technicalProcess && project.technicalProcess.length > 0 ? (
                     <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
@@ -143,7 +143,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     <p>No technical process details available.</p>
                   )}
                 </section>
-                <aside className="md:col-span-4">
+                <aside className="md:col-span-2">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image 
                       src="/images/GearDrawing.jpg" 
@@ -216,22 +216,17 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     <p className="leading-relaxed">{project.outcomeAndImpact}</p>
                   )}
               </section>
-            </>
-          )}
-          
-          {project.id !== 'inline-121-gearbox' && (
-            <>
               <Separator className="my-8" />
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                  <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image 
-                      src="https://placehold.co/600x400.png" 
-                      alt="Additional project image 1" 
+                      src="/images/GearDrawing.jpg" 
+                      alt="Gear Drawing" 
                       fill={true}
-                      style={{ objectFit: 'cover' }}
-                      data-ai-hint="project details"
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="technical drawing"
                     />
                   </div>
                   <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
@@ -256,12 +251,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               </section>
             </>
           )}
-
         </article>
       </main>
       <Footer />
     </>
   );
 }
-
-    
