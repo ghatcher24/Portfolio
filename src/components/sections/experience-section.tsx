@@ -79,7 +79,7 @@ export function ExperienceSection() {
       <div className="space-y-8">
         {experienceData.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
+            <CardHeader className={`flex flex-col sm:flex-row justify-between items-start sm:items-center ${exp.company === 'University of Massachusetts Amherst' ? 'pb-2' : 'pb-4'}`}>
               <div className="mb-4 sm:mb-0">
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
@@ -109,7 +109,7 @@ export function ExperienceSection() {
                   {exp.positions.map((pos, posIndex) => (
                     <div key={posIndex} className={posIndex > 0 ? "pt-6 border-t border-border/50" : ""}>
                       
-                      <h4 className="text-xl font-semibold text-accent mb-1">{pos.title}</h4>
+                      <h4 className={`text-xl font-semibold mb-1 ${exp.company === 'University of Massachusetts Amherst' ? 'text-primary' : 'text-accent'}`}>{pos.title}</h4>
                       <p className="text-sm text-muted-foreground mb-3">{pos.dates}</p>
 
                       {pos.focusAreas ? (
