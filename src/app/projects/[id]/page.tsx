@@ -15,14 +15,10 @@ interface ProjectDetailPageProps {
   };
 }
 
-// Define a type for the technical process step if it's an object
 interface TechnicalProcessStepObject {
   title: string;
   description: string;
 }
-
-// Update the Project type if necessary, or ensure project data is flexible
-// For simplicity, we'll check type in map function.
 
 export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const project = projectsData.find(p => p.id === params.id);
@@ -35,7 +31,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           <h1 className="text-4xl font-bold text-destructive mb-4">Project Not Found</h1>
           <p className="text-lg text-muted-foreground mb-8">The project you are looking for does not exist or has been moved.</p>
           <Button asChild>
-            <Link href="/#projects"> {/* Corrected to /#projects */}
+            <Link href="/#projects">
               <ArrowLeft size={18} className="mr-2" />
               Back to Projects
             </Link>
@@ -52,7 +48,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="mb-8">
           <Button asChild variant="outline" size="sm">
-            <Link href="/#projects"> {/* Changed from /projects to /#projects to go to the section on homepage */}
+            <Link href="/#projects">
               <ArrowLeft size={18} className="mr-2" />
               Back to All Projects
             </Link>
@@ -121,7 +117,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             </ul>
           </section>
 
-          {project.id === 'inline-12:1-gearbox' ? (
+          {project.id === 'inline-12-1-gearbox' ? (
             <div className="md:grid md:grid-cols-10 md:gap-12 my-8">
               <div className="md:col-span-6">
                 <section className="mb-8 prose prose-lg max-w-none text-foreground">
