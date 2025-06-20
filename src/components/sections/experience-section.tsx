@@ -23,8 +23,8 @@ const experienceData = [
     dates: 'June 2023 - August 2023',
     description: [
       'Aided in design, development and delivery of numerous projects to customers.',
-      'Contacted suppliers and established meetings to explore potential manufacturing options.',
-      'Designed test rigs to evaluate product capabilities. Wrote testing procedures and conducted testing in accordance with ISO.',
+      'Contacted suppliers and established meetings to explore potential manufacturing options. Explored tooling options and generated cost projections.',
+      'Designed test rigs to determine product meets customer requirements. Wrote testing procedures and conducted testing in accordance with ISO.',
     ],
     imageUrl: '/images/CofabLogo.jpg',
     imageHint: 'Cofab Design logo'
@@ -154,4 +154,3 @@ export function ExperienceSection() {
     </SectionWrapper>
   );
 }
-
