@@ -73,7 +73,7 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Parameter Selection', 'Matlab', 'Gear Stress Calculations', 'PTC Mathcad', 'Gear Train Design', 'SolidWorks', 'Design Packaging'],
-    objective: 'To create an intuitive tool for teams to enhance productivity and collaboration on projects.',
+    objective: 'Design a 12:1 reduction ratio gearbox that fits within a 22 mm cylindrical package. Use gears of standard pressure angles and pitches. The gearbox would be driven by a motor w/ nominal of torque 6.96 mNm at a nominal speed of 7060 rpm.',
     requirements: [
         'User registration and login.',
         'Create, assign, and update tasks.',
