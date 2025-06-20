@@ -55,9 +55,8 @@ const experienceData = [
         title: 'Graduate Student Advisor',
         dates: 'August 2024 - May 2025',
         description: [
-          'Assigned to more complex tasks involving API development and UI enhancements.',
-          'Assisted in database schema modifications for new product modules.',
-          'Participated in debugging sessions for critical platform issues.',
+          'Managed class enrollment of 80 students during registration periods',
+          'Built optimal class schedules on a student by student basis for three and four year tracks.',
         ],
       },
       {
