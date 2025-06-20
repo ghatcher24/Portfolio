@@ -14,7 +14,7 @@ const experienceData = [
       'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure.',
       'Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
-    imageUrl: '/images/InnovaPlasticsLogo.jpg', // Updated from ThermofabLogo.jpg
+    imageUrl: '/images/InnovaPlasticsLogo.jpg', 
     imageHint: 'Innova Plastics Engineering logo'
   },
   {
@@ -109,7 +109,7 @@ export function ExperienceSection() {
                   {exp.positions.map((pos, posIndex) => (
                     <div key={posIndex} className={posIndex > 0 ? "pt-6 border-t border-border/50" : ""}>
                       
-                      <h4 className={`text-xl font-semibold mb-1 ${exp.company === 'University of Massachusetts Amherst' ? 'text-primary' : 'text-accent'}`}>{pos.title}</h4>
+                      <h4 className={`text-xl font-semibold mt-1 mb-1 ${exp.company === 'University of Massachusetts Amherst' ? 'text-primary' : 'text-accent'}`}>{pos.title}</h4>
                       <p className="text-sm text-muted-foreground mb-3">{pos.dates}</p>
 
                       {pos.focusAreas ? (
