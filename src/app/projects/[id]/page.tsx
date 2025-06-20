@@ -245,10 +245,23 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </aside>
               </div>
               <Separator className="my-8" />
-              <section className="mb-8 prose prose-lg max-w-none text-foreground">
-                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-                {renderOutcomeAndImpact()}
-              </section>
+              <div className="grid md:grid-cols-7 gap-8 mb-8">
+                <section className="md:col-span-3 flex flex-col justify-center prose prose-lg max-w-none text-foreground">
+                  <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                  {renderOutcomeAndImpact()}
+                </section>
+                <aside className="md:col-span-4 flex items-center justify-center">
+                  <div className="relative w-full aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/BoneScrewAnsys.png"
+                      alt="Bone Screw ANSYS FEA"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="FEA analysis"
+                    />
+                  </div>
+                </aside>
+              </div>
             </>
           ) : (
             <>
