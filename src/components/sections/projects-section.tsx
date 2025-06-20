@@ -75,11 +75,14 @@ export const projectsData = [
     tags: ['Parameter Selection', 'Matlab', 'Gear Stress Calculations', 'PTC Mathcad', 'Gear Train Design', 'SolidWorks', 'Design Packaging'],
     objective: 'Design a 12:1 reduction ratio gearbox that fits within a 22 mm cylindrical package. Use gears of standard pressure angles and pitches. The gearbox would be driven by a motor w/ nominal of torque 6.96 mNm at a nominal speed of 7060 rpm.',
     requirements: [
-        'User registration and login.',
-        'Create, assign, and update tasks.',
-        'Kanban-style board with drag-and-drop functionality.',
-        'Real-time updates for collaborative editing.',
-        'Notifications for task assignments and updates.'
+        'Reduction ratio of 12:1 (Input:Output)',
+        'Package Size: 22mm OD, 20mm Length',
+        'Nominal Motor Input: Torque: 6.96mNm Speed: 7060rpm',
+        'Standard Gear Pressure Angle: 20 degrees',
+        'Maximum Number of Gear Stages: 2',
+        'Gear Material: 1045 Steel',
+        'Shaft Material: Stainless Steel 304',
+        'Case Material: Aluminum 6061'
     ],
     technicalProcess: [
         'Utilized MongoDB for flexible data storage.',
