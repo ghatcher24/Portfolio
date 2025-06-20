@@ -68,7 +68,7 @@ export const projectsData = [
     id: generateSlug('Inline 12:1 Gearbox'),
     title: 'Inline 12:1 Gearbox',
     description: 'Design of compound gear train to achieve 12:1 reduction ratio within 22 millimeter casing. Gear combinations computationally established and then validated and selected using gear stress analysis. Casing modeled for selected configuration.',
-    imageUrl: '/images/GearTrainCover.JPG',
+    imageUrl: '/images/GearCover.jpg',
     imageHint: 'gearbox assembly',
     liveLink: '#',
     githubLink: '#',
@@ -99,7 +99,7 @@ export const projectsData = [
         description: 'Optimal design selected and modeled with bearings and casing. Input and output shaft aligned through canting.'
       }
     ],
-    outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
+    outcomeAndImpact: 'Successfully designed a two-stage compound gear train with a 12:1 reduction ratio. The gear train utilizes standard 20-degree pressure angle gears and fits within the specified 22 mm OD by 20 mm length package. Engineering calculations performed in Mathcad confirmed that the selected gear configuration (Material: 1045 Steel) meets the desired 1000-hour lifespan under the nominal motor input of 6.96 mNm torque at 7060 rpm. The final design, modeled in SolidWorks, includes appropriate bearings and a casing, with the input and output shafts aligned through canting for a compact inline assembly. This project demonstrates proficiency in gear train design, stress analysis, material selection, and CAD modeling for precision mechanical systems.'
   },
     {
     id: generateSlug('Prototype Slitting Machine'),
