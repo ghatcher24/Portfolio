@@ -155,7 +155,10 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   )}
                 </section>
               </div>
-              {/* Right column for image is intentionally left empty for now for this project */}
+              {/* Right column is intentionally left empty for now */}
+              <div className="md:col-span-1">
+                 {/* Placeholder for image if needed later */}
+              </div>
             </div>
           ) : (
             <>
