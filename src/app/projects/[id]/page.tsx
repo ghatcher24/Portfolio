@@ -123,25 +123,29 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <>
               <div className="grid md:grid-cols-7 gap-8 mb-8">
                 <section className="md:col-span-3 prose prose-lg max-w-none text-foreground flex flex-col h-full">
-                  <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
-                  {project.technicalProcess && project.technicalProcess.length > 0 ? (
-                    <ol className="list-decimal pl-5 space-y-4 leading-relaxed">
-                      {project.technicalProcess.map((step, index) => (
-                        <li key={index}>
-                          {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
-                            <>
-                              <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
-                              <div>{(step as TechnicalProcessStepObject).description}</div>
-                            </>
-                          ) : (
-                            String(step) 
-                          )}
-                        </li>
-                      ))}
-                    </ol>
-                  ) : (
-                    <p>No technical process details available.</p>
-                  )}
+                  <div>
+                    <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  </div>
+                  <div className="flex-grow flex flex-col justify-center">
+                    {project.technicalProcess && project.technicalProcess.length > 0 ? (
+                      <ol className="list-decimal pl-5 space-y-4 leading-relaxed">
+                        {project.technicalProcess.map((step, index) => (
+                          <li key={index}>
+                            {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
+                              <>
+                                <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
+                                <div>{(step as TechnicalProcessStepObject).description}</div>
+                              </>
+                            ) : (
+                              String(step) 
+                            )}
+                          </li>
+                        ))}
+                      </ol>
+                    ) : (
+                      <p className="leading-relaxed">No technical process details available.</p>
+                    )}
+                  </div>
                 </section>
                 <aside className="md:col-span-4">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
@@ -223,17 +227,29 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  {project.id === 'inline-121-gearbox' && (
-                     <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  {project.id === 'inline-121-gearbox' ? (
+                    <>
+                     {/* GearDrawing.jpg is intentionally not here for this project as it's shown above */}
+                     <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                         <Image 
-                          src="/images/GearDrawing.jpg" 
-                          alt="Gear Drawing" 
+                          src="https://placehold.co/600x400.png" 
+                          alt="Additional project image 2" 
                           fill={true}
-                          style={{ objectFit: 'contain' }}
-                          data-ai-hint="technical drawing"
+                          style={{ objectFit: 'cover' }}
+                          data-ai-hint="interface screenshot"
                         />
                       </div>
-                  )}
+                      <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                        <Image 
+                          src="https://placehold.co/600x400.png" 
+                          alt="Additional project image 3" 
+                          fill={true}
+                          style={{ objectFit: 'cover' }}
+                          data-ai-hint="feature showcase"
+                        />
+                      </div>
+                    </>
+                  ) : (
                     <>
                      <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                         <Image 
@@ -254,6 +270,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         />
                       </div>
                     </>
+                  )}
                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                     <Image 
                       src="https://placehold.co/600x400.png" 
@@ -273,3 +290,4 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
+
