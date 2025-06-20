@@ -117,9 +117,9 @@ export function ExperienceSection() {
                       {pos.focusAreas ? (
                         <div className="space-y-4">
                           {pos.focusAreas.map((area, areaIndex) => (
-                            <div key={areaIndex} className="ml-0">
+                            <div key={areaIndex}>
                               <h5 className="text-md text-primary font-semibold mb-1">{area.areaTitle}</h5>
-                              <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm ml-5">
+                              <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
                                 {area.description.map((item, i) => (
                                   <li key={i}>{item}</li>
                                 ))}
@@ -128,7 +128,7 @@ export function ExperienceSection() {
                           ))}
                         </div>
                       ) : pos.description ? (
-                        <ul className="list-disc list-inside space-y-1 text-foreground leading-relaxed text-sm ml-5">
+                        <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
                           {pos.description.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
