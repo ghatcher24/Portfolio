@@ -44,7 +44,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
   const renderTechnicalProcess = () => (
     project.technicalProcess && project.technicalProcess.length > 0 ? (
-      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' ? 'space-y-4' : project.id === 'angiographic-catheter' ? 'space-y-4' :'space-y-2'}`}>
+      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' ? 'space-y-4' :'space-y-2'}`}>
         {project.technicalProcess.map((step, index) => (
           <li key={index}>
             {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
@@ -239,36 +239,33 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           
           {project.id === 'angiographic-catheter' ? (
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative h-64 rounded-lg overflow-hidden shadow-md flex justify-center items-center bg-muted/10">
+              <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
+              <div className="flex flex-wrap justify-center items-start gap-6 mt-8">
+                <div className="relative h-64 w-auto rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1">
                   <Image 
                     src="/images/CatheterGallery1.jpg" 
                     alt="Angiographic Catheter Gallery Image 1" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
-                    className="max-w-full max-h-full"
                   />
                 </div>
-                <div className="relative h-64 rounded-lg overflow-hidden shadow-md flex justify-center items-center bg-muted/10">
+                <div className="relative h-64 w-auto rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1">
                   <Image 
                     src="/images/CatheterGallery2.jpg" 
                     alt="Angiographic Catheter Gallery Image 2" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
-                    className="max-w-full max-h-full"
                   />
                 </div>
-                <div className="relative h-64 rounded-lg overflow-hidden shadow-md flex justify-center items-center bg-muted/10">
+                <div className="relative h-64 w-auto rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1">
                   <Image 
                     src="/images/CatheterGallery3.jpg" 
                     alt="Angiographic Catheter Gallery Image 3" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
-                    className="max-w-full max-h-full"
                   />
                 </div>
               </div>
@@ -314,4 +311,3 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
-
