@@ -118,8 +118,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           </section>
 
           {project.id === 'inline-12-1-gearbox' ? (
-            <div className="md:grid md:grid-cols-10 md:gap-12 my-8">
-              <div className="md:col-span-6">
+            <div className="md:grid md:grid-cols-2 md:gap-8 my-8">
+              <div className="md:col-span-1"> {/* Left column for text content */}
                 <section className="mb-8 prose prose-lg max-w-none text-foreground">
                   <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   {project.technicalProcess && project.technicalProcess.length > 0 ? (
@@ -155,19 +155,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   )}
                 </section>
               </div>
-              <div className="md:col-span-4 flex flex-col items-center justify-start pt-8 md:pt-0">
-                <div className="w-full">
-                  <Image 
-                    src="/images/GearDrawing.jpg" 
-                    alt="Detailed drawing of the inline 12:1 gearbox"
-                    width={350}
-                    height={490}
-                    style={{ objectFit: 'contain' }}
-                    className="rounded-lg shadow-md mx-auto"
-                    data-ai-hint="gearbox drawing"
-                  />
-                </div>
-              </div>
+              {/* Right column for image is intentionally left empty for now for this project */}
             </div>
           ) : (
             <>
