@@ -78,11 +78,8 @@ export const projectsData = [
         'Reduction ratio of 12:1 (Input:Output)',
         'Package Size: 22mm OD, 20mm Length',
         'Nominal Motor Input: Torque: 6.96mNm Speed: 7060rpm',
-        'Standard Gear Pressure Angle: 20 degrees',
-        'Maximum Number of Gear Stages: 2',
         'Gear Material: 1045 Steel',
-        'Shaft Material: Stainless Steel 304',
-        'Case Material: Aluminum 6061'
+        'Desired Lifespan: 1000 hours'
     ],
     technicalProcess: [
         'Utilized MongoDB for flexible data storage.',
