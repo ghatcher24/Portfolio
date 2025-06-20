@@ -10,8 +10,8 @@ const experienceData = [
     position: 'Process Engineering Intern',
     dates: 'June 2024 - August 2024',
     description: [
-      'Developed QMS procedures relevant for transition to ISO 13485 compliance and performed installation qualification on existing machinery.',
-      'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure. Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
+      'Developed QMS procedures for transition to ISO 13485 compliance and performed installation qualification on machinery.',
+      'Identified paint consumption issue and developed consumption measurement procedure. Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
     imageUrl: '/images/ThermofabLogo.jpg',
     imageHint: 'Thermofab logo'
