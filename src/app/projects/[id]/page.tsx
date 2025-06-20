@@ -168,6 +168,20 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   <p className="leading-relaxed">{project.outcomeAndImpact}</p>
                 )}
               </section>
+               <div className="my-8"> {/* Changed mb-8 to my-8 to ensure spacing */}
+                <h3 className="text-xl font-semibold text-accent mb-4 flex items-center">
+                    <Images size={20} className="mr-2 text-primary" /> Additional View
+                </h3>
+                <div className="relative aspect-[2/1] rounded-lg overflow-hidden shadow-md">
+                  <Image 
+                    src="/images/GearGallery.jpg" 
+                    alt="Gearbox Gallery Image" 
+                    fill={true}
+                    style={{ objectFit: 'cover' }}
+                    data-ai-hint="gear detail"
+                  />
+                </div>
+              </div>
             </>
           ) : (
             <>
@@ -240,10 +254,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   data-ai-hint="feature showcase"
                 />
               </div>
-              {/* Conditionally render GearDrawing.jpg in gallery ONLY IF it's NOT the gearbox project, to avoid duplication.
-                  However, since GearDrawing.jpg is specific to the gearbox project, it will only be shown above.
-                  This effectively removes it from the gallery for the gearbox project.
-              */}
             </div>
           </section>
 
