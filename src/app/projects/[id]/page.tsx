@@ -122,10 +122,10 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           {project.id === 'inline-121-gearbox' ? (
             <>
               <div className="grid md:grid-cols-7 gap-8 mb-8">
-                <section className="md:col-span-3 prose prose-lg max-w-none text-foreground">
+                <section className="md:col-span-3 prose prose-lg max-w-none text-foreground flex flex-col justify-center h-full">
                   <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   {project.technicalProcess && project.technicalProcess.length > 0 ? (
-                    <ol className="list-decimal pl-5 space-y-2 leading-relaxed">
+                    <ol className="list-decimal pl-5 space-y-4 leading-relaxed">
                       {project.technicalProcess.map((step, index) => (
                         <li key={index}>
                           {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
@@ -223,7 +223,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                   {project.id === 'inline-121-gearbox' ? null : (
                     <>
                      <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                         <Image 
@@ -244,7 +243,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         />
                       </div>
                     </>
-                  )}
                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                     <Image 
                       src="https://placehold.co/600x400.png" 
