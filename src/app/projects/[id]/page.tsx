@@ -251,7 +251,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   {renderOutcomeAndImpact()}
                 </section>
                 <aside className="md:col-span-1 flex items-center justify-center">
-                  <div className="relative w-3/4 aspect-square rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                     <Image
                       src="/images/BoneScrewAnsys.png"
                       alt="Bone Screw ANSYS FEA"
@@ -316,7 +316,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
+                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                   <Image
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 1"
@@ -325,7 +325,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     data-ai-hint="app showcase"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
+                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                   <Image
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 2"
@@ -334,7 +334,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     data-ai-hint="interface screenshot"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md border-0">
+                <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                   <Image
                     src="https://placehold.co/600x400.png"
                     alt="Additional project image 3"
