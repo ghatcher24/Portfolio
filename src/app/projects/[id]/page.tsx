@@ -241,36 +241,39 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative h-64 rounded-lg overflow-hidden shadow-md flex justify-center items-center bg-muted/10">
                   <Image 
                     src="/images/CatheterGallery1.jpg" 
                     alt="Angiographic Catheter Gallery Image 1" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
+                    className="max-w-full max-h-full"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative h-64 rounded-lg overflow-hidden shadow-md flex justify-center items-center bg-muted/10">
                   <Image 
                     src="/images/CatheterGallery2.jpg" 
                     alt="Angiographic Catheter Gallery Image 2" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
+                    className="max-w-full max-h-full"
                   />
                 </div>
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
+                <div className="relative h-64 rounded-lg overflow-hidden shadow-md flex justify-center items-center bg-muted/10">
                   <Image 
                     src="/images/CatheterGallery3.jpg" 
                     alt="Angiographic Catheter Gallery Image 3" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
+                    className="max-w-full max-h-full"
                   />
                 </div>
               </div>
             </section>
-          ) : project.id !== 'inline-121-gearbox' ? ( // Hide gallery for inline-121-gearbox
+          ) : project.id !== 'inline-121-gearbox' ? ( 
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -311,3 +314,4 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
+
