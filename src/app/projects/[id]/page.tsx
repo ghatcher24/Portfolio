@@ -204,7 +204,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </section>
                 <aside className="md:col-span-4 flex items-center justify-center">
-                  <div className="relative w-1/2 aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-muted/10">
+                  <div className="relative w-3/5 aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-muted/10">
                     <Image
                       src="/images/CatheterDrawing.png"
                       alt="Catheter Drawing"
