@@ -45,8 +45,8 @@ const experienceData = [
           {
             areaTitle: 'Senior Design Capstone',
             description: [
-              'Text',
-              'Text',
+              'Lead weekly progress update meetings with student teams and guided them throughout proper design process.',
+              'Provided constructive feedback correcting missteps and aided in filling knowledge gaps.',
             ],
           },
         ],
