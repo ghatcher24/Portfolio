@@ -82,10 +82,10 @@ export const projectsData = [
         'Desired Lifespan: 1000 hours'
     ],
     technicalProcess: [
-        'Utilized MongoDB for flexible data storage.',
-        'Built backend APIs with Node.js and Express.',
-        'Implemented real-time communication using Socket.io.',
-        'Developed frontend with React for a dynamic user interface.'
+        'Define Design Degrees of Freedom: The design degrees of freedom were identified as pitch, number of teeth, face width, and individual stage ratios.',
+        'Determine Stage Permutations: Used prime factorization in MATLAB, to find standard ratios that reached a 12:1 reduction for 4,5 and 6 stage configurations.',
+        'Engineering Calculations: Gear constants for stress calculations selected. Bending and surface stress and strength compared in MATHCAD.',
+        'Selection and Modeling: Optimal design selected and modeled with bearings and casing. Input and output shaft aligned through canting.'
     ],
     outcomeAndImpact: 'Improved team efficiency by 25% and provided a clear overview of project progress, reducing missed deadlines.'
   },
