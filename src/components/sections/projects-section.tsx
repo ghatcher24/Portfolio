@@ -259,7 +259,7 @@ export const projectsData = [
         description: 'Uniaxial tensile testing was conducted on Instron per ASTM Section A3. Failure modes were visually inspected, data was compared to FEA.'
       }
     ],
-    outcomeAndImpact: 'Resin screws are not suitable for pediatric fracture fixation due to insufficient thread strength.\nFEA is a reliable predictor of physical testing outcomes when executed properly.'
+    outcomeAndImpact: 'Found that SLA printed resin screw was not suitable for pediatric fracture fixation due to insufficient thread strength.\nReaffirmed that FEA is a reliable predictor of physical testing outcomes when executed properly.'
   },
   {
     id: generateSlug('Catheter Hub w/ Hemostatic Lock'),
