@@ -195,7 +195,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           ) : project.id === 'angiographic-catheter' ? (
             <>
               <div className="grid md:grid-cols-7 gap-8 mb-8">
-                <section className="md:col-span-3 flex flex-col h-full">
+                 <section className="md:col-span-3 flex flex-col h-full">
                   <div>
                     <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   </div>
@@ -243,7 +243,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                   <Image 
-                    src="/images/CatheterGallery1.png" 
+                    src="/images/CatheterGallery1.jpg" 
                     alt="Angiographic Catheter Gallery Image 1" 
                     fill={true}
                     style={{ objectFit: 'cover' }}
@@ -252,7 +252,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </div>
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                   <Image 
-                    src="/images/CatheterGallery2.png" 
+                    src="/images/CatheterGallery2.jpg" 
                     alt="Angiographic Catheter Gallery Image 2" 
                     fill={true}
                     style={{ objectFit: 'cover' }}
@@ -261,7 +261,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </div>
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                   <Image 
-                    src="/images/CatheterGallery3.png" 
+                    src="/images/CatheterGallery3.jpg" 
                     alt="Angiographic Catheter Gallery Image 3" 
                     fill={true}
                     style={{ objectFit: 'cover' }}
