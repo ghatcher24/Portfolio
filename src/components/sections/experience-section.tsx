@@ -6,7 +6,7 @@ import { Award, Building2 } from 'lucide-react';
 
 const experienceData = [
   {
-    company: 'Thermofab',
+    company: 'Innova Plastics Engineering',
     position: 'Process Engineering Intern',
     dates: 'June 2024 - August 2024',
     description: [
@@ -15,7 +15,7 @@ const experienceData = [
       'Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
     imageUrl: '/images/ThermofabLogo.jpg',
-    imageHint: 'Thermofab logo'
+    imageHint: 'Innova Plastics Engineering logo'
   },
   {
     company: 'Cofab Design',

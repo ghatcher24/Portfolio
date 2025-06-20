@@ -23,7 +23,7 @@ export function ResumeSection() {
             <div className="space-y-3 text-left text-sm text-foreground">
                 <p><strong>Summary:</strong> Motivated graduate with a Masters in Mechanical Engineering searching for next step...</p>
                 <p><strong>Key Skills:</strong> Product Design, CSWA SolidWorks, Process Improvement, MATLAB, FEA...</p>
-                <p><strong>Recent Experience:</strong> Process Engineering Intern at Thermofab</p>
+                <p><strong>Recent Experience:</strong> Process Engineering Intern at Innova Plastics Engineering</p>
                 <p className="italic text-muted-foreground mt-4">For a complete overview, please download the full PDF version.</p>
             </div>
         </div>
@@ -31,7 +31,3 @@ export function ResumeSection() {
     </SectionWrapper>
   );
 }
-
-
-
-
