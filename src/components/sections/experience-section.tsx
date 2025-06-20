@@ -82,14 +82,14 @@ export function ExperienceSection() {
             <CardHeader 
               className={`flex flex-col sm:flex-row justify-between items-start sm:items-center pb-0 ${exp.company === 'University of Massachusetts Amherst' ? 'sm:space-y-0' : ''}`}
             >
-              <div className={`${exp.company === 'University of Massachusetts Amherst' ? "sm:mb-0" : "mb-4 sm:mb-0"}`}>
+              <div className="mb-4 sm:mb-0">
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
                   {exp.company}
                 </CardTitle>
                 {exp.positions && exp.positions.length > 0 ? (
                   <>
-                    <CardDescription className="text-xl font-semibold mt-1 text-primary">{exp.positions[0].title}</CardDescription>
+                    <CardDescription className="text-lg font-semibold mt-1 text-primary">{exp.positions[0].title}</CardDescription>
                     <CardDescription className="text-sm text-muted-foreground mt-1">{exp.positions[0].dates}</CardDescription>
                   </>
                 ) : exp.position && exp.dates ? (
@@ -121,7 +121,7 @@ export function ExperienceSection() {
                     return (
                       <>
                         {firstPosDetailsExist && (
-                          <div className="mt-1"> {/* Ensure this block starts with a small top margin if it's the first content */}
+                          <div className="mt-1">
                             {firstPos.focusAreas ? (
                               <div className="space-y-4">
                                 {firstPos.focusAreas.map((area, areaIndex) => (
@@ -147,10 +147,10 @@ export function ExperienceSection() {
                             className={
                               (firstPosDetailsExist || posIdx > 0) 
                                 ? "pt-6 border-t border-border/50"
-                                : "mt-1" // If it's the first of remaining and no initial details, add small top margin
+                                : "mt-1" 
                             }
                           >
-                            <h4 className="text-xl font-semibold mt-1 mb-1 text-primary">{pos.title}</h4>
+                            <h4 className="text-lg font-semibold mt-1 mb-1 text-primary">{pos.title}</h4>
                             <p className="text-sm text-muted-foreground mb-3">{pos.dates}</p>
                             {pos.focusAreas ? (
                               <div className="space-y-4">
