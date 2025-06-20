@@ -131,7 +131,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   <li key={index}>
                     {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
                       <>
-                        <strong>{(step as TechnicalProcessStepObject).title}:</strong> {(step as TechnicalProcessStepObject).description}
+                        <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
+                        <div>{(step as TechnicalProcessStepObject).description}</div>
                       </>
                     ) : (
                       String(step) 
