@@ -14,8 +14,8 @@ const experienceData = [
       'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure.',
       'Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
-    imageUrl: '/images/InnovaPlasticsLogo.jpg',
-    imageHint: 'Innova Plastics Engineering logo'
+    imageUrl: '/images/ThermofabLogo.jpg',
+    imageHint: 'Thermofab logo'
   },
   {
     company: 'Cofab Design',
@@ -79,13 +79,14 @@ export function ExperienceSection() {
       <div className="space-y-8">
         {experienceData.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
-              <div className="mb-4 sm:mb-0"> {/* Container for text elements */}
+            <CardHeader 
+              className={`flex flex-col sm:flex-row justify-between items-start sm:items-center pb-0 ${exp.company === 'University of Massachusetts Amherst' ? 'sm:space-y-0' : ''}`}
+            >
+              <div className={`${exp.company === 'University of Massachusetts Amherst' ? "sm:mb-0" : "mb-4 sm:mb-0"}`}>
                 <CardTitle className="text-2xl text-accent flex items-center">
                   <Building2 size={24} className="mr-3 text-primary" />
                   {exp.company}
                 </CardTitle>
-                {/* Display first UMass position's title & dates, or the single position for other companies */}
                 {exp.positions && exp.positions.length > 0 ? (
                   <>
                     <CardDescription className="text-xl font-semibold mt-1 text-primary">{exp.positions[0].title}</CardDescription>
@@ -98,7 +99,7 @@ export function ExperienceSection() {
                   </>
                 ) : null}
               </div>
-              <div className="flex-shrink-0 self-center sm:self-start"> {/* Container for the image */}
+              <div className="flex-shrink-0 self-center sm:self-start mt-2 sm:mt-0">
                 <Image
                   src={exp.imageUrl}
                   alt={`${exp.company} logo`}
@@ -109,20 +110,18 @@ export function ExperienceSection() {
                 />
               </div>
             </CardHeader>
-            <CardContent>
-              {exp.positions ? ( // UMass case: multiple positions
-                <div className="space-y-6">
+            <CardContent className="pt-0">
+              {exp.positions ? (
+                <div className="space-y-6 mt-4">
                   {(() => {
                     const firstPos = exp.positions[0];
-                    // Check if the first position has details (focusAreas or description) to render in CardContent
                     const firstPosDetailsExist = firstPos && (firstPos.focusAreas || (firstPos.description && !firstPos.focusAreas));
                     const remainingPositions = exp.positions.slice(1);
 
                     return (
                       <>
-                        {/* Details for the first position (title/dates are now in header) */}
                         {firstPosDetailsExist && (
-                          <div> {/* No top border for this first block of details */}
+                          <div className="mt-1"> {/* Ensure this block starts with a small top margin if it's the first content */}
                             {firstPos.focusAreas ? (
                               <div className="space-y-4">
                                 {firstPos.focusAreas.map((area, areaIndex) => (
@@ -142,14 +141,13 @@ export function ExperienceSection() {
                           </div>
                         )}
 
-                        {/* Subsequent positions (from index 1 onwards) */}
                         {remainingPositions.map((pos, posIdx) => (
                           <div
                             key={`pos-${posIdx}`}
                             className={
-                              (firstPosDetailsExist || posIdx > 0) // Add border if first pos details existed, OR if this is not the first of remaining_positions
+                              (firstPosDetailsExist || posIdx > 0) 
                                 ? "pt-6 border-t border-border/50"
-                                : ""
+                                : "mt-1" // If it's the first of remaining and no initial details, add small top margin
                             }
                           >
                             <h4 className="text-xl font-semibold mt-1 mb-1 text-primary">{pos.title}</h4>
@@ -176,9 +174,9 @@ export function ExperienceSection() {
                     );
                   })()}
                 </div>
-              ) : ( // Non-UMass case: single position, render its description
+              ) : ( 
                 exp.description && (
-                  <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5">
+                  <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed pl-5 mt-4">
                     {exp.description.map((item, i) => <li key={i}>{item}</li>)}
                   </ul>
                 )
