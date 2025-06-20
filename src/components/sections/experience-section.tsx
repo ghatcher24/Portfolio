@@ -11,7 +11,8 @@ const experienceData = [
     dates: 'June 2024 - August 2024',
     description: [
       'Developed QMS procedures for transition to ISO 13485 compliance and performed installation qualification on machinery.',
-      'Identified paint consumption issue and developed consumption measurement procedure. Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
+      'Identified paint consumption issue and collaborated with shop employees to develop consumption measurement procedure.',
+      'Coded interface to record metrics and produce unit consumption statistics using Visual BASIC.',
     ],
     imageUrl: '/images/ThermofabLogo.jpg',
     imageHint: 'Thermofab logo'
@@ -112,7 +113,7 @@ export function ExperienceSection() {
                     <div key={posIndex} className={posIndex > 0 ? "pt-6 border-t border-border/50" : ""}>
                       
                       <h4 className="text-xl font-semibold text-accent mb-1">{pos.title}</h4>
-                      <p className="text-md text-muted-foreground mb-3">{pos.dates}</p>
+                      <p className="text-sm text-muted-foreground mb-3">{pos.dates}</p>
 
                       {pos.focusAreas ? (
                         <div className="space-y-4">
