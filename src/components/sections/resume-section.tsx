@@ -19,11 +19,11 @@ export function ResumeSection() {
         </Button>
         <div className="mt-12 p-8 border border-dashed border-border rounded-lg bg-background max-w-3xl mx-auto shadow-sm">
             <h3 className="text-2xl font-semibold text-accent mb-4">Resume Preview (Placeholder)</h3>
-            <p className="text-muted-foreground mb-2">This area could feature a simplified version or key highlights from the resume.</p>
+            
             <div className="space-y-3 text-left text-sm text-foreground">
                 <p><strong>Summary:</strong> Motivated graduate with a Masters in Mechanical Engineering searching for next step...</p>
                 <p><strong>Key Skills:</strong> Product Design, CSWA SolidWorks, Process Improvement, MATLAB, FEA...</p>
-                <p><strong>Recent Experience:</strong> Senior Software Engineer at Tech Solutions Inc. ...</p>
+                <p><strong>Recent Experience:</strong> Process Engineering Intern at Thermofab</p>
                 <p className="italic text-muted-foreground mt-4">For a complete overview, please download the full PDF version.</p>
             </div>
         </div>
@@ -31,5 +31,6 @@ export function ResumeSection() {
     </SectionWrapper>
   );
 }
+
 
 
