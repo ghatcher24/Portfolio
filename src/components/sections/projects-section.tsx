@@ -40,7 +40,7 @@ export const projectsData = [
   {
     id: generateSlug('IRE Ablation Device'),
     title: 'IRE Ablation Device',
-    description: 'Design and development of soft robotic gripper for the purpose of manipulating plastic straws. Actuator parameters optimized and selected through parameter sweeping. Resin molds fabricated and gripper prototyped with performance evaluated.',
+    description: 'Evaluation of numerous electrode configurations for performing IRE Ablation Procedure. Electrode spacing and sizing tested using Comsol cell death modeling to optimize design. Preliminary modeling of catheter based design performed.',
     imageUrl: '/images/AblationCover.JPG',
     imageHint: 'medical ablation device',
     liveLink: '#',
