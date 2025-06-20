@@ -99,7 +99,7 @@ export const projectsData = [
         description: 'Optimal design selected and modeled with bearings and casing. Input and output shaft aligned through canting.'
       }
     ],
-    outcomeAndImpact: 'Optimized solution was identified, validated and modeled.\nThrough this project experience was gained in gear train design and analysis practices.'
+    outcomeAndImpact: "Optimized solution was identified, validated and modeled.\nThrough this project experience was gained in gear train design and analysis practices."
   },
     {
     id: generateSlug('Prototype Slitting Machine'),

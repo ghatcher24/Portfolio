@@ -148,7 +148,15 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <Separator className="my-8" />
                 <section className="mb-8 prose prose-lg max-w-none text-foreground">
                   <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-                  <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+                  {typeof project.outcomeAndImpact === 'string' && project.outcomeAndImpact.includes('\n') ? (
+                    <ul className="list-disc pl-5 space-y-1 leading-relaxed">
+                      {project.outcomeAndImpact.split('\n').map((item, index) => (
+                        item.trim() ? <li key={index}>{item.trim()}</li> : null
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+                  )}
                 </section>
               </div>
               <div className="md:col-span-4 flex flex-col items-center justify-start pt-8 md:pt-0">
@@ -192,7 +200,15 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <Separator className="my-8" />
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
-                <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+                 {typeof project.outcomeAndImpact === 'string' && project.outcomeAndImpact.includes('\n') ? (
+                    <ul className="list-disc pl-5 space-y-1 leading-relaxed">
+                      {project.outcomeAndImpact.split('\n').map((item, index) => (
+                         item.trim() ? <li key={index}>{item.trim()}</li> : null
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="leading-relaxed">{project.outcomeAndImpact}</p>
+                  )}
               </section>
             </>
           )}
