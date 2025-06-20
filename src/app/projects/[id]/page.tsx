@@ -185,7 +185,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   data-ai-hint="feature showcase"
                 />
               </div>
-              {project.id === 'inline-12-1-gearbox' && (
+              {project.id === 'inline-121-gearbox' && (
                 <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                   <Image 
                     src="/images/GearDrawing.jpg" 
