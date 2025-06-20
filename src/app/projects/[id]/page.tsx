@@ -53,7 +53,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <div>{(step as TechnicalProcessStepObject).description}</div>
               </>
             ) : (
-              String(step) 
+              String(step)
             )}
           </li>
         ))}
@@ -99,9 +99,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               ))}
             </div>
             <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
-              <Image 
-                src={project.imageUrl} 
-                alt={project.title} 
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
                 fill={true}
                 style={{ objectFit: 'cover' }}
                 data-ai-hint={project.imageHint}
@@ -133,9 +133,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><FileText size={24} className="mr-3 text-primary" />Project Overview</h2>
             <p className="leading-relaxed">{project.description}</p>
           </section>
-          
+
           <Separator className="my-8" />
-          
+
           <section className="mb-8 prose prose-lg max-w-none text-foreground">
             <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Target size={24} className="mr-3 text-primary" />Project Objective</h2>
             <p className="leading-relaxed">{project.objective}</p>
@@ -165,9 +165,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </section>
                 <aside className="md:col-span-4">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
-                    <Image 
-                      src="/images/GearDrawing.jpg" 
-                      alt="Gear Drawing" 
+                    <Image
+                      src="/images/GearDrawing.jpg"
+                      alt="Gear Drawing"
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="technical drawing"
@@ -182,9 +182,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               </section>
                <div className="my-8">
                 <div className="relative aspect-[2/1] rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="/images/GearGallery.jpg" 
-                    alt="Gearbox Gallery Image" 
+                  <Image
+                    src="/images/GearGallery.jpg"
+                    alt="Gearbox Gallery Image"
                     fill={true}
                     style={{ objectFit: 'cover' }}
                     data-ai-hint="gear detail"
@@ -195,7 +195,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           ) : project.id === 'angiographic-catheter' ? (
             <>
               <div className="grid md:grid-cols-7 gap-8 mb-8">
-                 <section className="md:col-span-3 flex flex-col h-full">
+                 <section className="md:col-span-3 flex flex-col">
                   <div>
                     <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   </div>
@@ -205,9 +205,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </section>
                 <aside className="md:col-span-4">
                   <div className="relative aspect-[5/7] rounded-lg overflow-hidden shadow-md">
-                    <Image 
-                      src="/images/CatheterDrawing.png" 
-                      alt="Catheter Drawing" 
+                    <Image
+                      src="/images/CatheterDrawing.png"
+                      alt="Catheter Drawing"
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="catheter drawing"
@@ -236,33 +236,33 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           )}
 
           <Separator className="my-8" />
-          
+
           {project.id === 'angiographic-catheter' ? (
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="text-center space-y-4 mt-8">
-                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card align-top">
-                  <Image 
-                    src="/images/CatheterGallery1.jpg" 
-                    alt="Angiographic Catheter Gallery Image 1, 2:1 aspect ratio" 
+                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1 align-top">
+                  <Image
+                    src="/images/CatheterGallery1.jpg"
+                    alt="Angiographic Catheter Gallery Image 1, 2:1 aspect ratio"
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
                   />
                 </div>
-                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card align-top">
-                  <Image 
-                    src="/images/CatheterGallery2.jpg" 
-                    alt="Angiographic Catheter Gallery Image 2, 5:4 aspect ratio" 
+                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1 align-top">
+                  <Image
+                    src="/images/CatheterGallery2.jpg"
+                    alt="Angiographic Catheter Gallery Image 2, 5:4 aspect ratio"
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
                   />
                 </div>
-                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card align-top">
-                  <Image 
-                    src="/images/CatheterGallery3.jpg" 
-                    alt="Angiographic Catheter Gallery Image 3, 2:1 aspect ratio" 
+                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1 align-top">
+                  <Image
+                    src="/images/CatheterGallery3.jpg"
+                    alt="Angiographic Catheter Gallery Image 3, 2:1 aspect ratio"
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
@@ -270,32 +270,32 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </div>
               </div>
             </section>
-          ) : project.id !== 'inline-121-gearbox' ? ( 
+          ) : project.id !== 'inline-121-gearbox' ? (
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="https://placehold.co/600x400.png" 
-                    alt="Additional project image 1" 
+                  <Image
+                    src="https://placehold.co/600x400.png"
+                    alt="Additional project image 1"
                     fill={true}
                     style={{ objectFit: 'cover' }}
                     data-ai-hint="app showcase"
                   />
                 </div>
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="https://placehold.co/600x400.png" 
-                    alt="Additional project image 2" 
+                  <Image
+                    src="https://placehold.co/600x400.png"
+                    alt="Additional project image 2"
                     fill={true}
                     style={{ objectFit: 'cover' }}
                     data-ai-hint="interface screenshot"
                   />
                 </div>
                 <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                  <Image 
-                    src="https://placehold.co/600x400.png" 
-                    alt="Additional project image 3" 
+                  <Image
+                    src="https://placehold.co/600x400.png"
+                    alt="Additional project image 3"
                     fill={true}
                     style={{ objectFit: 'cover' }}
                     data-ai-hint="feature showcase"
@@ -311,3 +311,5 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
+
+    
