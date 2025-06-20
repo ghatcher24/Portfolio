@@ -241,28 +241,28 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-6 text-center flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="text-center space-y-4 mt-8">
-                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1 align-top">
+                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card align-top">
                   <Image 
                     src="/images/CatheterGallery1.jpg" 
-                    alt="Angiographic Catheter Gallery Image 1" 
+                    alt="Angiographic Catheter Gallery Image 1, 2:1 aspect ratio" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter detail"
                   />
                 </div>
-                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1 align-top">
+                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card align-top">
                   <Image 
                     src="/images/CatheterGallery2.jpg" 
-                    alt="Angiographic Catheter Gallery Image 2" 
+                    alt="Angiographic Catheter Gallery Image 2, 5:4 aspect ratio" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="medical device"
                   />
                 </div>
-                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card p-1 align-top">
+                <div className="inline-block relative h-64 mx-2 rounded-lg overflow-hidden shadow-xl bg-background dark:bg-card align-top">
                   <Image 
                     src="/images/CatheterGallery3.jpg" 
-                    alt="Angiographic Catheter Gallery Image 3" 
+                    alt="Angiographic Catheter Gallery Image 3, 2:1 aspect ratio" 
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="catheter design"
