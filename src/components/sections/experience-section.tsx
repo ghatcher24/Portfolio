@@ -39,8 +39,7 @@ const experienceData = [
           {
             areaTitle: 'Industrial Automation',
             description: [
-              'Text',
-              'Text',
+              'Reviewed and graded assignments covering Process Plans, Flow Maps, P&ID, and Ladder Diagram PLC coding.',
             ],
           },
           {
