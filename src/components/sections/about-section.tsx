@@ -45,7 +45,7 @@ export function AboutSection() {
         </div>
         <div className="md:col-span-2">
           <p className="text-lg md:text-xl mb-4 leading-relaxed text-foreground">
-            <strong>Hi, I&apos;m Gordon!</strong> Recently I graduated from the University of Massachusetts Amherst with a Masters in Mechanical Engineering and am now looking for an opportunity to take the next big step in my professional career. I thrive on decomposing complex engineering challenges and creating intuitive solutions to tackle them. My academic journey has been driven by an intense curiosity and a desire to better the world around me.
+            <strong>Hi, I&apos;m Gordon</strong>! Recently, I graduated from the University of Massachusetts Amherst with a Masters in Mechanical Engineering and am now looking for an opportunity to take the next big step in my professional career. I thrive on decomposing complex engineering challenges and creating intuitive solutions to tackle them. My academic journey has been driven by an intense curiosity and a desire to better the world around me.
           </p>
           <p className="text-lg md:text-xl mb-4 leading-relaxed text-foreground">
             In my free time I like to enjoy the outdoors with back-country skiing, hiking or bouldering. My passion project is my 1992 NA Miata which spends most of its life in the garage where I work on it, although I hope to compete in autocross if I can get it running properly.
