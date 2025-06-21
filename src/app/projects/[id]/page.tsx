@@ -304,7 +304,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                             <div>{(project.technicalProcess[2] as TechnicalProcessStepObject).description}</div>
                           </div>
                           <div className="flex flex-col gap-4 items-center justify-center">
-                            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
+                            <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden shadow-md">
                                <Image
                                 src="/images/CrossSection.JPG"
                                 alt="Cross Section Parameter Sweep"
