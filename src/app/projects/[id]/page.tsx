@@ -283,22 +283,13 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                             <div>{(project.technicalProcess[1] as TechnicalProcessStepObject).description}</div>
                           </div>
                           <div className="flex flex-col gap-4 items-center justify-center">
-                            <div className="relative w-1/2 aspect-video rounded-lg overflow-hidden shadow-md">
+                            <div className="relative w-3/4 aspect-video rounded-lg overflow-hidden shadow-md">
                               <Image
                                 src="/images/BendAngle.png"
                                 alt="Bend Angle Parameter Sweep"
                                 fill={true}
                                 style={{ objectFit: 'contain' }}
                                 data-ai-hint="parameter graph"
-                              />
-                            </div>
-                            <div className="relative w-1/2 aspect-video rounded-lg overflow-hidden shadow-md">
-                              <Image
-                                src="/images/MaxThickness.png"
-                                alt="Max Thickness Parameter Sweep"
-                                fill={true}
-                                style={{ objectFit: 'contain' }}
-                                data-ai-hint="data graph"
                               />
                             </div>
                           </div>
