@@ -433,7 +433,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                   <div className="relative aspect-video rounded-lg overflow-hidden border-0">
                      <Image
-                        src="/images/ActuatorComplete.png"
+                        src="/images/ActuatorComplete.jpg"
                         alt="Completed Actuator"
                         fill={true}
                         style={{ objectFit: 'contain' }}
