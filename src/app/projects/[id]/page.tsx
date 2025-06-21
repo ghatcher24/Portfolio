@@ -317,8 +317,35 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         </div>
                       </li>
 
-                      {/* Steps 4-7 */}
-                      {project.technicalProcess.slice(3).map((step, index) => (
+                      {/* Step 4 */}
+                      <li>
+                        <div><strong>{(project.technicalProcess[3] as TechnicalProcessStepObject).title}</strong></div>
+                        <div>{(project.technicalProcess[3] as TechnicalProcessStepObject).description}</div>
+                      </li>
+
+                      {/* Step 5 with image */}
+                      <li>
+                        <div className="grid md:grid-cols-2 gap-8 items-start">
+                          <div>
+                            <div><strong>{(project.technicalProcess[4] as TechnicalProcessStepObject).title}</strong></div>
+                            <div>{(project.technicalProcess[4] as TechnicalProcessStepObject).description}</div>
+                          </div>
+                          <div className="flex flex-col gap-4 items-center justify-center">
+                            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
+                               <Image
+                                src="/images/Mold2.png"
+                                alt="Mold Design"
+                                fill={true}
+                                style={{ objectFit: 'contain' }}
+                                data-ai-hint="mold design"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      {/* Steps 6-7 */}
+                      {project.technicalProcess.slice(5).map((step, index) => (
                         <li key={index}>
                           <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
                           <div>{(step as TechnicalProcessStepObject).description}</div>
