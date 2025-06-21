@@ -263,6 +263,64 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </aside>
               </div>
             </>
+          ) : project.id === 'pneumatic-soft-gripper' ? (
+            <>
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
+                    <ol className="list-decimal pl-5 leading-relaxed space-y-4">
+                      {/* Step 1 */}
+                      <li>
+                        <div><strong>{(project.technicalProcess[0] as TechnicalProcessStepObject).title}</strong></div>
+                        <div>{(project.technicalProcess[0] as TechnicalProcessStepObject).description}</div>
+                      </li>
+                      
+                      {/* Step 2 with images */}
+                      <li>
+                        <div className="grid md:grid-cols-2 gap-8 items-start">
+                          <div>
+                            <div><strong>{(project.technicalProcess[1] as TechnicalProcessStepObject).title}</strong></div>
+                            <div>{(project.technicalProcess[1] as TechnicalProcessStepObject).description}</div>
+                          </div>
+                          <div className="flex flex-col gap-4 items-center justify-center">
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                              <Image
+                                src="/images/BendAngle.png"
+                                alt="Bend Angle Parameter Sweep"
+                                fill={true}
+                                style={{ objectFit: 'contain' }}
+                                data-ai-hint="parameter graph"
+                              />
+                            </div>
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                              <Image
+                                src="/images/MaxThickness.png"
+                                alt="Max Thickness Parameter Sweep"
+                                fill={true}
+                                style={{ objectFit: 'contain' }}
+                                data-ai-hint="data graph"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      {/* Steps 3-7 */}
+                      {project.technicalProcess.slice(2).map((step, index) => (
+                        <li key={index}>
+                          <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
+                          <div>{(step as TechnicalProcessStepObject).description}</div>
+                        </li>
+                      ))}
+                    </ol>
+                  ) : <p className="leading-relaxed">No technical process details available.</p> }
+              </section>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                {renderOutcomeAndImpact()}
+              </section>
+            </>
           ) : (
             <>
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
@@ -353,4 +411,3 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
-
