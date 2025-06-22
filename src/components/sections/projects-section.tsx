@@ -68,23 +68,42 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Medical Device', 'Ablation Analysis', 'Comsol', 'SolidWorks Design', 'Market Research'],
-    objective: 'To develop a safe and effective IRE ablation device for targeted tissue destruction with minimal collateral damage to surrounding healthy tissue.',
+    objective: 'Develop an optimal electron configuration for performing IRE Ablation along a 2 cm section of vessel wall. The design must fit within a 3 French catheter.',
     requirements: [
-      'Precise delivery of high-voltage, short-duration electrical pulses.',
-      'Accurate electrode placement and configuration.',
-      'Real-time monitoring and feedback of treatment parameters.',
-      'Compliance with medical device safety standards.',
-      'User-friendly interface for clinicians.'
+      'Evenly ablate 2 cm section of cell wall',
+      'Target cells have 3 - 7mm diameters',
+      'Wall thickness is 25% of cell diameter',
+      'Vessel wall conductivity 0.271 S/m',
+      'Muscle Conductivity 0.202 S/m',
+      'Blood conductivity 0.7 S/m'
     ],
     technicalProcess: [
-      'Researched principles of irreversible electroporation and existing devices.',
-      'Designed and simulated various electrode configurations using COMSOL.',
-      'Developed a high-voltage pulse generator with precise control.',
-      'Integrated safety mechanisms and monitoring systems.',
-      'Conducted ex-vivo and in-vitro testing to validate ablation zones.',
-      'Iterated on design based on experimental results and usability feedback.'
+      {
+        title: 'Establish Cell Death Model',
+        description: 'Created a FEA model within COMSOL that evaluated cell death based on input current, voltage, and electron configuration. Model established using biological conductivies sourced from existing research.'
+      },
+      {
+        title: 'Evaluate Monopolar vs Bipolar Configuration',
+        description: 'Utilizing custom cell death model, tested monopolar and bipolar electrode configuration for 60 and 80 pulses. Established that bipolar configuration resulted in more uniform ablation.'
+      },
+      {
+        title: 'Evaluate Number of Electrodes',
+        description: 'Compared 4,6, and 8 electrode bipolar configurations with optimized electron diameters. Discovered 6 electrodes was optimal for ablating the entire vessel wall without additional cell death.'
+      },
+      {
+        title: 'Optimize Number of Pulses',
+        description: 'Tuned number of pulses for 6 electrode bipolar configuration at 3, 5, and 7mm vessel diameters.'
+      },
+      {
+        title: 'Create Preliminary Catheter Design',
+        description: 'Designed and modeled catheter to house electrodes and expand them to different vessel diameters. Electrodes intended to rest in buckled state and expand outwards as cover is retracted.'
+      },
+      {
+        title: 'Conduct Competitor Research',
+        description: 'Abbott Xience Stent technology investigated and regulatory pathway taken explored to lay framework for developing a marketable product.'
+      }
     ],
-    outcomeAndImpact: 'Successfully developed a prototype IRE ablation system demonstrating precise and controllable tissue ablation. The device shows promise for applications in treating tumors and other pathological tissues with improved selectivity and reduced side effects compared to traditional methods.'
+    outcomeAndImpact: 'Designed catheter based IRE ablation device optimized for achieving best results for target blood vessels.\nGained valuable experience in using COMSOL software.\nDeveloped understanding of regulatory pathway required to take FDA Class 3 medical device to consumer market.'
   },
   {
     id: generateSlug('Inline 12:1 Gearbox'),
