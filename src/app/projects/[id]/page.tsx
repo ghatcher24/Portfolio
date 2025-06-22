@@ -269,90 +269,87 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
-                      {/* Step 1 */}
-                      <li>
-                        <div><strong>{(project.technicalProcess[0] as TechnicalProcessStepObject).title}</strong></div>
-                        <div>{(project.technicalProcess[0] as TechnicalProcessStepObject).description}</div>
-                      </li>
-                      
-                      {/* Step 2 with image */}
-                      <li>
-                        <div className="grid md:grid-cols-2 gap-8 items-start">
-                          <div>
-                            <div><strong>{(project.technicalProcess[1] as TechnicalProcessStepObject).title}</strong></div>
-                            <div>{(project.technicalProcess[1] as TechnicalProcessStepObject).description}</div>
-                          </div>
-                          <div className="flex flex-col gap-4 items-center justify-center">
-                            <div className="relative w-3/4 aspect-video rounded-lg overflow-hidden shadow-md">
-                              <Image
-                                src="/images/BendAngle.png"
-                                alt="Bend Angle Parameter Sweep"
-                                fill={true}
-                                style={{ objectFit: 'contain' }}
-                                data-ai-hint="parameter graph"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                      {/* Step 3 with image */}
-                      <li>
-                        <div className="grid md:grid-cols-2 gap-8 items-start">
-                          <div>
-                            <div><strong>{(project.technicalProcess[2] as TechnicalProcessStepObject).title}</strong></div>
-                            <div>{(project.technicalProcess[2] as TechnicalProcessStepObject).description}</div>
-                          </div>
-                          <div className="flex flex-col gap-4 items-center justify-center">
-                            <div className="relative w-3/4 aspect-[9/4] rounded-lg overflow-hidden shadow-md">
-                               <Image
-                                src="/images/CrossSection.JPG"
-                                alt="Cross Section Parameter Sweep"
-                                fill={true}
-                                style={{ objectFit: 'contain' }}
-                                data-ai-hint="parameter graph"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                      {/* Step 4 */}
-                      <li>
-                        <div><strong>{(project.technicalProcess[3] as TechnicalProcessStepObject).title}</strong></div>
-                        <div>{(project.technicalProcess[3] as TechnicalProcessStepObject).description}</div>
-                      </li>
-
-                      {/* Step 5 with image */}
-                      <li>
-                        <div className="grid md:grid-cols-2 gap-8 items-start">
-                          <div>
-                            <div><strong>{(project.technicalProcess[4] as TechnicalProcessStepObject).title}</strong></div>
-                            <div>{(project.technicalProcess[4] as TechnicalProcessStepObject).description}</div>
-                          </div>
-                          <div className="flex flex-col gap-4 items-center justify-center">
-                            <div className="relative w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
-                               <Image
-                                src="/images/Mold2.png"
-                                alt="Mold Design"
-                                fill={true}
-                                style={{ objectFit: 'contain' }}
-                                data-ai-hint="mold design"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                      {/* Steps 6-7 */}
-                      {project.technicalProcess.slice(5).map((step, index) => (
-                        <li key={index}>
-                          <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
-                          <div>{(step as TechnicalProcessStepObject).description}</div>
-                        </li>
-                      ))}
+                      {project.technicalProcess.map((step, index) => {
+                        const stepData = step as TechnicalProcessStepObject;
+                        if (index === 1) { // Step 2 with image
+                          return (
+                            <li key={index}>
+                              <div className="grid md:grid-cols-2 gap-8 items-start">
+                                <div>
+                                  <div><strong>{stepData.title}</strong></div>
+                                  <div>{stepData.description}</div>
+                                </div>
+                                <div className="flex flex-col gap-4 items-center justify-center">
+                                  <div className="relative w-3/4 aspect-video rounded-lg overflow-hidden shadow-md">
+                                    <Image
+                                      src="/images/BendAngle.png"
+                                      alt="Bend Angle Parameter Sweep"
+                                      fill={true}
+                                      style={{ objectFit: 'contain' }}
+                                      data-ai-hint="parameter graph"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          );
+                        }
+                        if (index === 2) { // Step 3 with image
+                          return (
+                            <li key={index}>
+                              <div className="grid md:grid-cols-2 gap-8 items-start">
+                                <div>
+                                  <div><strong>{stepData.title}</strong></div>
+                                  <div>{stepData.description}</div>
+                                </div>
+                                <div className="flex flex-col gap-4 items-center justify-center">
+                                  <div className="relative w-3/4 aspect-[9/4] rounded-lg overflow-hidden shadow-md">
+                                    <Image
+                                      src="/images/CrossSection.JPG"
+                                      alt="Cross Section Parameter Sweep"
+                                      fill={true}
+                                      style={{ objectFit: 'contain' }}
+                                      data-ai-hint="parameter graph"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          );
+                        }
+                        if (index === 4) { // Step 5 with image
+                          return (
+                            <li key={index}>
+                              <div className="grid md:grid-cols-2 gap-8 items-start">
+                                <div>
+                                  <div><strong>{stepData.title}</strong></div>
+                                  <div>{stepData.description}</div>
+                                </div>
+                                <div className="flex flex-col gap-4 items-center justify-center">
+                                  <div className="relative w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                                    <Image
+                                      src="/images/Mold2.png"
+                                      alt="Mold Design"
+                                      fill={true}
+                                      style={{ objectFit: 'contain' }}
+                                      data-ai-hint="mold design"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          );
+                        }
+                        // Default step rendering
+                        return (
+                          <li key={index}>
+                            <div><strong>{stepData.title}</strong></div>
+                            <div>{stepData.description}</div>
+                          </li>
+                        );
+                      })}
                     </ol>
-                  ) : <p className="leading-relaxed">No technical process details available.</p> }
+                  ) : <p className="leading-relaxed">No technical process details available.</p>}
               </section>
               <Separator className="my-8" />
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
