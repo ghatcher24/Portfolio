@@ -122,7 +122,12 @@ export const projectsData = [
       },
       {
         title: 'Create Preliminary Catheter Design',
-        description: 'Designed and modeled catheter to house electrodes and expand them to different vessel diameters. Electrodes intended to rest in buckled state and expand outwards as cover is retracted.'
+        description: 'Designed and modeled catheter to house electrodes and expand them to different vessel diameters. Electrodes intended to rest in buckled state and expand outwards as cover is retracted.',
+        images: [
+            { src: '/images/AblationDesign1.png', alt: 'Ablation Design - View 1', hint: 'catheter design' },
+            { src: '/images/AblationDesign1.png', alt: 'Ablation Design - View 2', hint: 'medical device' },
+            { src: '/images/AblationDesign1.png', alt: 'Ablation Design - View 3', hint: 'cad model' },
+        ]
       },
       {
         title: 'Conduct Competitor Research',
