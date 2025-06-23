@@ -271,7 +271,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
                       {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
-                        // Default step rendering
                         if (step.images) {
                           return (
                             <li key={index}>
@@ -282,7 +281,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                 </div>
                                 <div className="flex flex-col gap-4 items-center justify-center">
                                   {step.images.map((image, imgIndex) => (
-                                      <div key={imgIndex} className={`relative ${image.alt === 'Mold Design' ? 'w-1/2 aspect-[4/3]' : 'w-3/4'} ${image.alt.includes('Cross Section') ? 'aspect-[9/4]' : ''} ${image.alt.includes('Bend Angle') ? 'aspect-video' : ''} rounded-lg overflow-hidden shadow-md`}>
+                                      <div key={imgIndex} className={`relative ${image.alt === 'Mold Design' ? 'w-1/2 aspect-[4/3]' : 'w-3/4'} ${image.alt === 'Mold Fabrication' ? 'w-1/2 aspect-[4/3]' : 'w-3/4'} ${image.alt.includes('Cross Section') ? 'aspect-[9/4]' : ''} ${image.alt.includes('Bend Angle') ? 'aspect-video' : ''} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -321,13 +320,39 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
                       {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
-                        if (step.images) { // Step 2 with images
+                        if (step.images && step.title.includes('Evaluate Monopolar vs Bipolar Configuration')) {
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
                               <div>{step.description}</div>
                               
                                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+                                  {step.images.map((image, imgIndex) => (
+                                    <figure key={imgIndex} className="w-full flex flex-col">
+                                      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                      </div>
+                                      <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
+                                    </figure>
+                                  ))}
+                                </div>
+                              
+                            </li>
+                          );
+                        }
+                        if (step.images && step.title.includes('Evaluate Number of Electrodes')) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div>{step.description}</div>
+                              
+                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
                                     <figure key={imgIndex} className="w-full flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">

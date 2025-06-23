@@ -104,7 +104,12 @@ export const projectsData = [
       },
       {
         title: 'Evaluate Number of Electrodes',
-        description: 'Compared 4, 6, and 8 electrode bipolar configurations with optimized electron diameters. Discovered 6 electrodes was optimal for ablating the entire vessel wall without additional cell death.'
+        description: 'Compared 4, 6, and 8 electrode bipolar configurations with optimized electron diameters. Discovered 6 electrodes was optimal for ablating the entire vessel wall without additional cell death.',
+        images: [
+          { src: '/images/Electrodes4.png', alt: '4 Electrodes configuration', hint: 'FEA ablation' },
+          { src: '/images/Electrodes6.png', alt: '6 Electrodes configuration', hint: 'FEA ablation' },
+          { src: '/images/Electrodes8.png', alt: '8 Electrodes configuration', hint: 'FEA ablation' }
+        ]
       },
       {
         title: 'Optimize Number of Pulses',
