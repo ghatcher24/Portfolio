@@ -60,7 +60,7 @@ export const projectsData = [
     outcomeAndImpact: 'Designed and prototyped fiber reinforced soft actuator that successfully completed intended function.\nGained valuable experience in using parallel processing to perform parameter sweeps within MATLAB.'
   },
   {
-    id: generateSlug('IRE Ablation Device'),
+    id: 'ire-ablation-device',
     title: 'IRE Ablation Device',
     description: 'Evaluation of numerous electrode configurations for performing IRE Ablation Procedure. Electrode spacing and sizing tested using Comsol cell death modeling to optimize design. Preliminary modeling of catheter based design performed.',
     imageUrl: '/images/AblationCover.JPG',
@@ -68,7 +68,7 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Medical Device', 'Ablation Analysis', 'Comsol', 'SolidWorks Design', 'Market Research'],
-    objective: 'Develop an optimal electron configuration for performing IRE Ablation along a 2 cm section of vessel wall. The design must fit within a 3 French catheter.',
+    objective: 'Develop an optimal electrode configuration for performing IRE Ablation along a 2 cm section of vessel wall. The design must fit within a 3 French catheter.',
     requirements: [
       'Evenly ablate 2 cm section of cell wall',
       'Target cells have 3 - 7mm diameters',
@@ -80,15 +80,21 @@ export const projectsData = [
     technicalProcess: [
       {
         title: 'Establish Cell Death Model',
-        description: 'Created a FEA model within COMSOL that evaluated cell death based on input current, voltage, and electron configuration. Model established using biological conductivies sourced from existing research.'
+        description: 'Created a FEA model within COMSOL that evaluated cell death based on input current, voltage, and electron configuration. Model established using biological conductivities sourced from existing research.'
       },
       {
         title: 'Evaluate Monopolar vs Bipolar Configuration',
-        description: 'Utilizing custom cell death model, tested monopolar and bipolar electrode configuration for 60 and 80 pulses. Established that bipolar configuration resulted in more uniform ablation.'
+        description: 'Utilizing custom cell death model, tested monopolar and bipolar electrode configuration for 60 and 80 pulses. Established that bipolar configuration resulted in more uniform ablation.',
+        images: [
+          { src: '/images/Monopolar60.png', alt: 'Monopolar configuration 60 pulses', hint: 'FEA ablation' },
+          { src: '/images/Bipolar60.png', alt: 'Bipolar configuration 60 pulses', hint: 'FEA ablation' },
+          { src: '/images/Monopolar80.png', alt: 'Monopolar configuration 80 pulses', hint: 'FEA ablation' },
+          { src: '/images/Bipolar80.png', alt: 'Bipolar configuration 80 pulses', hint: 'FEA ablation' }
+        ]
       },
       {
         title: 'Evaluate Number of Electrodes',
-        description: 'Compared 4,6, and 8 electrode bipolar configurations with optimized electron diameters. Discovered 6 electrodes was optimal for ablating the entire vessel wall without additional cell death.'
+        description: 'Compared 4, 6, and 8 electrode bipolar configurations with optimized electron diameters. Discovered 6 electrodes was optimal for ablating the entire vessel wall without additional cell death.'
       },
       {
         title: 'Optimize Number of Pulses',

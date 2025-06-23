@@ -18,6 +18,7 @@ interface ProjectDetailPageProps {
 interface TechnicalProcessStepObject {
   title: string;
   description: string;
+  images?: { src: string; alt: string; hint: string }[];
 }
 
 export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
@@ -269,15 +270,14 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
                   {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
-                      {project.technicalProcess.map((step, index) => {
-                        const stepData = step as TechnicalProcessStepObject;
+                      {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
                         if (index === 1) { // Step 2 with image
                           return (
                             <li key={index}>
                               <div className="grid md:grid-cols-2 gap-8 items-start">
                                 <div>
-                                  <div><strong>{stepData.title}</strong></div>
-                                  <div>{stepData.description}</div>
+                                  <div><strong>{step.title}</strong></div>
+                                  <div>{step.description}</div>
                                 </div>
                                 <div className="flex flex-col gap-4 items-center justify-center">
                                   <div className="relative w-3/4 aspect-video rounded-lg overflow-hidden shadow-md">
@@ -299,8 +299,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                             <li key={index}>
                               <div className="grid md:grid-cols-2 gap-8 items-start">
                                 <div>
-                                  <div><strong>{stepData.title}</strong></div>
-                                  <div>{stepData.description}</div>
+                                  <div><strong>{step.title}</strong></div>
+                                  <div>{step.description}</div>
                                 </div>
                                 <div className="flex flex-col gap-4 items-center justify-center">
                                   <div className="relative w-3/4 aspect-[9/4] rounded-lg overflow-hidden shadow-md">
@@ -322,8 +322,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                             <li key={index}>
                               <div className="grid md:grid-cols-2 gap-8 items-start">
                                 <div>
-                                  <div><strong>{stepData.title}</strong></div>
-                                  <div>{stepData.description}</div>
+                                  <div><strong>{step.title}</strong></div>
+                                  <div>{step.description}</div>
                                 </div>
                                 <div className="flex flex-col gap-4 items-center justify-center">
                                   <div className="relative w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md">
@@ -343,8 +343,55 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         // Default step rendering
                         return (
                           <li key={index}>
-                            <div><strong>{stepData.title}</strong></div>
-                            <div>{stepData.description}</div>
+                            <div><strong>{step.title}</strong></div>
+                            <div>{step.description}</div>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  ) : <p className="leading-relaxed">No technical process details available.</p>}
+              </section>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                {renderOutcomeAndImpact()}
+              </section>
+            </>
+          ) : project.id === 'ire-ablation-device' ? (
+             <>
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
+                    <ol className="list-decimal pl-5 leading-relaxed space-y-4">
+                      {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
+                        if (index === 1) { // Step 2 with images
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div>{step.description}</div>
+                              {step.images && (
+                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                  {step.images.map((image, imgIndex) => (
+                                    <div key={imgIndex} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
+                                      <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill={true}
+                                        style={{ objectFit: 'contain' }}
+                                        data-ai-hint={image.hint}
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </li>
+                          );
+                        }
+                        // Default step rendering
+                        return (
+                          <li key={index}>
+                            <div><strong>{step.title}</strong></div>
+                            <div>{step.description}</div>
                           </li>
                         );
                       })}
@@ -439,7 +486,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </div>
             </section>
-          ) : !['inline-121-gearbox', 'ha-65-bone-screw'].includes(project.id) ? (
+          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device'].includes(project.id) ? (
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
