@@ -113,7 +113,12 @@ export const projectsData = [
       },
       {
         title: 'Optimize Number of Pulses',
-        description: 'Tuned number of pulses for 6 electrode bipolar configuration at 3, 5, and 7mm vessel diameters.'
+        description: 'Tuned number of pulses for 6 electrode bipolar configuration at 3, 5, and 7mm vessel diameters.',
+        images: [
+            { src: '/images/ID3mm.png', alt: '3mm Vessel Diameter', hint: 'FEA ablation' },
+            { src: '/images/ID5mm.png', alt: '5mm Vessel Diameter', hint: 'FEA ablation' },
+            { src: '/images/ID7mm.png', alt: '7mm Vessel Diameter', hint: 'FEA ablation' }
+        ]
       },
       {
         title: 'Create Preliminary Catheter Design',
