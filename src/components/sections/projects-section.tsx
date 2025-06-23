@@ -124,9 +124,9 @@ export const projectsData = [
         title: 'Create Preliminary Catheter Design',
         description: 'Designed and modeled catheter to house electrodes and expand them to different vessel diameters. Electrodes intended to rest in buckled state and expand outwards as cover is retracted.',
         images: [
-            { src: '/images/AblationDesign1.png', alt: 'Ablation Design - View 1', hint: 'catheter design' },
-            { src: '/images/AblationDesign1.png', alt: 'Ablation Design - View 2', hint: 'medical device' },
-            { src: '/images/AblationDesign1.png', alt: 'Ablation Design - View 3', hint: 'cad model' },
+            { src: '/images/AblationDesign1.jpg', alt: 'Ablation Design - View 1', hint: 'catheter design' },
+            { src: '/images/AblationDesign1.jpg', alt: 'Ablation Design - View 2', hint: 'medical device' },
+            { src: '/images/AblationDesign1.jpg', alt: 'Ablation Design - View 3', hint: 'cad model' },
         ]
       },
       {
@@ -264,7 +264,7 @@ export const projectsData = [
         title: 'Generate Project Schedule and Highlight Recovery Methods',
         description: 'Utilized work breakdown structure to generate projected project schedule. Identified critical path and proposed potential recovery methods that included fast tracking, crashing and resource reallocation to overcome unforeseen delays.'
       },
-      {
+       {
         title: 'Analyze Potential Risks',
         description: 'Created a categorized list of potential risks impacting project cost or schedule using If Then format. Quantified each risk based on the likelihood and consequence, with each scored from 1-5. Created 4 Corner Risk Chart for largest risks.'
       },
