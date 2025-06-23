@@ -125,8 +125,8 @@ export const projectsData = [
         description: 'Designed and modeled catheter to house electrodes and expand them to different vessel diameters. Electrodes intended to rest in buckled state and expand outwards as cover is retracted.',
         images: [
             { src: '/images/AblationDesign1.jpg', alt: 'Ablation Design - View 1', hint: 'catheter design' },
-            { src: '/images/AblationDesign1.jpg', alt: 'Ablation Design - View 2', hint: 'medical device' },
-            { src: '/images/AblationDesign1.jpg', alt: 'Ablation Design - View 3', hint: 'cad model' },
+            { src: '/images/AblationDesign2.jpg', alt: 'Ablation Design - View 2', hint: 'medical device' },
+            { src: '/images/AblationDesign3.jpg', alt: 'Ablation Design - View 3', hint: 'cad model' },
         ]
       },
       {
