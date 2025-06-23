@@ -354,7 +354,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               
                                 <div className="mt-4 grid grid-cols-3 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
-                                    <figure key={imgIndex} className="w-3/4 flex flex-col">
+                                    <figure key={imgIndex} className="w-full flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                                         <Image
                                           src={image.src}
@@ -380,7 +380,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               
                                 <div className="mt-4 grid grid-cols-3 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
-                                    <figure key={imgIndex} className="w-3/4 flex flex-col">
+                                    <figure key={imgIndex} className="w-full flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                                         <Image
                                           src={image.src}
@@ -470,7 +470,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div>{step.description}</div>
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
-                                  const aspectClass = image.src.includes('Schedule') || image.src.includes('Risk') ? 'aspect-[3/1]' : 'aspect-video';
+                                  const aspectClass = image.src.includes('Schedule') ? 'aspect-[2/1]' : (image.src.includes('Risk') ? 'aspect-[3/1]' : 'aspect-video');
                                   return (
                                     <div key={imgIndex} className={`relative w-full md:w-2/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
