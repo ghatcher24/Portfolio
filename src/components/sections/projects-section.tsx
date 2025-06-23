@@ -238,7 +238,7 @@ export const projectsData = [
     outcomeAndImpact: 'Researched and designed proof of concept angiographic catheter.\nPrepared design for prototyping through design changes and part sourcing.\nGained experience with designing in compliance to ISO 594'
   },
   {
-    id: generateSlug('Project Management Simulation'),
+    id: 'project-management-simulation',
     title: 'Project Management Simulation',
     description: 'Creation of project plan and kick off presentation covering scope, work breakdown structure, schedule, recovery, risk management and cost management for deployment of a manufacturing product line.',
     imageUrl: '/images/ManageCover.JPG',
@@ -258,7 +258,10 @@ export const projectsData = [
       },
       {
         title: 'Create Work Breakdown Structure',
-        description: 'Tasks required to achieve defined scope were identified and grouped to create work breakdown structure to facilitate later creation of scheduling and tasks.'
+        description: 'Tasks required to achieve defined scope were identified and grouped to create work breakdown structure to facilitate later creation of scheduling and tasks.',
+        images: [
+            { src: '/images/WBS.JPG', alt: 'Work Breakdown Structure', hint: 'gantt chart' }
+        ]
       },
       {
         title: 'Generate Project Schedule and Highlight Recovery Methods',
