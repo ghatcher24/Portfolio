@@ -272,7 +272,10 @@ export const projectsData = [
       },
        {
         title: 'Analyze Potential Risks',
-        description: 'Created a categorized list of potential risks impacting project cost or schedule using If Then format. Quantified each risk based on the likelihood and consequence, with each scored from 1-5. Created 4 Corner Risk Chart for largest risks.'
+        description: 'Created a categorized list of potential risks impacting project cost or schedule using If Then format. Quantified each risk based on the likelihood and consequence, with each scored from 1-5. Created 4 Corner Risk Chart for largest risks.',
+        images: [
+            { src: '/images/Risk.png', alt: 'Project Risk Analysis', hint: 'risk chart' }
+        ]
       },
       {
         title: 'Estimate Project Costs',
@@ -486,5 +489,7 @@ export function ProjectsSection() {
     </SectionWrapper>
   );
 }
+
+    
 
     
