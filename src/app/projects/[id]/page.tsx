@@ -326,7 +326,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div><strong>{step.title}</strong></div>
                               <div>{step.description}</div>
                               
-                                <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 justify-items-center">
+                                <div className="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
                                     <figure key={imgIndex} className="w-3/4 flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
@@ -355,7 +355,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                 <div className="mt-4 grid grid-cols-3 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
                                     <figure key={imgIndex} className="w-3/4 flex flex-col">
-                                      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
+                                      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -381,7 +381,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                 <div className="mt-4 grid grid-cols-3 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
                                     <figure key={imgIndex} className="w-3/4 flex flex-col">
-                                      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
+                                      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -470,7 +470,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div>{step.description}</div>
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => (
-                                    <div key={imgIndex} className="relative w-full md:w-4/5 aspect-video rounded-lg overflow-hidden shadow-md">
+                                    <div key={imgIndex} className="relative w-full md:w-2/5 aspect-video rounded-lg overflow-hidden shadow-md">
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
