@@ -265,7 +265,10 @@ export const projectsData = [
       },
       {
         title: 'Generate Project Schedule and Highlight Recovery Methods',
-        description: 'Utilized work breakdown structure to generate projected project schedule. Identified critical path and proposed potential recovery methods that included fast tracking, crashing and resource reallocation to overcome unforeseen delays.'
+        description: 'Utilized work breakdown structure to generate projected project schedule. Identified critical path and proposed potential recovery methods that included fast tracking, crashing, and resource reallocation to overcome unforeseen delays.',
+        images: [
+            { src: '/images/Schedule.png', alt: 'Project Schedule', hint: 'gantt chart' }
+        ]
       },
        {
         title: 'Analyze Potential Risks',
