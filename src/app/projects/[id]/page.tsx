@@ -469,8 +469,10 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div><strong>{step.title}</strong></div>
                               <div>{step.description}</div>
                               <div className="mt-4 flex justify-center">
-                                {step.images.map((image, imgIndex) => (
-                                    <div key={imgIndex} className="relative w-full md:w-2/5 aspect-video rounded-lg overflow-hidden shadow-md">
+                                {step.images.map((image, imgIndex) => {
+                                  const aspectClass = image.src.includes('Schedule') ? 'aspect-[3/1]' : 'aspect-video';
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-2/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -479,7 +481,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                           data-ai-hint={image.hint}
                                         />
                                     </div>
-                                ))}
+                                  )
+                                })}
                               </div>
                             </li>
                           )
