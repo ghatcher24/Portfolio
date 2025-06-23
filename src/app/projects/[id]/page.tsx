@@ -354,7 +354,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               
                                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
-                                    <figure key={imgIndex} className="w-full flex flex-col">
+                                    <figure key={imgIndex} className="w-5/6 flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
                                         <Image
                                           src={image.src}

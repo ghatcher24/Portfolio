@@ -96,19 +96,19 @@ export const projectsData = [
         title: 'Evaluate Monopolar vs Bipolar Configuration',
         description: 'Utilizing custom cell death model, tested monopolar and bipolar electrode configuration for 60 and 80 pulses. Established that bipolar configuration resulted in more uniform ablation.',
         images: [
-          { src: '/images/Monopolar60.png', alt: 'Monopolar configuration 60 pulses', hint: 'FEA ablation' },
-          { src: '/images/Bipolar60.png', alt: 'Bipolar configuration 60 pulses', hint: 'FEA ablation' },
-          { src: '/images/Monopolar80.png', alt: 'Monopolar configuration 80 pulses', hint: 'FEA ablation' },
-          { src: '/images/Bipolar80.png', alt: 'Bipolar configuration 80 pulses', hint: 'FEA ablation' }
+          { src: '/images/Monopolar60.png', alt: 'Monopolar Configuration 60 pulses', hint: 'FEA ablation' },
+          { src: '/images/Bipolar60.png', alt: 'Bipolar Configuration 60 pulses', hint: 'FEA ablation' },
+          { src: '/images/Monopolar80.png', alt: 'Monopolar Configuration 80 pulses', hint: 'FEA ablation' },
+          { src: '/images/Bipolar80.png', alt: 'Bipolar Configuration 80 pulses', hint: 'FEA ablation' }
         ]
       },
       {
         title: 'Evaluate Number of Electrodes',
         description: 'Compared 4, 6, and 8 electrode bipolar configurations with optimized electron diameters. Discovered 6 electrodes was optimal for ablating the entire vessel wall without additional cell death.',
         images: [
-          { src: '/images/Electrodes4.png', alt: '4 Electrodes configuration', hint: 'FEA ablation' },
-          { src: '/images/Electrodes6.png', alt: '6 Electrodes configuration', hint: 'FEA ablation' },
-          { src: '/images/Electrodes8.png', alt: '8 Electrodes configuration', hint: 'FEA ablation' }
+          { src: '/images/Electrodes4.png', alt: '4 Electrodes Configuration', hint: 'FEA ablation' },
+          { src: '/images/Electrodes6.png', alt: '6 Electrodes Configuration', hint: 'FEA ablation' },
+          { src: '/images/Electrodes8.png', alt: '8 Electrodes Configuration', hint: 'FEA ablation' }
         ]
       },
       {
@@ -255,12 +255,12 @@ export const projectsData = [
         description: 'Utilized work breakdown structure to generate projected project schedule. Identified critical path and proposed potential recovery methods that included fast tracking, crashing and resource reallocation to overcome unforeseen delays.'
       },
       {
-        title: 'Estimate Project Costs',
-        description: 'Established reasonable estimates for the cost of individual tasks using labor cost estimates, expected man hours, commercial rental listings, and equipment costs. Produced an overall project cost estimate.'
-      },
-      {
         title: 'Analyze Potential Risks',
         description: 'Created a categorized list of potential risks impacting project cost or schedule using If Then format. Quantified each risk based on the likelihood and consequence, with each scored from 1-5. Created 4 Corner Risk Chart for largest risks.'
+      },
+      {
+        title: 'Estimate Project Costs',
+        description: 'Established reasonable estimates for the cost of individual tasks using labor cost estimates, expected man hours, commercial rental listings, and equipment costs. Produced an overall project cost estimate.'
       },
       {
         title: 'Create Customer Communication Plan',
