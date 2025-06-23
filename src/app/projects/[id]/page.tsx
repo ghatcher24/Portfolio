@@ -326,7 +326,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div><strong>{step.title}</strong></div>
                               <div>{step.description}</div>
                               
-                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center">
+                                <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
                                     <figure key={imgIndex} className="w-3/4 flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
