@@ -321,15 +321,15 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
                       {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
-                        if (index === 1) { // Step 2 with images
+                        if (step.images) { // Step 2 with images
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
                               <div>{step.description}</div>
-                              {step.images && (
-                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-8 justify-items-center">
+                              
+                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
                                   {step.images.map((image, imgIndex) => (
-                                    <figure key={imgIndex} className="w-3/4 flex flex-col">
+                                    <figure key={imgIndex} className="w-full flex flex-col">
                                       <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-muted/10">
                                         <Image
                                           src={image.src}
@@ -343,7 +343,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                     </figure>
                                   ))}
                                 </div>
-                              )}
+                              
                             </li>
                           );
                         }
