@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const skills = [
   { name: 'MATLAB', icon: Sigma },
-  { name: 'SOLIDWORKS', icon: Cuboid },
+  { name: 'SOLIDWORKS CSWP Certified', icon: Cuboid },
   { name: 'OnShape', icon: DraftingCompass },
   { name: 'Inventor', icon: Cuboid },
   { name: 'ANSYS', icon: Calculator },
