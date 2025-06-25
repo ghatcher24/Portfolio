@@ -518,7 +518,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div>{step.description}</div>
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
-                                  const aspectClass = 'aspect-[4/5]';
+                                  const aspectClass = 'aspect-[822/658]';
                                   return (
                                     <div key={imgIndex} className={`relative w-full md:w-2/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
