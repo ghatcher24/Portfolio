@@ -319,7 +319,7 @@ export const projectsData = [
         ]
       },
       {
-        title: 'Solved Fixed Points for Untreated Model',
+        title: 'Solved Fixed Points for Treated Model',
         description: 'Solved fixed points and location MATLAB using previously established scaled parameters.'
       },
       {
@@ -511,4 +511,5 @@ export function ProjectsSection() {
     
 
     
+
 
