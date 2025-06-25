@@ -291,7 +291,7 @@ export const projectsData = [
   {
     id: generateSlug('Nonlinear Cancer Treatment Model'),
     title: 'Nonlinear Cancer Treatment Model',
-    description: 'Evaluation of existing nonlinear models that simulated dynamics of cancer growth and treatment. Fixed point and bifurcation analysis conducted for untreated and chemotheraputrically treated tumors',
+    description: 'Evaluation of existing nonlinear models that simulated dynamics of cancer growth and treatment. Fixed point and bifurcation analysis conducted for untreated and chemotherapeutically treated tumors.',
     imageUrl: '/images/CancerCover.JPG',
     imageHint: 'mathematical model graph',
     liveLink: '#',
@@ -299,21 +299,36 @@ export const projectsData = [
     tags: ['Nonlinear Modeling', '3 Degrees of Freedom', 'Chemotherapy', 'Stability Analysis', 'Matlab', 'Bifurcation Study'],
     objective: 'To create a predictive model for cancer progression under various treatment regimens, aiding in the personalization of therapy.',
     requirements: [
-      'Model nonlinear tumor growth dynamics.',
-      'Incorporate effects of chemotherapy and immunotherapy.',
-      'Parameterize the model using clinical or experimental data.',
-      'Perform sensitivity analysis to identify key parameters.',
-      'Simulate and compare different treatment protocols.'
+      'Selected cancer model must be multidimensional',
+      'Must perform stability and bifurcation analysis'
     ],
     technicalProcess: [
-      'Literature review of existing cancer models and treatment mechanisms.',
-      'Formulation of a system of nonlinear ordinary differential equations.',
-      'Implementation of the model in a computational environment (e.g., MATLAB, Python).',
-      'Parameter estimation using optimization techniques.',
-      'Validation of the model against known biological behaviors.',
-      'Simulation of treatment scenarios and analysis of outcomes.'
+      {
+        title: 'Literature Review',
+        description: 'Developed an understanding of tumor growth dynamics through review of De Aruajo et Al’s work entitled An Analysis of a Mathematical Model Describing the Growth of a Tumor Treated with Chemotherapy.'
+      },
+      {
+        title: 'Assigned Values to Parameters',
+        description: 'Established scaled values for each of the model’s parameters using reasonable quantities based on the work by Aruajo et al.'
+      },
+      {
+        title: 'Evaluated Fixed Points for Untreated Model',
+        description: 'Converted the cancer model to an untreated model, removing drug concentration and yielding a two dimensional model. Solved new model for fixed points and null clines by setting 2nd order terms equal to zero which found 2 fixed points in the quadrant of interest. Categorized fixed points by calculating Jacobian and finding traces. Found location by calculating eigenvalues for each fixed point.'
+      },
+      {
+        title: 'Solved Fixed Points for Untreated Model',
+        description: 'Solved fixed points and location MATLAB using previously established scaled parameters.'
+      },
+      {
+        title: 'Performed Bifurcation Analysis for Treated Model',
+        description: 'Bifurcation analysis performed on fixed points for numerous parameters including: Tissue Interaction Parameter, Tumor Cell Influx Rate, Absorption/Deactivation Rate and Drug Infusion Rate. Solved critical values of each bifurcation study.'
+      },
+      {
+        title: 'Discussed Model Behavior',
+        description: 'Discussed behavior of cancer model under varying bifurcation studies and fixed points highlighting value of using numerical models to inform treatment decisions to improve efficacy.'
+      }
     ],
-    outcomeAndImpact: 'Developed a robust nonlinear model capable of simulating complex cancer dynamics and treatment responses. The model provides a framework for exploring novel therapeutic strategies and has potential to contribute to personalized medicine approaches in oncology.'
+    outcomeAndImpact: 'Utilized evaluation techniques to perform stability and bifurcation analysis on nonlinear systems.\nReinforced the importance of using using numerical models to inform decision making within medical treatment and engineering.'
   },
    {
     id: 'ha-65-bone-screw', // Using pre-generated slug
