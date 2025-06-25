@@ -320,7 +320,10 @@ export const projectsData = [
       },
       {
         title: 'Solved Fixed Points for Treated Model',
-        description: 'Solved fixed points and location MATLAB using previously established scaled parameters.'
+        description: 'Solved fixed points and location MATLAB using previously established scaled parameters.',
+        images: [
+          { src: '/images/TreatedModel.JPG', alt: 'Treated Model Fixed Points', hint: 'graph plot' }
+        ]
       },
       {
         title: 'Performed Bifurcation Analysis for Treated Model',
@@ -517,6 +520,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
