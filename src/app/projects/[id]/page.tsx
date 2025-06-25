@@ -512,6 +512,31 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
                       {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
                         if (step.images) {
+                          if (step.title.includes('Bifurcation Analysis')) {
+                            return (
+                              <li key={index}>
+                                <div><strong>{step.title}</strong></div>
+                                <div>{step.description}</div>
+                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                  {step.images.map((image, imgIndex) => (
+                                    <figure key={imgIndex} className="w-full flex flex-col">
+                                      <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                      </div>
+                                      <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
+                                    </figure>
+                                  ))}
+                                </div>
+                              </li>
+                            );
+                          }
+                          // Default for other images (like step 3)
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
@@ -521,13 +546,13 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                   const aspectClass = 'aspect-[822/658]';
                                   return (
                                     <div key={imgIndex} className={`relative w-full md:w-2/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
-                                        <Image
-                                          src={image.src}
-                                          alt={image.alt}
-                                          fill={true}
-                                          style={{ objectFit: 'contain' }}
-                                          data-ai-hint={image.hint}
-                                        />
+                                      <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill={true}
+                                        style={{ objectFit: 'contain' }}
+                                        data-ai-hint={image.hint}
+                                      />
                                     </div>
                                   )
                                 })}

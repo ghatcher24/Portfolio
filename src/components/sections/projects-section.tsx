@@ -324,7 +324,13 @@ export const projectsData = [
       },
       {
         title: 'Performed Bifurcation Analysis for Treated Model',
-        description: 'Bifurcation analysis performed on fixed points for numerous parameters including: Tissue Interaction Parameter, Tumor Cell Influx Rate, Absorption/Deactivation Rate and Drug Infusion Rate. Solved critical values of each bifurcation study.'
+        description: 'Bifurcation analysis performed on fixed points for numerous parameters including: Tissue Interaction Parameter, Tumor Cell Influx Rate, Absorption/Deactivation Rate and Drug Infusion Rate. Solved critical values of each bifurcation study.',
+        images: [
+            { src: '/images/ActivationDeactivationRate.JPG', alt: 'Activation Deactivation Rate Bifurcation', hint: 'bifurcation diagram' },
+            { src: '/images/CancerCellInfluxRate.JPG', alt: 'Cancer Cell Influx Rate Bifurcation', hint: 'bifurcation diagram' },
+            { src: '/images/InfusionRate.JPG', alt: 'Infusion Rate Bifurcation', hint: 'bifurcation diagram' },
+            { src: '/images/TissueInteractionParameter.JPG', alt: 'Tissue Interaction Parameter Bifurcation', hint: 'bifurcation diagram' }
+        ]
       },
       {
         title: 'Discussed Model Behavior',
@@ -511,5 +517,6 @@ export function ProjectsSection() {
     
 
     
+
 
 
