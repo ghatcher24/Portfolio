@@ -556,7 +556,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = 'aspect-[822/658]';
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-2/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-1/2 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                       <Image
                                         src={image.src}
                                         alt={image.alt}
@@ -713,4 +713,5 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 }
 
     
+
 
