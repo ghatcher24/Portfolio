@@ -504,6 +504,54 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 {renderOutcomeAndImpact()}
               </section>
             </>
+          ) : project.id === 'nonlinear-cancer-treatment-model' ? (
+             <>
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
+                    <ol className="list-decimal pl-5 leading-relaxed space-y-4">
+                      {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
+                        if (step.images) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div>{step.description}</div>
+                              <div className="mt-4 flex justify-center">
+                                {step.images.map((image, imgIndex) => {
+                                  const aspectClass = 'aspect-video';
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-2/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </li>
+                          )
+                        }
+                        // Default step rendering
+                        return (
+                          <li key={index}>
+                            <div><strong>{step.title}</strong></div>
+                            <div>{(step as TechnicalProcessStepObject).description}</div>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  ) : <p className="leading-relaxed">No technical process details available.</p>}
+              </section>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                {renderOutcomeAndImpact()}
+              </section>
+            </>
           ) : (
             <>
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
@@ -586,7 +634,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </div>
             </section>
-          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device', 'project-management-simulation'].includes(project.id) ? (
+          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device', 'project-management-simulation', 'nonlinear-cancer-treatment-model'].includes(project.id) ? (
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

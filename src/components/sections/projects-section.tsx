@@ -313,7 +313,10 @@ export const projectsData = [
       },
       {
         title: 'Evaluated Fixed Points for Untreated Model',
-        description: 'Converted the cancer model to an untreated model, removing drug concentration and yielding a two dimensional model. Solved new model for fixed points and null clines by setting 2nd order terms equal to zero which found 2 fixed points in the quadrant of interest. Categorized fixed points by calculating Jacobian and finding traces. Found location by calculating eigenvalues for each fixed point.'
+        description: 'Converted the cancer model to an untreated model, removing drug concentration and yielding a two dimensional model. Solved new model for fixed points and null clines by setting 2nd order terms equal to zero which found 2 fixed points in the quadrant of interest. Categorized fixed points by calculating Jacobian and finding traces. Found location by calculating eigenvalues for each fixed point.',
+        images: [
+            { src: '/images/UntreatedModel.JPG', alt: 'Untreated Model Fixed Points', hint: 'graph plot' }
+        ]
       },
       {
         title: 'Solved Fixed Points for Untreated Model',
@@ -508,3 +511,4 @@ export function ProjectsSection() {
     
 
     
+
