@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github, Target, ListChecks, Cpu, TrendingUp, FileText, Images } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 
 interface ProjectDetailPageProps {
   params: {
@@ -517,21 +518,31 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <li key={index}>
                                 <div><strong>{step.title}</strong></div>
                                 <div>{step.description}</div>
-                                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                  {step.images.map((image, imgIndex) => (
-                                    <figure key={imgIndex} className="w-full flex flex-col">
-                                      <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
-                                        <Image
-                                          src={image.src}
-                                          alt={image.alt}
-                                          fill={true}
-                                          style={{ objectFit: 'contain' }}
-                                          data-ai-hint={image.hint}
-                                        />
-                                      </div>
-                                      <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
-                                    </figure>
-                                  ))}
+                                <div className="mt-4 flex justify-center">
+                                  <Carousel className="w-full max-w-md">
+                                    <CarouselContent>
+                                      {step.images.map((image, imgIndex) => (
+                                        <CarouselItem key={imgIndex}>
+                                          <div className="p-1">
+                                            <figure className="w-full flex flex-col items-center">
+                                              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
+                                                <Image
+                                                  src={image.src}
+                                                  alt={image.alt}
+                                                  fill={true}
+                                                  style={{ objectFit: 'contain' }}
+                                                  data-ai-hint={image.hint}
+                                                />
+                                              </div>
+                                              <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
+                                            </figure>
+                                          </div>
+                                        </CarouselItem>
+                                      ))}
+                                    </CarouselContent>
+                                    <CarouselPrevious />
+                                    <CarouselNext />
+                                  </Carousel>
                                 </div>
                               </li>
                             );
@@ -702,3 +713,4 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 }
 
     
+
