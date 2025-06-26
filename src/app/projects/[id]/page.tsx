@@ -46,7 +46,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
   const renderTechnicalProcess = () => (
     project.technicalProcess && project.technicalProcess.length > 0 ? (
-      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' || project.id === 'ha-65-bone-screw' ? 'space-y-4' :'space-y-2'}`}>
+      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' || project.id === 'ha-65-bone-screw' || project.id === 'catheter-hub-w-hemostatic-lock' ? 'space-y-4' :'space-y-2'}`}>
         {project.technicalProcess.map((step, index) => (
           <li key={index}>
             {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
@@ -588,6 +588,44 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 {renderOutcomeAndImpact()}
               </section>
             </>
+          ) : project.id === 'catheter-hub-w-hemostatic-lock' ? (
+            <>
+              <div className="grid md:grid-cols-7 gap-8 mb-8">
+                <section className="md:col-span-3 flex flex-col h-full">
+                  <div>
+                    <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  </div>
+                  <div className="flex-grow flex flex-col justify-center">
+                    {renderTechnicalProcess()}
+                  </div>
+                </section>
+                <aside className="md:col-span-4 flex items-center justify-center gap-4">
+                  <div className="relative w-1/2 aspect-square rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/HemostaticDrawing1.jpg"
+                      alt="Hemostatic Lock Drawing 1"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="technical drawing"
+                    />
+                  </div>
+                  <div className="relative w-1/2 aspect-square rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/HemostaticDrawing2.jpg"
+                      alt="Hemostatic Lock Drawing 2"
+                      fill={true}
+                      style={{ objectFit: 'contain' }}
+                      data-ai-hint="cad model"
+                    />
+                  </div>
+                </aside>
+              </div>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                {renderOutcomeAndImpact()}
+              </section>
+            </>
           ) : (
             <>
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
@@ -670,7 +708,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </div>
             </section>
-          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device', 'project-management-simulation', 'nonlinear-cancer-treatment-model'].includes(project.id) ? (
+          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device', 'project-management-simulation', 'nonlinear-cancer-treatment-model', 'catheter-hub-w-hemostatic-lock'].includes(project.id) ? (
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -711,7 +749,3 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     </>
   );
 }
-
-    
-
-
