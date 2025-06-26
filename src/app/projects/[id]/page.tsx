@@ -600,7 +600,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </section>
                 <aside className="md:col-span-4 flex flex-col items-center justify-center gap-4">
-                  <div className="relative w-[90%] aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-[45%] aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/HemostaticDrawing1.jpg"
                       alt="Hemostatic Lock Drawing 1"
@@ -609,7 +609,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       data-ai-hint="technical drawing"
                     />
                   </div>
-                  <div className="relative w-[90%] aspect-[5/7] rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-[45%] aspect-[5/7] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/HemostaticDrawing2.jpg"
                       alt="Hemostatic Lock Drawing 2"
