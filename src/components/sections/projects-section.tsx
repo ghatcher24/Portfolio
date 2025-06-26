@@ -394,24 +394,37 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Design Requirement Matrix', 'Hemostatic Design', 'DFMEA', 'DHF Management', 'ISO 594', 'FDA 21.CFR 820.30', 'SLA 3D Printing'],
-    objective: 'To design a robust adaptive controller that allows a 6 DOF robotic arm to maintain trajectory tracking accuracy despite unknown or changing dynamic parameters.',
+    objective: 'Design a prototype of a catheter hub that enabled the injection of contrast while immobilizing the guide wire in a hemostatic lock in accordance with ISO 594 and ISO/ASTM 52911-1 while adhering to the design process specified as per FDA 21.CFR 820.30.',
     requirements: [
-      'Controller must adapt to at least a 50% variation in payload mass.',
-      'Real-time implementation with acceptable computational load.',
-      'Stability guarantees for the adaptive control law.',
-      'Performance comparison with conventional PID controllers.',
-      'Simulation validation in MATLAB/Simulink environment.'
+      'Maintain Design History File throughout design and development process.',
+      'Hemostatic lock with ability to immobilize guide wire.',
+      'ISO 594 luer lock that permits contrast injection.',
+      'Design for fabrication with SLA 3D Printing.',
     ],
     technicalProcess: [
-      'Derived the dynamic model of the 6 DOF robotic arm.',
-      'Designed a model reference adaptive control (MRAC) scheme.',
-      'Developed Lyapunov-based adaptation laws for parameter estimation.',
-      'Implemented the controller and robot dynamics in Simulink.',
-      'Conducted extensive simulations with varying payloads and disturbances.',
-      'Analyzed controller performance in terms of tracking error and adaptation speed.'
+      {
+        title: 'Generate Design Requirements Matrix',
+        description: 'Identified and categorized customer requirements and market specifications. Attributed rationale, performance expectation, source and test method to each specification.',
+      },
+      {
+        title: 'Design Hemostatic Catheter Hub',
+        description: 'Generated concepts for hemostatic locking catheter hub. Created 3D Model of selected catheter hub design with ISO 594 compatible male luer lock in SolidWorks.',
+      },
+      {
+        title: 'SLA 3D Print and Post Process',
+        description: '3D printed catheter out of resin. Performed prototype post processing and recorded procedure.',
+      },
+      {
+        title: 'Detail Testing Procedure and Perform Testing',
+        description: 'Defined high pressure liquid leakage testing procedure based on 594-1 and a custom low pressure liquid leakage procedure. Conducted testing in accordance with written procedures and recorded outcomes.',
+      },
+      {
+        title: 'Analyze Failure Modes/Cause of Failure',
+        description: 'Analyzed failure modes of prototype and speculated on reasons design failed to achieve results called for in requirements matrix.',
+      },
     ],
-    outcomeAndImpact: 'The adaptive controller significantly outperformed traditional PID controllers in handling payload variations, maintaining precise trajectory tracking. This work demonstrates the potential of adaptive control for enhancing robustness and versatility in industrial robotic applications.'
-  }
+    outcomeAndImpact: 'Gained experience in design practices called for in FDA 21.CFR 820.30 including maintaining Design History Files\nLearned to test in accordance with ISO 594-1',
+  },
 ];
 
 // Helper function to chunk an array into smaller arrays of a specific size
@@ -520,6 +533,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
