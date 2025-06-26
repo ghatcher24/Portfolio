@@ -627,7 +627,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   {renderOutcomeAndImpact()}
                 </section>
                 <aside className="md:col-span-1 flex items-center justify-center">
-                  <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-full aspect-[5/4] rounded-lg overflow-hidden shadow-md">
                     <Image
                       src="/images/HubAfterFailure.JPG"
                       alt="Catheter Hub After Failure"
