@@ -652,25 +652,31 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Images size={24} className="mr-3 text-primary" />Manufacturing Drawings</h2>
                 <p className="leading-relaxed">Detailed manufacturing drawings, including component prints and assembly diagrams, were created for this project. These are available upon request.</p>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                        <Image
-                            src="https://placehold.co/800x600.png"
-                            alt="Manufacturing Drawing 1"
-                            fill={true}
-                            style={{ objectFit: 'contain' }}
-                            data-ai-hint="technical drawing blueprint"
-                        />
-                    </div>
-                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-md">
-                        <Image
-                            src="https://placehold.co/800x600.png"
-                            alt="Manufacturing Drawing 2"
-                            fill={true}
-                            style={{ objectFit: 'contain' }}
-                            data-ai-hint="assembly diagram"
-                        />
-                    </div>
+                <div className="mt-6 flex justify-center">
+                    <Carousel className="w-full max-w-4xl">
+                      <CarouselContent>
+                        {Array.from({ length: 13 }).map((_, index) => (
+                          <CarouselItem key={index}>
+                            <div className="p-1">
+                              <figure className="w-full flex flex-col items-center">
+                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-white">
+                                  <Image
+                                    src={`/images/Drawing${index + 1}.jpg`}
+                                    alt={`Manufacturing Drawing ${index + 1}`}
+                                    fill={true}
+                                    style={{ objectFit: 'contain' }}
+                                    data-ai-hint="technical drawing blueprint"
+                                  />
+                                </div>
+                                <figcaption className="mt-2 text-sm text-center text-muted-foreground">{`Drawing ${index + 1}`}</figcaption>
+                              </figure>
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
                 </div>
               </section>
             </>
