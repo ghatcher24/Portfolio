@@ -617,7 +617,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-[1918/1346] rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
