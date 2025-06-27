@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const skills = [
   { name: 'MATLAB', icon: Sigma },
-  { name: 'Certified SolidWorks CAD Design Professional', icon: Cuboid, href: 'https://www.credly.com/badges/98c3fe92-cec5-41e1-866a-ffd0a292b40d/linked_in?t=sye9d0' },
+  { name: 'CSWA SolidWorks', icon: Cuboid },
   { name: 'OnShape', icon: DraftingCompass },
   { name: 'Inventor', icon: Cuboid },
   { name: 'ANSYS', icon: Calculator },
@@ -58,20 +58,11 @@ export function AboutSection() {
       <div>
         <h3 className="text-2xl md:text-3xl font-semibold text-accent mb-6 text-center md:text-left">My Skills</h3>
         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-          {skills.map((skill: any) => (
-            skill.href ? (
-                <a key={skill.name} href={skill.href} target="_blank" rel="noopener noreferrer">
-                    <Badge variant="secondary" className="text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors duration-300 cursor-pointer">
-                        <skill.icon size={16} className="mr-2" />
-                        {skill.name}
-                    </Badge>
-                </a>
-            ) : (
-                <Badge key={skill.name} variant="secondary" className="text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors duration-300 cursor-default">
-                    <skill.icon size={16} className="mr-2" />
-                    {skill.name}
-                </Badge>
-            )
+          {skills.map((skill) => (
+            <Badge key={skill.name} variant="secondary" className="text-sm px-4 py-2 rounded-full bg-primary/10 text-primary border-primary/30">
+              <skill.icon size={16} className="mr-2" />
+              {skill.name}
+            </Badge>
           ))}
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import { SectionWrapper } from '@/components/layout/section-wrapper';
 import { Button } from '@/components/ui/button';
 import { FileText, Download } from 'lucide-react';
@@ -22,7 +21,18 @@ export function ResumeSection() {
             
             <div className="space-y-3 text-left text-sm text-foreground">
                 <p><strong>Summary:</strong> Motivated graduate with a Masters in Mechanical Engineering searching for next step...</p>
-                <p><strong>Key Skills:</strong> Product Design, CSWA SolidWorks, Process Improvement, MATLAB, FEA...</p>
+                <p>
+                    <strong>Key Skills:</strong> Product Design,{' '}
+                    <a
+                        href="https://www.credly.com/badges/98c3fe92-cec5-41e1-866a-ffd0a292b40d/linked_in?t=sye9d0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-primary hover:text-accent transition-colors"
+                    >
+                        Certified SolidWorks CAD Design Professional
+                    </a>
+                    , Process Improvement, MATLAB, FEA...
+                </p>
                 <p><strong>Recent Experience:</strong> Process Engineering Intern at Innova Plastics Engineering</p>
                 <p className="italic text-muted-foreground mt-4">For a complete overview, please download the full PDF version.</p>
             </div>
