@@ -52,7 +52,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
               <>
                 <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
-                <div>{(step as TechnicalProcessStepObject).description}</div>
+                <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
               </>
             ) : (
               String(step)
@@ -142,6 +142,20 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Target size={24} className="mr-3 text-primary" />Project Objective</h2>
             <p className="leading-relaxed">{project.objective}</p>
           </section>
+
+          {project.id === 'prototype-slitting-machine' && (
+            <div className="my-8 flex justify-center">
+              <div className="relative w-full max-w-2xl aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                <Image
+                  src="/images/BlendyStraw.JPG"
+                  alt="Prototype Slitting Machine result"
+                  fill={true}
+                  style={{ objectFit: 'contain' }}
+                  data-ai-hint="slitted straw"
+                />
+              </div>
+            </div>
+          )}
 
           <Separator className="my-8" />
 
@@ -301,7 +315,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         return (
                           <li key={index}>
                             <div><strong>{step.title}</strong></div>
-                            <div>{step.description}</div>
+                            <div className="whitespace-pre-wrap">{step.description}</div>
                           </li>
                         );
                       })}
@@ -444,7 +458,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         return (
                           <li key={index}>
                             <div><strong>{step.title}</strong></div>
-                            <div>{(step as TechnicalProcessStepObject).description}</div>
+                            <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
                           </li>
                         );
                       })}
@@ -468,7 +482,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
-                              <div>{step.description}</div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = image.src.includes('Schedule') ? 'aspect-[2/1]' : (image.src.includes('Risk') ? 'aspect-[3/1]' : 'aspect-video');
@@ -492,7 +506,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         return (
                           <li key={index}>
                             <div><strong>{step.title}</strong></div>
-                            <div>{(step as TechnicalProcessStepObject).description}</div>
+                            <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
                           </li>
                         );
                       })}
@@ -517,7 +531,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                             return (
                               <li key={index}>
                                 <div><strong>{step.title}</strong></div>
-                                <div>{step.description}</div>
+                                <div className="whitespace-pre-wrap">{step.description}</div>
                                 <div className="mt-4 flex justify-center">
                                   <Carousel className="w-full max-w-md">
                                     <CarouselContent>
@@ -551,7 +565,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
-                              <div>{step.description}</div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = 'aspect-[822/658]';
@@ -575,7 +589,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         return (
                           <li key={index}>
                             <div><strong>{step.title}</strong></div>
-                            <div>{(step as TechnicalProcessStepObject).description}</div>
+                            <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
                           </li>
                         );
                       })}
