@@ -200,7 +200,7 @@ export const projectsData = [
       },
       {
         title: 'Concept Generation',
-        description: 'Process was decomposed into the holding and slitting mechanisms.  Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.',
+        description: 'Process was decomposed into the holding and slitting mechanisms. Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.',
         images: [
             { src: '/images/Concepting.JPG', alt: 'Concept sketches', hint: 'sketches drawing' }
         ]
@@ -221,8 +221,11 @@ export const projectsData = [
         description: 'The sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
       },
       {
-        title: 'Prototyping',
-        description: 'From the final design, a bill of materials and manufacturing design package was generated. Custom components were milled from aluminum stock. Stainless steel mandrel arms were 3D printed on an EOS M290 Printer. The prototype was fabricated in stages with frame components being assembled prior to the installation of pneumatics and control'
+        title: 'Prototype Fabrication',
+        description: 'From the final design, a bill of materials and manufacturing design package was generated. Custom components were milled from aluminum stock. Stainless steel mandrel arms were 3D printed on an EOS M290 Printer. The prototype was fabricated in stages with frame components being assembled prior to the installation of pneumatics and control',
+        images: [
+            { src: '/images/BlendyPrototype.jpg', alt: 'Slitting Machine Prototype', hint: 'machine prototype' }
+        ]
       },
       {
         title: 'Process Evaluation',
@@ -568,6 +571,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
