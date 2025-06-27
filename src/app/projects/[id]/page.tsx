@@ -55,7 +55,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
               </>
             ) : (
-              String(step)
+              <div className="whitespace-pre-wrap">{String(step)}</div>
             )}
           </li>
         ))}
@@ -145,7 +145,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
           {project.id === 'prototype-slitting-machine' && (
             <div className="my-8 flex justify-center">
-              <div className="relative w-full max-w-2xl aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+              <div className="relative w-full max-w-2xl aspect-[2338/710] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/images/BlendyStraw.JPG"
                   alt="Prototype Slitting Machine result"
