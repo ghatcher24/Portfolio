@@ -11,7 +11,7 @@ export function ResumeSection() {
           Interested in learning more about my qualifications and experience? Download my full resume for a detailed overview.
         </p>
         <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
-          <Link href="/pdfs/Gordon Hatcher CV.pdf" target="_blank" download="Gordon Hatcher CV.pdf">
+          <Link href="/pdfs/GordonHatcherCV.pdf" target="_blank" download="GordonHatcherCV.pdf">
             <Download size={20} className="mr-2" />
             Download Resume (PDF)
           </Link>
