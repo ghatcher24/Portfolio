@@ -214,7 +214,10 @@ export const projectsData = [
       },
       {
         title: 'Concept to Design: Actuation',
-        description: 'Pneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created.'
+        description: 'Pneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created.',
+        images: [
+            { src: '/images/Pnumatics.png', alt: 'Pneumatics Schematic', hint: 'schematic diagram' }
+        ]
       },
       {
         title: 'Concept to Design: Control',
@@ -571,6 +574,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
