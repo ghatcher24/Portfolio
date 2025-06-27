@@ -616,8 +616,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div className="whitespace-pre-wrap">{step.description}</div>
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
+                                  const aspectClass = image.src.includes('Concepting') ? 'aspect-[1918/1346]' : 'aspect-[4/3]';
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-3/4 aspect-[1918/1346] rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-3/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -668,7 +669,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                     data-ai-hint="technical drawing blueprint"
                                   />
                                 </div>
-                                <figcaption className="mt-2 text-sm text-center text-muted-foreground">{`Drawing ${index + 1}`}</figcaption>
                               </figure>
                             </div>
                           </CarouselItem>
