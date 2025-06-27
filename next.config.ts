@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   basePath: "/Portfolio",
   output: "export",
+  reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -19,7 +20,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  reactStrictMode: true,
 };
 
 export default nextConfig;
