@@ -182,19 +182,43 @@ export const projectsData = [
     liveLink: '#',
     githubLink: '#',
     tags: ['Customer Communication', 'Scope Management', 'Process Design', 'Pneumatic Control', 'CNC Machining', '3D Printing'],
-    objective: 'To build a performant and SEO-friendly platform for content creators to publish articles and engage with readers.',
+    objective: 'Design a manufacturing process that can consistently create four identical equidistant slits on a plastic straw and develop a proof-of-concept prototype to validate the process. Compete in senior design showcase competition at the conclusion of the project.',
     requirements: [
-        'User authentication for authors.',
-        'Markdown editor for writing posts.',
-        'Comment system for reader interaction.',
-        'Admin panel for managing posts and users.'
+      '6 second cycle time',
+      'Slit length of 2.5 ± 0.2”',
+      'Slit width of 0.02 ± 0.005”',
+      'Slit positioning 0.25 ± 0.1”'
     ],
     technicalProcess: [
-        'Used Next.js for server-side rendering and static site generation.',
-        'Integrated with a headless CMS (e.g., Strapi, Contentful) via GraphQL.',
-        'Implemented user authentication using NextAuth.js.'
+      {
+        title: 'Scope Management',
+        description: 'Continuous communication with customer was conducted to refine project scope and requirements. Weekly meetings were used to discuss any necessary changes to expectations and update customer on design updates.'
+      },
+      {
+        title: 'Initial Experimentation',
+        description: 'Experiments with numerous blade shapes and cutting techniques were evaluated to identify optimal method. A variety of straw holding techniques were explored as well.'
+      },
+      {
+        title: 'Concept Generation',
+        description: 'Process was decomposed into the holding and slitting mechanisms. Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.'
+      },
+      {
+        title: 'Concept to Design Process',
+        description: 'General Practices: Prototype was designed to allow for easy iterating while maintaining accuracy. Mechanisms were designed to minimize play and were constantly refined to reduce cost. Actuation: Pneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created. Control: The sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
+      },
+      {
+        title: 'Prototyping',
+        description: 'From the final design, a bill of materials and manufacturing design package was generated. Custom components were milled from aluminum stock. Stainless steel mandrel arms were 3D printed on an EOS M290 Printer. The prototype was fabricated in stages with frame components being assembled prior to the installation of pneumatics and control'
+      },
+      {
+        title: 'Process Evaluation',
+        description: 'Established operating procedure and conducted quality control study on designed process. Measured product outputs and utilized ANOVA to determine if process consistently produced the required slits.'
+      }
     ],
-    outcomeAndImpact: 'Provided a fast, secure, and easy-to-use blogging solution, adopted by several content creators for its modern stack and features.'
+    outcomeAndImpact: `The final prototype was evaluated in line with customer requirements:
+Slit length found to be within tolerance but failed to be entirely linear or equidistant.
+Results presented to customer and despite shortcomings, they felt prototype provided significant proof of process.
+Final Design a development process presented at 2024 Fall Senior Design Showcase where 1st Place was awarded.`
   },
   {
     id: 'angiographic-catheter', // Using pre-generated slug
@@ -533,6 +557,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
