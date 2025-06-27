@@ -588,7 +588,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         // Default step rendering
                         return (
                           <li key={index}>
-                            <div><strong>{step.title}</strong></div>
+                            <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
                             <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
                           </li>
                         );
@@ -618,7 +618,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = image.src.includes('Concepting') ? 'aspect-[1918/1346]' : 'aspect-[4/3]';
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-1/2 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-3/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -641,7 +641,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-2/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -664,7 +664,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-1/3 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-1/4 aspect-video rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -687,7 +687,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-1/3 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-1/4 aspect-video rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -710,7 +710,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-2/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -744,9 +744,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               <Separator className="my-8" />
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Images size={24} className="mr-3 text-primary" />Manufacturing Drawings</h2>
-                <p className="leading-relaxed">Detailed manufacturing drawings, including component prints and assembly diagrams, were created for this project. These are available upon request.</p>
                 <div className="mt-6 flex justify-center">
-                    <Carousel className="w-full max-w-xs">
+                    <Carousel className="w-full max-w-sm">
                       <CarouselContent>
                         {Array.from({ length: 13 }).map((_, index) => (
                           <CarouselItem key={index}>
