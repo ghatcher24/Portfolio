@@ -46,7 +46,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
   const renderTechnicalProcess = () => (
     project.technicalProcess && project.technicalProcess.length > 0 ? (
-      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' || project.id === 'ha-65-bone-screw' || project.id === 'catheter-hub-w-hemostatic-lock' ? 'space-y-4' :'space-y-2'}`}>
+      <ol className={`list-decimal pl-5 leading-relaxed ${project.id === 'inline-121-gearbox' || project.id === 'angiographic-catheter' || project.id === 'ha-65-bone-screw' || project.id === 'catheter-hub-w-hemostatic-lock' || project.id === 'prototype-slitting-machine' ? 'space-y-4' :'space-y-2'}`}>
         {project.technicalProcess.map((step, index) => (
           <li key={index}>
             {typeof step === 'object' && step !== null && 'title' in step && 'description' in step ? (
@@ -145,7 +145,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
           {project.id === 'prototype-slitting-machine' && (
             <div className="my-8 flex justify-center">
-              <div className="relative w-full max-w-2xl aspect-[2338/710] rounded-lg overflow-hidden shadow-md">
+              <div className="relative w-full max-w-4xl aspect-[2338/710] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/images/BlendyStraw.JPG"
                   alt="Prototype Slitting Machine result"
@@ -561,7 +561,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               </li>
                             );
                           }
-                          // Default for other images (like step 3)
+                          // Default for other images
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
@@ -570,7 +570,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = 'aspect-[822/658]';
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-1/2 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full ${step.title.includes('Untreated Model') ? 'md:w-1/2' : 'md:w-2/5'} ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                       <Image
                                         src={image.src}
                                         alt={image.alt}
@@ -735,7 +735,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </div>
             </section>
-          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device', 'project-management-simulation', 'nonlinear-cancer-treatment-model', 'catheter-hub-w-hemostatic-lock'].includes(project.id) ? (
+          ) : !['inline-121-gearbox', 'ha-65-bone-screw', 'ire-ablation-device', 'project-management-simulation', 'nonlinear-cancer-treatment-model', 'catheter-hub-w-hemostatic-lock', 'prototype-slitting-machine'].includes(project.id) ? (
              <section className="mb-8">
               <h2 className="text-2xl font-semibold text-accent mb-4 flex items-center"><Images size={24} className="mr-3 text-primary" />Image Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
