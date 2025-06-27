@@ -659,7 +659,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           <CarouselItem key={index}>
                             <div className="p-1">
                               <figure className="w-full flex flex-col items-center">
-                                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-white">
+                                <div className="relative w-full aspect-[5/7] rounded-lg overflow-hidden shadow-md bg-white">
                                   <Image
                                     src={`/images/Drawing${index + 1}.jpg`}
                                     alt={`Manufacturing Drawing ${index + 1}`}
