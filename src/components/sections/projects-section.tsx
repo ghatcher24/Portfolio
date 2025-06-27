@@ -200,14 +200,25 @@ export const projectsData = [
       },
       {
         title: 'Concept Generation',
-        description: 'Process was decomposed into the holding and slitting mechanisms. Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.',
+        description: 'Process was decomposed into the holding and slitting mechanisms.  Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.',
         images: [
             { src: '/images/Concepting.JPG', alt: 'Concept sketches', hint: 'sketches drawing' }
         ]
       },
       {
-        title: 'Concept to Design Process',
-        description: 'General Practices:\nPrototype was designed to allow for easy iterating while maintaining accuracy. Mechanisms were designed to minimize play and were constantly refined to reduce cost.\n\nActuation:\nPneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created.\n\nControl:\nThe sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
+        title: 'Concept to Design: General Practices',
+        description: 'Prototype was designed to allow for easy iterating while maintaining accuracy. Mechanisms were designed to minimize play and were constantly refined to reduce cost.',
+        images: [
+          { src: '/images/DesignIteration.JPG', alt: 'Design Iteration CAD', hint: 'cad model' }
+        ]
+      },
+      {
+        title: 'Concept to Design: Actuation',
+        description: 'Pneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created.'
+      },
+      {
+        title: 'Concept to Design: Control',
+        description: 'The sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
       },
       {
         title: 'Prototyping',
@@ -557,6 +568,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
