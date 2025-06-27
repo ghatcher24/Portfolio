@@ -221,7 +221,10 @@ export const projectsData = [
       },
       {
         title: 'Concept to Design: Control',
-        description: 'The sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
+        description: 'The sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.',
+        images: [
+            { src: '/images/BlendyElectrics.png', alt: 'Electrics Schematic', hint: 'schematic diagram' }
+        ]
       },
       {
         title: 'Prototype Fabrication',
@@ -574,6 +577,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 
