@@ -609,7 +609,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
                     <ol className="list-decimal pl-5 leading-relaxed space-y-4">
                       {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
-                        if (step.images) {
+                        if (step.images && step.title.includes('Concept Generation')) {
                           return (
                             <li key={index}>
                               <div><strong>{step.title}</strong></div>
@@ -633,10 +633,102 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                             </li>
                           )
                         }
+                        if (step.images && step.title.includes('Concept to Design: General Practices')) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
+                              <div className="mt-4 flex justify-center">
+                                {step.images.map((image, imgIndex) => {
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </li>
+                          )
+                        }
+                        if (step.images && step.title.includes('Concept to Design: Actuation')) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
+                              <div className="mt-4 flex justify-center">
+                                {step.images.map((image, imgIndex) => {
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-2/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </li>
+                          )
+                        }
+                        if (step.images && step.title.includes('Concept to Design: Control')) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
+                              <div className="mt-4 flex justify-center">
+                                {step.images.map((image, imgIndex) => {
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-2/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </li>
+                          )
+                        }
+                        if (step.images && step.title.includes('Prototype Fabrication')) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
+                              <div className="mt-4 flex justify-center">
+                                {step.images.map((image, imgIndex) => {
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </li>
+                          )
+                        }
                         // Default step rendering
                         return (
                           <li key={index}>
-                            <div><strong>{step.title}</strong></div>
+                            <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
                             <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
                           </li>
                         );
@@ -654,7 +746,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Images size={24} className="mr-3 text-primary" />Manufacturing Drawings</h2>
                 <p className="leading-relaxed">Detailed manufacturing drawings, including component prints and assembly diagrams, were created for this project. These are available upon request.</p>
                 <div className="mt-6 flex justify-center">
-                    <Carousel className="w-full max-w-4xl">
+                    <Carousel className="w-full max-w-2xl">
                       <CarouselContent>
                         {Array.from({ length: 13 }).map((_, index) => (
                           <CarouselItem key={index}>
