@@ -1,7 +1,8 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: "/Portfolio",
+  output: "export",
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -18,6 +19,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
