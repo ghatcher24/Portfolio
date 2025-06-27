@@ -200,11 +200,14 @@ export const projectsData = [
       },
       {
         title: 'Concept Generation',
-        description: 'Process was decomposed into the holding and slitting mechanisms. Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.'
+        description: 'Process was decomposed into the holding and slitting mechanisms. Initial concepts were generated. These concepts were presented to customer alongside benefits and drawbacks. A vertically moving slitting mechanism where the straw traveled horizontally was selected.',
+        images: [
+            { src: '/images/Concepting.JPG', alt: 'Concept sketches', hint: 'sketches drawing' }
+        ]
       },
       {
         title: 'Concept to Design Process',
-        description: 'General Practices: Prototype was designed to allow for easy iterating while maintaining accuracy. Mechanisms were designed to minimize play and were constantly refined to reduce cost. Actuation: Pneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created. Control: The sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
+        description: 'General Practices:\nPrototype was designed to allow for easy iterating while maintaining accuracy. Mechanisms were designed to minimize play and were constantly refined to reduce cost.\n\nActuation:\nPneumatics were selected for actuation. Linear actuators, airlines and valves were sized and schematics created.\n\nControl:\nThe sponsor did not want to invest heavily into control yet, so an Arduino was selected to control the manufacturing cycle. A simple open loop cycle was coded to facilitate the process.'
       },
       {
         title: 'Prototyping',
@@ -215,10 +218,7 @@ export const projectsData = [
         description: 'Established operating procedure and conducted quality control study on designed process. Measured product outputs and utilized ANOVA to determine if process consistently produced the required slits.'
       }
     ],
-    outcomeAndImpact: `The final prototype was evaluated in line with customer requirements:
-Slit length found to be within tolerance but failed to be entirely linear or equidistant.
-Results presented to customer and despite shortcomings, they felt prototype provided significant proof of process.
-Final Design a development process presented at 2024 Fall Senior Design Showcase where 1st Place was awarded.`
+    outcomeAndImpact: 'The final prototype was evaluated in line with customer requirements:\nSlit length found to be within tolerance but failed to be entirely linear or equidistant.\nResults presented to customer and despite shortcomings, they felt prototype provided significant proof of process.\nFinal Design a development process presented at 2024 Fall Senior Design Showcase where 1st Place was awarded.'
   },
   {
     id: 'angiographic-catheter', // Using pre-generated slug
@@ -557,6 +557,7 @@ export function ProjectsSection() {
     
 
     
+
 
 
 

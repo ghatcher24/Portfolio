@@ -145,7 +145,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
           {project.id === 'prototype-slitting-machine' && (
             <div className="my-8 flex justify-center">
-              <div className="relative w-full max-w-4xl aspect-[2338/710] rounded-lg overflow-hidden shadow-md">
+              <div className="relative w-full max-w-2xl aspect-[2338/710] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/images/BlendyStraw.JPG"
                   alt="Prototype Slitting Machine result"
@@ -457,7 +457,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         // Default step rendering
                         return (
                           <li key={index}>
-                            <div><strong>{step.title}</strong></div>
+                            <div><strong>{(step as TechnicalProcessStepObject).title}</strong></div>
                             <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
                           </li>
                         );
@@ -578,6 +578,53 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                                         style={{ objectFit: 'contain' }}
                                         data-ai-hint={image.hint}
                                       />
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </li>
+                          )
+                        }
+                        // Default step rendering
+                        return (
+                          <li key={index}>
+                            <div><strong>{step.title}</strong></div>
+                            <div className="whitespace-pre-wrap">{(step as TechnicalProcessStepObject).description}</div>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  ) : <p className="leading-relaxed">No technical process details available.</p>}
+              </section>
+              <Separator className="my-8" />
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><TrendingUp size={24} className="mr-3 text-primary" />Outcome and Impact</h2>
+                {renderOutcomeAndImpact()}
+              </section>
+            </>
+          ) : project.id === 'prototype-slitting-machine' ? (
+             <>
+              <section className="mb-8 prose prose-lg max-w-none text-foreground">
+                <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center"><Cpu size={24} className="mr-3 text-primary" />Technical Process</h2>
+                  {project.technicalProcess && Array.isArray(project.technicalProcess) ? (
+                    <ol className="list-decimal pl-5 leading-relaxed space-y-4">
+                      {(project.technicalProcess as TechnicalProcessStepObject[]).map((step, index) => {
+                        if (step.images) {
+                          return (
+                            <li key={index}>
+                              <div><strong>{step.title}</strong></div>
+                              <div className="whitespace-pre-wrap">{step.description}</div>
+                              <div className="mt-4 flex justify-center">
+                                {step.images.map((image, imgIndex) => {
+                                  return (
+                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                        <Image
+                                          src={image.src}
+                                          alt={image.alt}
+                                          fill={true}
+                                          style={{ objectFit: 'contain' }}
+                                          data-ai-hint={image.hint}
+                                        />
                                     </div>
                                   )
                                 })}
