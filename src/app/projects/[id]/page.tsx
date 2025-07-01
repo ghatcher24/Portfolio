@@ -8,21 +8,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github, Target, ListChecks, Cpu, TrendingUp, FileText, Images } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
-
-interface ProjectDetailPageProps {
-  params: {
-    id: string;
-  };
-}
-
+import { PageProps } from 'next/types';
 interface TechnicalProcessStepObject {
   title: string;
   description: string;
   images?: { src: string; alt: string; hint: string }[];
 }
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+export default function ProjectDetailPage({ params }: PageProps<{ id: string }>) {
   const project = projectsData.find(p => p.id === params.id);
 
   if (!project) {
