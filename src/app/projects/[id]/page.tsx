@@ -628,7 +628,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = image.src.includes('Concepting') ? 'aspect-[1918/1346]' : 'aspect-[4/3]';
                                   return (
-                                    <div key={imgIndex} className={`relative w-full ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -652,7 +652,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -676,7 +676,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -700,7 +700,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
@@ -760,7 +760,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
               <section className="mb-8 prose prose-lg max-w-none text-foreground">
                 <h2 className="text-2xl font-semibold text-accent mb-3 flex items-center justify-center"><Images size={24} className="mr-3 text-primary" />Manufacturing Drawings</h2>
                 <div className="mt-6 flex justify-center">
-                    <Carousel className="w-full max-w-3xl">
+                    <Carousel className="w-full max-w-2xl">
                       <CarouselContent>
                         {Array.from({ length: 13 }).map((_, index) => (
                           <CarouselItem key={index}>
