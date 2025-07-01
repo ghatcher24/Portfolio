@@ -3,7 +3,7 @@ import type {NextConfig} from 'next';
 const isProd = process.env.NODE_ENV === 'production';
 
 // You may need to change this to match your repository name
-const repoName = 'Portfolio';
+const repoName = 'greyscale-portfolio';
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {

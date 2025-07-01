@@ -8,14 +8,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github, Target, ListChecks, Cpu, TrendingUp, FileText, Images } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { PageProps } from 'next/types';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+
 interface TechnicalProcessStepObject {
   title: string;
   description: string;
   images?: { src: string; alt: string; hint: string }[];
 }
 
-export default function ProjectDetailPage({ params }: PageProps<{ id: string }>) {
+export default function ProjectDetailPage({ params }: { params: { id: string } }) {
   const project = projectsData.find(p => p.id === params.id);
 
   if (!project) {
@@ -100,6 +101,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                 fill={true}
                 style={{ objectFit: 'cover' }}
                 data-ai-hint={project.imageHint}
+                unoptimized
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -145,6 +147,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                   fill={true}
                   style={{ objectFit: 'contain' }}
                   data-ai-hint="slitted straw"
+                  unoptimized
                 />
               </div>
             </div>
@@ -180,6 +183,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="technical drawing"
+                      unoptimized
                     />
                   </div>
                 </aside>
@@ -197,6 +201,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                     fill={true}
                     style={{ objectFit: 'cover' }}
                     data-ai-hint="gear detail"
+                    unoptimized
                   />
                 </div>
               </div>
@@ -220,6 +225,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="catheter drawing"
+                      unoptimized
                     />
                   </div>
                 </aside>
@@ -249,6 +255,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="technical drawing"
+                      unoptimized
                     />
                   </div>
                 </aside>
@@ -267,6 +274,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="FEA analysis"
+                      unoptimized
                     />
                   </div>
                 </aside>
@@ -296,6 +304,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                       </div>
                                   ))}
@@ -344,6 +353,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                       </div>
                                       <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
@@ -370,6 +380,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                       </div>
                                       <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
@@ -396,6 +407,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                       </div>
                                       <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
@@ -422,6 +434,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                       </div>
                                       <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
@@ -437,6 +450,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                             fill={true}
                                             style={{ objectFit: 'contain' }}
                                             data-ai-hint={step.images[2].hint}
+                                            unoptimized
                                             />
                                         </div>
                                         <figcaption className="mt-2 text-xs text-center text-muted-foreground">{step.images[2].alt}</figcaption>
@@ -487,6 +501,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                     </div>
                                   )
@@ -539,6 +554,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                                   fill={true}
                                                   style={{ objectFit: 'contain' }}
                                                   data-ai-hint={image.hint}
+                                                  unoptimized
                                                 />
                                               </div>
                                               <figcaption className="mt-2 text-xs text-center text-muted-foreground">{image.alt}</figcaption>
@@ -570,6 +586,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                         fill={true}
                                         style={{ objectFit: 'contain' }}
                                         data-ai-hint={image.hint}
+                                        unoptimized
                                       />
                                     </div>
                                   )
@@ -611,13 +628,14 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                 {step.images.map((image, imgIndex) => {
                                   const aspectClass = image.src.includes('Concepting') ? 'aspect-[1918/1346]' : 'aspect-[4/3]';
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-3/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 ${aspectClass} rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                     </div>
                                   )
@@ -634,13 +652,14 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 aspect-[4/3] rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                     </div>
                                   )
@@ -657,13 +676,14 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                     </div>
                                   )
@@ -680,13 +700,14 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                               <div className="mt-4 flex justify-center">
                                 {step.images.map((image, imgIndex) => {
                                   return (
-                                    <div key={imgIndex} className={`relative w-full md:w-3/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
+                                    <div key={imgIndex} className={`relative w-full md:w-4/5 aspect-video rounded-lg overflow-hidden shadow-md`}>
                                         <Image
                                           src={image.src}
                                           alt={image.alt}
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                     </div>
                                   )
@@ -710,6 +731,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                           fill={true}
                                           style={{ objectFit: 'contain' }}
                                           data-ai-hint={image.hint}
+                                          unoptimized
                                         />
                                     </div>
                                   )
@@ -751,6 +773,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                                     fill={true}
                                     style={{ objectFit: 'contain' }}
                                     data-ai-hint="technical drawing blueprint"
+                                    unoptimized
                                   />
                                 </div>
                               </figure>
@@ -783,6 +806,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="technical drawing"
+                      unoptimized
                     />
                   </div>
                   <div className="relative w-[45%] aspect-[5/7] rounded-lg overflow-hidden shadow-md">
@@ -792,6 +816,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="cad model"
+                      unoptimized
                     />
                   </div>
                 </aside>
@@ -810,6 +835,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                       fill={true}
                       style={{ objectFit: 'contain' }}
                       data-ai-hint="broken prototype"
+                      unoptimized
                     />
                   </div>
                 </aside>
@@ -842,6 +868,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                         fill={true}
                         style={{ objectFit: 'contain' }}
                         data-ai-hint="catheter detail"
+                        unoptimized
                       />
                   </div>
                   <div className="relative aspect-video rounded-lg overflow-hidden border-0">
@@ -851,6 +878,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                         fill={true}
                         style={{ objectFit: 'contain' }}
                         data-ai-hint="medical device"
+                        unoptimized
                       />
                   </div>
                   <div className="relative aspect-video rounded-lg overflow-hidden border-0">
@@ -860,6 +888,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                         fill={true}
                         style={{ objectFit: 'contain' }}
                         data-ai-hint="catheter design"
+                        unoptimized
                       />
                   </div>
                 </div>
@@ -875,6 +904,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                         fill={true}
                         style={{ objectFit: 'contain' }}
                         data-ai-hint="actuator design"
+                        unoptimized
                       />
                   </div>
                   <div className="relative aspect-video rounded-lg overflow-hidden border-0">
@@ -884,6 +914,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                         fill={true}
                         style={{ objectFit: 'contain' }}
                         data-ai-hint="actuator fabrication"
+                        unoptimized
                       />
                   </div>
                   <div className="relative aspect-video rounded-lg overflow-hidden border-0">
@@ -893,6 +924,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                         fill={true}
                         style={{ objectFit: 'contain' }}
                         data-ai-hint="completed actuator"
+                        unoptimized
                       />
                   </div>
                 </div>
@@ -908,6 +940,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="app showcase"
+                    unoptimized
                   />
                 </div>
                 <div className="relative aspect-video rounded-lg overflow-hidden border-0">
@@ -917,6 +950,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="interface screenshot"
+                    unoptimized
                   />
                 </div>
                 <div className="relative aspect-video rounded-lg overflow-hidden border-0">
@@ -926,6 +960,7 @@ export default function ProjectDetailPage({ params }: PageProps<{ id: string }>)
                     fill={true}
                     style={{ objectFit: 'contain' }}
                     data-ai-hint="feature showcase"
+                    unoptimized
                   />
                 </div>
               </div>
